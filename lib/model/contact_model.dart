@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/user_model.dart';
 
 class ContactModel {
 
@@ -17,6 +18,17 @@ class ContactModel {
 
   String getFullNameofUser ()
   {
-    return fullName =   
+    return fullName =   firstName! + " " + lastName!;
+  }
+
+  UserModel createUserFromContact()
+  {
+    return UserModel(
+      id: id!,
+      firstName: firstName!,
+      lastName: lastName!,
+      displayImage: displayImage!,
+      
+    );
   }
 }  
