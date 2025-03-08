@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "624149702678",
+    "project_id": "myhousify",
+    "storage_bucket": "myhousify.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624149702678:android:d7723fb17a9022da2b6d37",
+        "android_client_info": {
+          "package_name": "com.example.house"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnuk5o4OsFvG1RInlx4qH4kBBKCPuH12w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

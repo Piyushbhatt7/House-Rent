@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:house/view/splashscreen.dart';
@@ -9,7 +10,8 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 void main() async
 {
   WidgetsFlutterBinding.ensureInitialized();
-  await Supabase.initialize(url: supabaseUrl, anonKey: supabaseKey);
+ // await Supabase.initialize(url: supabaseUrl, anonKey: supabaseKey);
+ await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
