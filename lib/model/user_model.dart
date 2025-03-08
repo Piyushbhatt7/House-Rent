@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:house/model/contact_model.dart';
 
-class UserModel
+class UserModel extends ContactModel
 {
   String? email;
   String? password;
@@ -21,7 +22,11 @@ class UserModel
     this.bio = "",
     this.city = "",
     this.country = "",
-    });
+    }) : super (id: id, firstName: firstName, lastName: lastName, displayImage: displayImage)
+    {
+      isHost = false;
+      
+    }
 
     
 }
