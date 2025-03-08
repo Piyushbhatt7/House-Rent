@@ -25,7 +25,7 @@ class UserModel extends ContactModel
     }) : super (id: id, firstName: firstName, lastName: lastName, displayImage: displayImage)
     {
       isHost = false;
-      
+      isCurrentlyHosting = false;
     }
 
     
