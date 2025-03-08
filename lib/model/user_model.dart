@@ -28,7 +28,7 @@ class UserModel extends ContactModel
       isCurrentlyHosting = false;
     }
 
-    Future<void> saveUserToFirestore () async
+    Future<void> saveUserToFirestore (bio, city, country, email, firstName, lastName, id) async
     {
       Map<String, dynamic> dataMap = 
       {
