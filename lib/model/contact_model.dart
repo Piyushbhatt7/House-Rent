@@ -17,6 +17,6 @@ class ContactModel {
 
   String getFullNameofUser ()
   {
-    return fullName = 
+    return fullName =  
   }
 } 
