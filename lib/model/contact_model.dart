@@ -11,7 +11,7 @@ class ContactModel {
   ContactModel ({
       this.id = "",
       this.firstName = "",
-      this.lastName = "", 
+      this.lastName = "",  
       this.displayImage,
   });
 
