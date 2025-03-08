@@ -12,7 +12,7 @@ class ContactModel {
       this.id = "",
       this.firstName = "",
       this.lastName = "",  
-      this.displayImage,
+      this.displayImage, 
   });
 
   String getFullNameofUser ()
