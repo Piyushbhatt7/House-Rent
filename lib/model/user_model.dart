@@ -38,6 +38,11 @@ class UserModel extends ContactModel
         "email": email,
         "firstName": firstName,
         "lastName": lastName,
+        "isHost": false,
+        "myPostingIDs": [],
+        "savedPostingIDs": [],
+        "earnings": 0
+
       };
     }
 
