@@ -295,7 +295,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         _cityTextEditingController.text.trim(),
                         _countryTextEditingController.text.trim(),
                         _bioTextEditingController.text.trim(),
-                        imageFileofUser
+                        imageFileofUser,
 
                       );
                   },
