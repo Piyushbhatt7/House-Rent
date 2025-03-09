@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class UserViewModel 
 {
 
-  signUp(email, password, firstName, lastName, city, country, bio)
+  signUp(email, password, firstName, lastName, city, country, bio, imageFileofUser)
   {
 
   }
