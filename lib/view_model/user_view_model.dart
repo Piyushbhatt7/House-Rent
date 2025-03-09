@@ -10,6 +10,7 @@ class UserViewModel
       "country": country,
       "email": email,
       "firstName": firstName,
+      "lastName": lastName,
       
     }
   }
