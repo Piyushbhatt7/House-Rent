@@ -22,6 +22,7 @@ class UserViewModel
           AppConstants.currentUser.city = city;
           AppConstants.currentUser.country = country;
           AppConstants.currentUser.bio = bio;
+          AppConstants.currentUser.email = email;
 
         }
         
