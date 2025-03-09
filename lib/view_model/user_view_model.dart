@@ -7,7 +7,9 @@ class UserViewModel
     {
       "bio": bio,
       "city": city,
-      "country": country
+      "country": country,
+      "email": email,
+      
     }
   }
 
