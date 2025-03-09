@@ -6,7 +6,8 @@ class UserViewModel
     Map<String, dynamic> dataMap = 
     {
       "bio": bio,
-      "city": city
+      "city": city,
+      "country": country
     }
   }
 
