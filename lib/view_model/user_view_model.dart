@@ -21,7 +21,7 @@ class UserViewModel
           AppConstants.currentUser.lastName = lastName;
           AppConstants.currentUser.city = city;
           AppConstants.currentUser.country = country;
-          
+          AppConstants.currentUser.bio = bio;
 
         }
         
