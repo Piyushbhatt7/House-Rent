@@ -11,7 +11,8 @@ class UserViewModel
       "email": email,
       "firstName": firstName,
       "lastName": lastName,
-      
+      "isHost": false,
+      "my"
     }
   }
 
