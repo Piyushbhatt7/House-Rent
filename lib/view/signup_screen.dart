@@ -281,7 +281,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         return;
                       }
 
-                      if(!_formKey.currentState!.validate() || imageFileofUser == null)
+                      if(_emailTextEditingController.text.isEmpty && )
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.pinkAccent,
