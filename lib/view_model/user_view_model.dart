@@ -17,6 +17,10 @@ class UserViewModel
           String currentUserID = result.user!.uid;
 
           AppConstants.currentUser.id = currentUserID;
+          AppConstants.currentUser.firstName = firstName;
+          AppConstants.currentUser.lastName = lastName;
+          
+
         }
         
       });
