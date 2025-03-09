@@ -10,7 +10,7 @@ class UserViewModel
      await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email, 
       password: password
-      ).then((result)
+      ).then((result) async
       {
          String currentUserID = result.user!.uid;
 
@@ -23,7 +23,7 @@ class UserViewModel
           AppConstants.currentUser.email = email;
           AppConstants.currentUser.password = password;
 
-          saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID);
+         await saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID);
         
       });
       
