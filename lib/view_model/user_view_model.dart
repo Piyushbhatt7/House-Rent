@@ -56,7 +56,7 @@ class UserViewModel
 
 saveAndUploadImageToFirebase(imageFileofUser) async
 {
-  
+  Reference referenceStorage = FirebaseStorage.instance.ref().child("useImages").child(path)
 }
 
 }
