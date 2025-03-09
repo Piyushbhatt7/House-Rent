@@ -281,7 +281,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         return;
                       }
 
-                      if(_emailTextEditingController.text.isEmpty && )
+                      if(_emailTextEditingController.text.isEmpty && _passwordTextEditingController.text.isEmpty)
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.pinkAccent,
