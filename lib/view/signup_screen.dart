@@ -273,7 +273,7 @@ class _SignupScreenState extends State<SignupScreen> {
               child: ElevatedButton(
                   onPressed: ()
                   {
-                      if(_formKey.currentState!.validate() || imageFileofUser == null)
+                      if(!_formKey.currentState!.validate() || imageFileofUser == null)
                       {
 
                       }
