@@ -26,7 +26,7 @@ class UserViewModel
          await saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID)
          .whenComplete(()
          {
-            saveAndUploadImageToFirebase();
+            saveAndUploadImageToFirebase(imageFileofUser);
          });
         
       });
@@ -52,9 +52,9 @@ class UserViewModel
     await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
   }
 
-saveAndUploadImageToFirebase()
+saveAndUploadImageToFirebase(imageFileofUser)
 {
-  
+
 }
 
 }
