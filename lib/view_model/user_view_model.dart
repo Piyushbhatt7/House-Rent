@@ -12,7 +12,8 @@ class UserViewModel
       "firstName": firstName,
       "lastName": lastName,
       "isHost": false,
-      "my"
+      "myPostingIDs": [],
+      
     }
   }
 
