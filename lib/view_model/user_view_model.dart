@@ -11,7 +11,11 @@ class UserViewModel
       password: password
       ).then((result)
       {
-        String currentUserID = result.user!.uid;
+        if(result != null)
+        {
+          String currentUserID = result.user!.uid;
+        }
+        
       });
       
   }
