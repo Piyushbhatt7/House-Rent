@@ -52,6 +52,9 @@ class UserViewModel
     await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
   }
 
-
+saveAndUploadImageToFirebase()
+{
+  
+}
 
 }
