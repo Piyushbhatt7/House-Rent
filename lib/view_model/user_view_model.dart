@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/rendering.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
@@ -28,7 +31,7 @@ class UserViewModel
          await saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID)
          .whenComplete(()
          {
-            saveAndUploadImageToFirebase(imageFileofUser, currentUserID);
+            addImageToFirebaseStorage(imageFileofUser, currentUserID);
          });
         
       });
@@ -54,11 +57,16 @@ class UserViewModel
     await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
   }
 
-saveAndUploadImageToFirebase(imageFileofUser, currentUserID) async
+addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
 {
   Reference referenceStorage = FirebaseStorage.instance.ref()
   .child("useImages")
-  .child(currentUserID).child(currentUserID + ".png");
+  .child(currentUserID)
+  .child(currentUserID + ".png");
+
+  await referenceStorage.putFile(imageFileofUser).whenComplete((){});
+
+  AppConstants.currentUser.displayImage = MemoryImage(imageFileofUser.readAsBytesSync());
 }
 
 }
