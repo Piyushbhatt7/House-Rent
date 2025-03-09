@@ -2,6 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class UserViewModel 
 {
+
+  signUp()
+  {
+    
+  }
   
   Future<void> saveUserToFirestore(bio, city, country, email, firstName, lastName, id) async
   {
