@@ -23,7 +23,11 @@ class UserViewModel
           AppConstants.currentUser.email = email;
           AppConstants.currentUser.password = password;
 
-         await saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID);
+         await saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID)
+         .whenComplete(()
+         {
+
+         });
         
       });
       
