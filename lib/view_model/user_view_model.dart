@@ -12,9 +12,7 @@ class UserViewModel
       password: password
       ).then((result)
       {
-        if(result != null)
-        {
-          String currentUserID = result.user!.uid;
+         String currentUserID = result.user!.uid;
 
           AppConstants.currentUser.id = currentUserID;
           AppConstants.currentUser.firstName = firstName;
@@ -24,8 +22,6 @@ class UserViewModel
           AppConstants.currentUser.bio = bio;
           AppConstants.currentUser.email = email;
           AppConstants.currentUser.password = password;
-
-        }
         
       });
       
