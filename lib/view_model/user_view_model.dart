@@ -23,6 +23,7 @@ class UserViewModel
           AppConstants.currentUser.country = country;
           AppConstants.currentUser.bio = bio;
           AppConstants.currentUser.email = email;
+          AppConstants.currentUser.password = password;
 
         }
         
