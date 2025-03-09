@@ -13,7 +13,8 @@ class UserViewModel
       "lastName": lastName,
       "isHost": false,
       "myPostingIDs": [],
-      
+      "savedPostingIDs": [],
+      "earnings": 0,
     }
   }
 
