@@ -4,12 +4,15 @@ import 'package:firebase_auth/firebase_auth.dart';
 class UserViewModel 
 {
 
-  signUp(email, password, firstName, lastName, city, country, bio, imageFileofUser)
+  signUp(email, password, firstName, lastName, city, country, bio, imageFileofUser) async
   {
      FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email, 
       password: password
-      ).then((onValue){});
+      ).then((onValue)
+      {
+
+      });
       
   }
   
