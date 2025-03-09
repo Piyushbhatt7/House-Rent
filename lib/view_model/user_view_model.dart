@@ -19,7 +19,7 @@ class UserViewModel
           AppConstants.currentUser.id = currentUserID;
           AppConstants.currentUser.firstName = firstName;
           AppConstants.currentUser.lastName = lastName;
-          
+          AppConstants.currentUser.city = city;
 
         }
         
