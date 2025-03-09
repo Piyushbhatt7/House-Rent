@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:house/model/app_constants.dart';
 
 class UserViewModel 
 {
@@ -14,6 +15,8 @@ class UserViewModel
         if(result != null)
         {
           String currentUserID = result.user!.uid;
+
+          AppConstants.currentUser.id = currentUserID;
         }
         
       });
