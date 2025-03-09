@@ -9,9 +9,9 @@ class UserViewModel
      await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email, 
       password: password
-      ).then((Result)
+      ).then((result)
       {
-         
+         result.user!.uid;
       });
       
   }
