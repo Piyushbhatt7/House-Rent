@@ -66,7 +66,7 @@ addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
 
   await referenceStorage.putFile(imageFileofUser).whenComplete((){});
 
-  AppConstants.currentUser.displayImage = MemoryImage(imageFileofUser.readAsBytesSync());
+  AppConstants.currentUser.displayImage = MemoryImage(imageFileofUser.readAsBytesSync()); // 26:14
 }
 
 }
