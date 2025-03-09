@@ -278,7 +278,10 @@ class _SignupScreenState extends State<SignupScreen> {
                       if(!_formKey.currentState!.validate() || imageFileofUser == null)
                       {
                         Get.snackbar("Field Missing", "Please choose image and fill out complete sign up form");
+                        return;
                       }
+
+                      if(!_formKey.currentState!.validate() || imageFileofUser == null)
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.pinkAccent,
