@@ -9,6 +9,7 @@ class UserViewModel
       "city": city,
       "country": country,
       "email": email,
+      "firstName": firstName,
       
     }
   }
