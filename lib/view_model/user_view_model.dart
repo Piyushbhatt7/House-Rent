@@ -28,7 +28,7 @@ class UserViewModel
          await saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID)
          .whenComplete(()
          {
-            saveAndUploadImageToFirebase(imageFileofUser);
+            saveAndUploadImageToFirebase(imageFileofUser, currentUserID);
          });
         
       });
@@ -54,9 +54,11 @@ class UserViewModel
     await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
   }
 
-saveAndUploadImageToFirebase(imageFileofUser) async
+saveAndUploadImageToFirebase(imageFileofUser, currentUserID) async
 {
-  Reference referenceStorage = FirebaseStorage.instance.ref().child("useImages").child(path)
+  Reference referenceStorage = FirebaseStorage.instance.ref()
+  .child("useImages")
+  .child(currentUserID).child(currentUserID + ".png");
 }
 
 }
