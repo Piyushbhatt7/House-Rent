@@ -9,7 +9,8 @@ class UserViewModel
      FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email, 
       password: password
-      );
+      ).then((onValue){});
+      
   }
   
   Future<void> saveUserToFirestore(bio, city, country, email, firstName, lastName, id) async
