@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/utils.dart';
 import 'package:house/global.dart';
+import 'package:image_picker/image_picker.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -258,7 +259,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   onPressed: () async
                   {
 
-                    var imageFile = await ImagePicker
+                    var imageFile = await ImagePicker().pickImage(source: ImageSource.gallery)
 
               },
               child: imageFileofUser == null
