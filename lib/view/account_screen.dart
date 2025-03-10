@@ -13,7 +13,14 @@ class _AccountScreenState extends State<AccountScreen> {
     return SingleChildScrollView(
       child: 
       Padding(
-        padding: EdgeInsets.fromLTRB(25, 50, 20, 0)
+        padding: const EdgeInsets.fromLTRB(25, 50, 20, 0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+
+          ],
+        ),
         ),
     );
   }
