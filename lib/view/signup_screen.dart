@@ -263,7 +263,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
                     if(imageFile != null)
                     {
-                      File(imageFile.path);
+                      imageFileofUser = File(imageFile.path);
                     }
 
               },
