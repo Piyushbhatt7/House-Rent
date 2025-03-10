@@ -21,7 +21,7 @@ class _AccountScreenState extends State<AccountScreen> {
           children: [
            
   
-          // user info  
+          // user info   
 
             Padding(padding:const EdgeInsets.only(bottom: 30.0),
             child: Center(
