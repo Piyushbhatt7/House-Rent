@@ -18,6 +18,7 @@ class UserViewModel
     Get.snackbar("Please wait", "we are creating your account.");
 
      try {
+      
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email, 
       password: password
