@@ -41,7 +41,8 @@ class UserViewModel
          {
             await addImageToFirebaseStorage(imageFileofUser, currentUserID);
          });
-
+         
+         Get.to(AccountScreen());
          Get.snackbar("Congrulation", "your account has been created.");
         
       });
