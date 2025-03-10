@@ -109,8 +109,8 @@ class _LoginScreenState extends State<LoginScreen> {
                              {
                                userViewModel.login(
                                 _emailTextEditingController.text.trim(), 
-                                password
-                                )
+                                _passwordTextEditingController.text.trim(),
+                                );
                              }
                           },
                           style: ElevatedButton.styleFrom(
