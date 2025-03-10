@@ -17,7 +17,8 @@ class UserViewModel
 
     Get.snackbar("Please wait", "we are creating your account.");
 
-     await FirebaseAuth.instance.createUserWithEmailAndPassword(
+     try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email, 
       password: password
       ).then((result) async
@@ -42,6 +43,12 @@ class UserViewModel
          Get.snackbar("Congrulation", "your account has been created.");
         
       });
+     }
+
+     catch(e)
+     {
+      Get.snackbar("Error", e.toString());
+     }
       
   }
   
