@@ -33,6 +33,8 @@ class UserViewModel
          {
             await addImageToFirebaseStorage(imageFileofUser, currentUserID);
          });
+
+         Get.sna
         
       });
       
