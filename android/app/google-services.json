@@ -1,13 +1,33 @@
 {
   "project_info": {
-    "project_number": "624149702678",
-    "project_id": "myhousify",
-    "storage_bucket": "myhousify.firebasestorage.app"
+    "project_number": "634770521583",
+    "firebase_url": "https://demoapp-1c81f-default-rtdb.firebaseio.com",
+    "project_id": "demoapp-1c81f",
+    "storage_bucket": "demoapp-1c81f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:624149702678:android:d7723fb17a9022da2b6d37",
+        "mobilesdk_app_id": "1:634770521583:android:8fd9045969a0180a028a1a",
+        "android_client_info": {
+          "package_name": "com.example.food_delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeBZuEtR_WXM8oJNX_bvWLKZzNcUREPgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634770521583:android:12e5ba4e4d0515b0028a1a",
         "android_client_info": {
           "package_name": "com.example.house"
         }
@@ -15,7 +35,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBnuk5o4OsFvG1RInlx4qH4kBBKCPuH12w"
+          "current_key": "AIzaSyDeBZuEtR_WXM8oJNX_bvWLKZzNcUREPgQ"
         }
       ],
       "services": {
