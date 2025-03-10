@@ -36,7 +36,7 @@ class UserViewModel
             await addImageToFirebaseStorage(imageFileofUser, currentUserID);
          });
 
-         Get.snackbar("Congrulation", "your account has been created")
+         Get.snackbar("Congrulation", "your account has been created");
         
       });
       
