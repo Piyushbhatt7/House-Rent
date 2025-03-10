@@ -86,8 +86,13 @@ addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
 
 login() async 
 {
-  try{
-
+  try
+  {
+    FirebaseAuth.instance
+    .signInWithEmailAndPassword(
+      email: email, 
+      password: password
+      )
   }
 
   catch(e)
