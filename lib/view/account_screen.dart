@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/app_constants.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -30,6 +31,10 @@ class _AccountScreenState extends State<AccountScreen> {
                     child: CircleAvatar(
                       backgroundColor: Colors.black,
                       radius: MediaQuery.of(context).size.width / 4.5,
+                      child: CircleAvatar(
+                        backgroundColor: AppConstants.currentUser.displayImage,
+                         radius: MediaQuery.of(context).size.width / 4.6,
+                      ),
                     ),
                     onPressed: ()
                   {
