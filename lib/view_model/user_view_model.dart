@@ -98,6 +98,8 @@ login(email, password) async
 
         await getUserInfoFromFirestore(currentUserID);
         await getImageStorage(currentUserID);
+
+        
       });
       
   }
