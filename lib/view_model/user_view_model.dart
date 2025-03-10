@@ -100,6 +100,7 @@ login(email, password) async
         await getUserInfoFromFirestore(currentUserID);
         await getImageStorage(currentUserID);
         
+        Get.snackbar("Logged-In", "checking your credentials...");
         Get.to(AccountScreen());
         
       });
