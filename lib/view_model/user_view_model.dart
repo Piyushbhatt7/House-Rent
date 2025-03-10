@@ -108,6 +108,9 @@ login(email, password) async
 getUserInfoFromFirestore (userID) async
 {
   DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('users').doc(userID).get();
+
+  AppConstants.currentUser.snapshot = snapshot;
+  AppConstants.currentUser.firstName = snapshot["firstName"];
 }
 
 }
