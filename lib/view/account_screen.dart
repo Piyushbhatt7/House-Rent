@@ -46,7 +46,13 @@ class _AccountScreenState extends State<AccountScreen> {
                    Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-
+                      Text(
+                        AppConstants.currentUser.getFullNameofUser(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                        ),
+                      )
                     ],
                    )
                 ],
