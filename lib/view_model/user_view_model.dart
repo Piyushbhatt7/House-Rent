@@ -128,7 +128,11 @@ getImageStorage (userID) async
     return AppConstants.currentUser.displayImage;
   }
 
-  final imageDataInBytes = await FirebaseStorage.instance.ref().child("userImages").child(userID).child(userID + ".png");
+  final imageDataInBytes = await FirebaseStorage.instance.ref()
+  .child("userImages")
+  .child(userID)
+  .child(userID + ".png")
+  .getData(1024 * 1024);
 }
 
 }
