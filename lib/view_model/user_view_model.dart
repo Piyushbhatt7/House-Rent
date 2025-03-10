@@ -14,6 +14,9 @@ class UserViewModel
 
   signUp(email, password, firstName, lastName, city, country, bio, imageFileofUser) async
   {
+
+    Get.snackbar("Please wait", "we are creating your account.");
+
      await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email, 
       password: password
@@ -36,7 +39,7 @@ class UserViewModel
             await addImageToFirebaseStorage(imageFileofUser, currentUserID);
          });
 
-         Get.snackbar("Congrulation", "your account has been created");
+         Get.snackbar("Congrulation", "your account has been created.");
         
       });
       
