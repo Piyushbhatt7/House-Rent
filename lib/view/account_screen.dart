@@ -39,7 +39,9 @@ class _AccountScreenState extends State<AccountScreen> {
                          radius: MediaQuery.of(context).size.width / 4.6,
                       ),
                     ),
-                   )
+                   ),
+
+                   const SizedBox(height: 10.0,),
                 ],
               ),
             ),
