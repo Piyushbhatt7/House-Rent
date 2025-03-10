@@ -126,6 +126,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             fontSize: 24,
                           ),
                           controller: _passwordTextEditingController,
+                          obscureText: true,
                           validator: (valuePassword)
                           {
                             if(valuePassword!.length < 5)
