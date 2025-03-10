@@ -110,7 +110,13 @@ getUserInfoFromFirestore (userID) async
   DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('users').doc(userID).get();
 
   AppConstants.currentUser.snapshot = snapshot;
-  AppConstants.currentUser.firstName = snapshot["firstName"];
+  AppConstants.currentUser.firstName = snapshot['firstName'] ?? "";
+  AppConstants.currentUser.lastName = snapshot['lastName'] ?? "";
+  AppConstants.currentUser.email = snapshot['email'] ?? "";
+  AppConstants.currentUser.bio = snapshot['bio'] ?? "";
+  AppConstants.currentUser.city = snapshot['city'] ?? "";
+  AppConstants.currentUser.country = snapshot['country'] ?? "";
+  AppConstants.currentUser.isHost = snapshot['isHost'] ?? false;
 }
 
 }
