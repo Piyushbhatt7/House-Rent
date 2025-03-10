@@ -42,6 +42,13 @@ class _AccountScreenState extends State<AccountScreen> {
                    ),
 
                    const SizedBox(height: 10.0,),
+
+                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+
+                    ],
+                   )
                 ],
               ),
             ),
