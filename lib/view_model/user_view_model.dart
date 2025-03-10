@@ -121,12 +121,14 @@ getUserInfoFromFirestore (userID) async
   AppConstants.currentUser.isHost = snapshot['isHost'] ?? false;
 }
 
-getImageStorage () async
+getImageStorage (userID) async
 {
   if(AppConstants.currentUser.displayImage != null)
   {
     return AppConstants.currentUser.displayImage;
   }
+
+  final imageDataInBytes = await FirebaseStorage.instance.ref().child("userImages").child(userID).child(userID + ".png");
 }
 
 }
