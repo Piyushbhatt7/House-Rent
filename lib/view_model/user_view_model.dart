@@ -91,7 +91,11 @@ login(email, password) async
     FirebaseAuth.instance.signInWithEmailAndPassword(
       email: email, 
       password: password
-      );
+      ).then((result)
+      {
+        result.user!.uid;
+      });
+      
   }
 
   catch(e)
