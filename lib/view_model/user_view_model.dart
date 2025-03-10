@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:house/view/account_screen.dart';
 
 
 class UserViewModel 
@@ -98,7 +99,8 @@ login(email, password) async
 
         await getUserInfoFromFirestore(currentUserID);
         await getImageStorage(currentUserID);
-
+        
+        Get.to(AccountScreen());
         
       });
       
