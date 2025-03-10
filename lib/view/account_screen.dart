@@ -18,8 +18,26 @@ class _AccountScreenState extends State<AccountScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+          
 
-            Padding(padding:const EdgeInsets.only(bottom: 30.0)
+          // user info
+
+            Padding(padding:const EdgeInsets.only(bottom: 30.0),
+            child: Center(
+              child: Column(
+                children: [
+                  MaterialButton(
+                    child: CircleAvatar(
+                      backgroundColor: Colors.black,
+                      radius: MediaQuery.of(context).size.width / 4.5,
+                    ),
+                    onPressed: ()
+                  {
+
+                  })
+                ],
+              ),
+            ),
              )
           ],
         ),
