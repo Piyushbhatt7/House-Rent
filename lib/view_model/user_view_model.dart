@@ -29,9 +29,9 @@ class UserViewModel
           AppConstants.currentUser.password = password;
 
          await saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID)
-         .whenComplete(()
+         .whenComplete(() async
          {
-            addImageToFirebaseStorage(imageFileofUser, currentUserID);
+            await addImageToFirebaseStorage(imageFileofUser, currentUserID);
          });
         
       });
