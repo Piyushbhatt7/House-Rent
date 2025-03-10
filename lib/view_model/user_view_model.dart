@@ -97,6 +97,7 @@ login(email, password) async
         AppConstants.currentUser.id = currentUserID;
 
         await getUserInfoFromFirestore(currentUserID);
+        await getImageStorage(currentUserID);
       });
       
   }
