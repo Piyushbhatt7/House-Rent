@@ -27,6 +27,9 @@ class _AccountScreenState extends State<AccountScreen> {
             child: Center(
               child: Column(
                 children: [
+
+                  // image
+                  
                   MaterialButton(
                      onPressed: () {},
                 
@@ -43,6 +46,8 @@ class _AccountScreenState extends State<AccountScreen> {
 
                    const SizedBox(height: 10.0,),
 
+                   // name and email
+
                    Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -54,11 +59,11 @@ class _AccountScreenState extends State<AccountScreen> {
                         ),
                       ),
 
-                      // email
+                      
                       Text(
                         AppConstants.currentUser.email.toString(),
                         style: const TextStyle(
-                          fontWeight: FontWeight.bold,
+                          //fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       )
