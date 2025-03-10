@@ -121,4 +121,12 @@ getUserInfoFromFirestore (userID) async
   AppConstants.currentUser.isHost = snapshot['isHost'] ?? false;
 }
 
+getImageStorage () async
+{
+  if(AppConstants.currentUser.displayImage != null)
+  {
+    return AppConstants.currentUser.displayImage;
+  }
+}
+
 }
