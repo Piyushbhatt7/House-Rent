@@ -84,15 +84,14 @@ addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
   AppConstants.currentUser.displayImage = MemoryImage(imageFileofUser.readAsBytesSync()); // 26:14
 }
 
-login() async 
+login(email, password) async 
 {
   try
   {
-    FirebaseAuth.instance
-    .signInWithEmailAndPassword(
+    FirebaseAuth.instance.signInWithEmailAndPassword(
       email: email, 
       password: password
-      )
+      );
   }
 
   catch(e)
