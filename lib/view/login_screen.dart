@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:house/global.dart';
 import 'package:house/view/signup_screen.dart';
 
 
@@ -106,7 +107,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           {
                              if(_formKey.currentState!.validate())
                              {
-                               userV
+                               userViewModel.login(
+                                _emailTextEditingController.text.trim(), 
+                                password
+                                )
                              }
                           },
                           style: ElevatedButton.styleFrom(
