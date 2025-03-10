@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/get_core.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
@@ -34,7 +36,7 @@ class UserViewModel
             await addImageToFirebaseStorage(imageFileofUser, currentUserID);
          });
 
-         Get.sna
+         Get.snackbar("Congrulation", "your account has been created")
         
       });
       
