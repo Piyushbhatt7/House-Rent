@@ -93,7 +93,8 @@ login(email, password) async
       password: password
       ).then((result)
       {
-        result.user!.uid;
+        String currentUserID = result.user!.uid;
+        AppConstants.currentUser.id = currentUserID;
       });
       
   }
