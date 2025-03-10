@@ -255,7 +255,10 @@ class _SignupScreenState extends State<SignupScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 38.0),
               child: MaterialButton(
-                  onPressed: (){
+                  onPressed: () async
+                  {
+
+                    var imageFile = 
 
               },
               child: imageFileofUser == null
