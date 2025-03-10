@@ -87,6 +87,8 @@ addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
 
 login(email, password) async 
 {
+   Get.snackbar("Please wait", "checking your credentials....");
+
   try
   {
     FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -100,7 +102,7 @@ login(email, password) async
         await getUserInfoFromFirestore(currentUserID);
         await getImageStorage(currentUserID);
         
-        Get.snackbar("Logged-In", "checking your credentials...");
+        Get.snackbar("Logged-In", "you are loggen-in successufully...");
         Get.to(AccountScreen());
         
       });
