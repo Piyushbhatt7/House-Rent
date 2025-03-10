@@ -87,7 +87,12 @@ addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
 login() async 
 {
   try{
-    
+
+  }
+
+  catch(e)
+  {
+    Get.snackbar("Error", e.toString());
   }
 }
 
