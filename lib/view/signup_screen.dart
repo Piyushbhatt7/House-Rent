@@ -259,7 +259,12 @@ class _SignupScreenState extends State<SignupScreen> {
                   onPressed: () async
                   {
 
-                    var imageFile = await ImagePicker().pickImage(source: ImageSource.gallery)
+                    var imageFile = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+                    if(imageFile != null)
+                    {
+                      File(imageFile.path);
+                    }
 
               },
               child: imageFileofUser == null
