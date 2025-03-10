@@ -20,7 +20,7 @@ class _AccountScreenState extends State<AccountScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
            
-
+ 
           // user info
 
             Padding(padding:const EdgeInsets.only(bottom: 30.0),
