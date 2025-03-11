@@ -74,17 +74,24 @@ class UserViewModel
     await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
   }
 
-addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
-{
-  Reference referenceStorage = FirebaseStorage.instance.ref()
-  .child("userImages")
-  .child(currentUserID)
-  .child(currentUserID + ".png");
+Future<void> addImageToFirebaseStorage(File imageFileofUser, String currentUserID) async {
+  try {
+    Reference referenceStorage = FirebaseStorage.instance.ref()
+        .child("userImages") // Ensure folder name is correct
+        .child(currentUserID)
+        .child("$currentUserID.png");
 
-  await referenceStorage.putFile(imageFileofUser);//.whenComplete((){});
+    UploadTask uploadTask = referenceStorage.putFile(imageFileofUser);
 
-  AppConstants.currentUser.displayImage = MemoryImage(imageFileofUser.readAsBytesSync()); // 26:14
+    TaskSnapshot snapshot = await uploadTask;
+    String imageUrl = await snapshot.ref.getDownloadURL();
+    
+    print("Image uploaded successfully. URL: $imageUrl");
+  } catch (e) {
+    print("Error uploading image: $e");
+  }
 }
+
 
 login(email, password) async 
 {
