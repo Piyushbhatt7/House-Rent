@@ -135,6 +135,7 @@ getUserInfoFromFirestore (userID) async
   AppConstants.currentUser.city = snapshot['city'] ?? "";
   AppConstants.currentUser.country = snapshot['country'] ?? "";
   AppConstants.currentUser.isHost = snapshot['isHost'] ?? false;
+  //AppConstants.currentUser.displayImage = snapshot['displayImage'] ?? "";
 }
 
 getImageStorage(String userID) async {
