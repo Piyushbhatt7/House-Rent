@@ -15,6 +15,8 @@ class AccountScreen extends StatefulWidget {
 
 class _AccountScreenState extends State<AccountScreen> {
 
+  String _hostingTitle = 'Show my Dashboard';
+
   modifyHostingMode() async
   {
     if(AppConstants.currentUser.isHost!)
@@ -172,7 +174,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 height: MediaQuery.of(context).size.height / 9.1,
                 onPressed: ()
                {
-                  modifyHostingMode(),
+                  modifyHostingMode();
                },
                child: ListTile(
                 contentPadding: const EdgeInsets.all(0.0),
