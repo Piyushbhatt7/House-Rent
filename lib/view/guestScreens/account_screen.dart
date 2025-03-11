@@ -95,7 +95,7 @@ class _AccountScreenState extends State<AccountScreen> {
       )
                ),
                child: MaterialButton(
-                
+                height: MediaQuery.of(context).size.height / 9.1,
                 onPressed: ()
                {
 
