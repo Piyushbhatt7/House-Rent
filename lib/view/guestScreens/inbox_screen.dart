@@ -12,7 +12,7 @@ class _InboxScreenState extends State<InboxScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Explore screen"),
+        title: Text("Inbox screen"),
       ),
     );
   }
