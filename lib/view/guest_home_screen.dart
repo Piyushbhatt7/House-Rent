@@ -32,6 +32,14 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
     AccountScreen(),
   ];
 
+  BottomNavigationBarItem customNavigationBarItem(int index, IconData iconData, String title)
+  {
+    return BottomNavigationBarItem(
+      icon: icon
+      
+      )
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,10 +48,15 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         onTap: (i) 
         {
           setState(() {
-            
+            selectedIndex = i;
           }); 
         },
-        items: items
+        currentIndex: selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        items: <BottomNavigationBarItem>
+        [
+
+        ]
         ),
     );
   }
