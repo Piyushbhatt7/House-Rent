@@ -81,7 +81,7 @@ addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
   .child(currentUserID)
   .child(currentUserID + ".png");
 
-  await referenceStorage.putFile(imageFileofUser).whenComplete((){});
+  await referenceStorage.putFile(imageFileofUser);//.whenComplete((){});
 
   AppConstants.currentUser.displayImage = MemoryImage(imageFileofUser.readAsBytesSync()); // 26:14
 }
@@ -132,20 +132,21 @@ getUserInfoFromFirestore (userID) async
 
 getImageStorage (userID) async
 {
-  if(AppConstants.currentUser.displayImage != null)
-  {
-    return AppConstants.currentUser.displayImage;
+ getImageStorage(userID) async {
+  try {
+    final ref = FirebaseStorage.instance.ref()
+      .child("userImages")
+      .child(userID)
+      .child("$userID.png");
+
+    final imageDataInBytes = await ref.getData(1024 * 1024);
+    if (imageDataInBytes != null) {
+      AppConstants.currentUser.displayImage = MemoryImage(imageDataInBytes);
+    }
+  } catch (e) {
+    print("Error fetching image: $e"); // Log error instead of crashing
   }
-
-  final imageDataInBytes = await FirebaseStorage.instance.ref()
-  .child("userImages")
-  .child(userID)
-  .child(userID + ".png")
-  .getData(1024 * 1024);
-
-  AppConstants.currentUser.displayImage =  MemoryImage(imageDataInBytes!);
-
-  return AppConstants.currentUser.displayImage;
 }
+
 
 }
