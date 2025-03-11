@@ -99,7 +99,14 @@ class _AccountScreenState extends State<AccountScreen> {
                 onPressed: ()
                {
 
-               }),
+               },
+               child: ListTile(
+                contentPadding: const EdgeInsets.all(0.0),
+                leading: Text(
+                  "Personal Information"
+                ),
+               ),
+               ),
                 )
               ],
             )
