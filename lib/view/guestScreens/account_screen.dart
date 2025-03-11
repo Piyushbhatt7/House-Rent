@@ -93,7 +93,13 @@ class _AccountScreenState extends State<AccountScreen> {
                      stops: [0, 1],
                      tileMode: TileMode.clamp,
       )
-    ),
+               ),
+               child: MaterialButton(
+                
+                onPressed: ()
+               {
+
+               }),
                 )
               ],
             )
