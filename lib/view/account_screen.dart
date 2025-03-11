@@ -38,7 +38,8 @@ class _AccountScreenState extends State<AccountScreen> {
                       radius: MediaQuery.of(context).size.width / 4.5,
 
                       child: CircleAvatar(
-                        backgroundImage: AppConstants.currentUser.displayImage,
+                        backgroundImage: AppConstants.currentUser.displayImage
+                        ??  NetworkImage('https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg'),
                          radius: MediaQuery.of(context).size.width / 4.6,
                       ),
                     ),
