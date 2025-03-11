@@ -37,8 +37,11 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
     return Scaffold(
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (i) {
-          
+        onTap: (i) 
+        {
+          setState(() {
+            
+          }); 
         },
         items: items
         ),
