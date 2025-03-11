@@ -1,24 +1,24 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class GuestHomeScreen extends StatefulWidget {
-//   const GuestHomeScreen({super.key});
+class GuestHomeScreen extends StatefulWidget {
+  const GuestHomeScreen({super.key});
 
-//   @override
-//   State<GuestHomeScreen> createState() => _GuestHomeScreenState();
-// }
+  @override
+  State<GuestHomeScreen> createState() => _GuestHomeScreenState();
+}
 
-// class _GuestHomeScreenState extends State<GuestHomeScreen> {
+class _GuestHomeScreenState extends State<GuestHomeScreen> {
 
-//   final List<String> screenTitles = [
-//     'Explore',
-//     'Saved',
-//     'Trips',
-//     'Inbox',
-//     'Profile',
-//   ]
+  final List<String> screenTitles = [
+    'Explore',
+    'Saved',
+    'Trips',
+    'Inbox',
+    'Profile',
+  ];
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container();
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
