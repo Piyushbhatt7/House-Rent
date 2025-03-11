@@ -58,9 +58,9 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         [
           customNavigationBarItem(0, Icons.search_outlined, screenTitles[0]),
           customNavigationBarItem(1, Icons.favorite_border_outlined, screenTitles[1]),
-          customNavigationBarItem(2, Icons.search_outlined, screenTitles[2]),
-          customNavigationBarItem(3, Icons.search_outlined, screenTitles[3]),
-          customNavigationBarItem(4, Icons.search_outlined, screenTitles[4]),
+          customNavigationBarItem(2, Icons.hotel_class_outlined, screenTitles[2]),
+          customNavigationBarItem(3, Icons.message_outlined, screenTitles[3]),
+          customNavigationBarItem(4, Icons.person_outlined, screenTitles[4]),
         ]
         ),
     );
