@@ -67,6 +67,7 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
           ),
         ),
         automaticallyImplyLeading: false,
+        centerTitle: true,
       ) ,
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
