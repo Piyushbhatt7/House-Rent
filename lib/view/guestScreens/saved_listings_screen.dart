@@ -11,9 +11,7 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Saved listing screen"),
-      ),
+      
     );
   }
 }

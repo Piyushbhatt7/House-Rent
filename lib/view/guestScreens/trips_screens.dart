@@ -11,9 +11,7 @@ class _TripsScreensState extends State<TripsScreens> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Trips screen"),
-      ),
+     
     );
   }
 }
