@@ -35,9 +35,10 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
   BottomNavigationBarItem customNavigationBarItem(int index, IconData iconData, String title)
   {
     return BottomNavigationBarItem(
-      icon: icon
-      
-      )
+      icon: Icon(iconData, color: Colors.black,),
+      activeIcon: Icon(iconData, color: Colors.blueAccent,),
+      label: title,
+      );
   }
 
   @override
