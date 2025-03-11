@@ -120,7 +120,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
              
                // change hosting button
-               
+
                Container(
                    decoration: BoxDecoration(
                    gradient: LinearGradient(
@@ -132,7 +132,7 @@ class _AccountScreenState extends State<AccountScreen> {
                      end: FractionalOffset(1, 0),
                      stops: [0, 1],
                      tileMode: TileMode.clamp,
-      )
+                 )
                ),
                child: MaterialButton(
                 height: MediaQuery.of(context).size.height / 9.1,
@@ -151,7 +151,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 trailing: Icon(
                   size: 34,
-                  Icons.person_2_sharp,
+                  Icons.hotel_rounded,
                 ),
                ),
                ),
