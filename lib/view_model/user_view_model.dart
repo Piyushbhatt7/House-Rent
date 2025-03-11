@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:house/model/user_model.dart';
 import 'package:house/view/guestScreens/account_screen.dart';
 import 'package:house/view/guest_home_screen.dart';
 
@@ -14,7 +15,7 @@ import 'package:house/view/guest_home_screen.dart';
 class UserViewModel 
 {
 
-  signUp(email, password, firstName, lastName, city, country, bio, imageFileofUser) async
+signUp(email, password, firstName, lastName, city, country, bio, imageFileofUser) async
   {
 
     Get.snackbar("Please wait", "we are creating your account.");
@@ -56,7 +57,7 @@ class UserViewModel
       
   }
   
-  Future<void> saveUserToFirestore(bio, city, country, email, firstName, lastName, id) async
+Future<void> saveUserToFirestore(bio, city, country, email, firstName, lastName, id) async
   {
     Map<String, dynamic> dataMap = 
     {
@@ -159,4 +160,22 @@ getImageStorage(String userID) async {
   }
 }
 
+becomeHost (String userID) async
+{
+  UserModel userModel = UserModel();
+  userModel.isHost = true;
+
+  Map<String, dynamic> dataMap = 
+  {
+    "isHost" : true,
+  };
+
+  await FirebaseFirestore.instance.collection("users").doc(userID).update(dataMap);
+
+}
+
+ modifyCurrentlyHosting()
+ {
+  
+ }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/view/guest_home_screen.dart';
+import 'package:house/view/host_home_screen.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -26,12 +27,13 @@ class _AccountScreenState extends State<AccountScreen> {
         
         AppConstants.currentUser.isCurrentlyHosting = false;
 
-        Get.to(GuestHomeScreen());
+        Get.to(HostHomeScreen());
       }
     
     }
     else{
-
+        
+        AppConstants.currentUser.
     }
 
   }
