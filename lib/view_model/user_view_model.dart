@@ -15,6 +15,8 @@ import 'package:house/view/guest_home_screen.dart';
 class UserViewModel 
 {
 
+    UserModel userModel = UserModel();
+
 signUp(email, password, firstName, lastName, city, country, bio, imageFileofUser) async
   {
 
@@ -162,7 +164,7 @@ getImageStorage(String userID) async {
 
 becomeHost (String userID) async
 {
-  UserModel userModel = UserModel();
+
   userModel.isHost = true;
 
   Map<String, dynamic> dataMap = 
@@ -174,8 +176,9 @@ becomeHost (String userID) async
 
 }
 
- modifyCurrentlyHosting()
+ modifyCurrentlyHosting(bool isHosting)
  {
-  
+   userModel.isCurrentlyHosting = isHosting;
+   
  }
 }
