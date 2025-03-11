@@ -56,7 +56,7 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>
         [
-
+          customNavigationBarItem(0, Icons.search_outlined, screenTitles[0]),
         ]
         ),
     );
