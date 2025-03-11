@@ -44,6 +44,22 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(
+        flexibleSpace: Container(
+           decoration: BoxDecoration(
+        gradient: LinearGradient(
+        colors: [
+        Colors.pinkAccent,
+        Colors.amberAccent
+        ],
+        begin: FractionalOffset(0, 0),
+        end: FractionalOffset(1, 0),
+        stops: [0, 1],
+        tileMode: TileMode.clamp,
+      )
+    ),
+        ),
+      ) ,
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (i) 
@@ -58,7 +74,7 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         [
           customNavigationBarItem(0, Icons.search_outlined, screenTitles[0]),
           customNavigationBarItem(1, Icons.favorite_border_outlined, screenTitles[1]),
-          customNavigationBarItem(2, Icons.hotel_class_outlined, screenTitles[2]),
+          customNavigationBarItem(2, Icons.hotel_outlined, screenTitles[2]),
           customNavigationBarItem(3, Icons.message_outlined, screenTitles[3]),
           customNavigationBarItem(4, Icons.person_outlined, screenTitles[4]),// 11:44 - 7
         ]
