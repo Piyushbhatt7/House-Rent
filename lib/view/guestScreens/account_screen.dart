@@ -75,7 +75,7 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
              ),
             
-            // button
+            // Personal information button
 
             ListView(
               shrinkWrap: true,
@@ -106,8 +106,12 @@ class _AccountScreenState extends State<AccountScreen> {
                   "Personal Information",
                   style: TextStyle(
                     fontSize: 18.5,
-                    fontWeight: FontWeight.normal
+                    fontWeight: FontWeight.normal,
                   ),
+                ),
+                trailing: Icon(
+                  size: 34,
+                  Icons.person_2_sharp,
                 ),
                ),
                ),
