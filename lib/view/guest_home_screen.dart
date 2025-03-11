@@ -14,6 +14,8 @@ class GuestHomeScreen extends StatefulWidget {
 
 class _GuestHomeScreenState extends State<GuestHomeScreen> {
 
+  int selectedIndex = 0;
+
   final List<String> screenTitles = [
     'Explore',
     'Saved',
@@ -32,6 +34,8 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: screens,
+    );
   }
 }
