@@ -57,7 +57,7 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         items: <BottomNavigationBarItem>
         [
           customNavigationBarItem(0, Icons.search_outlined, screenTitles[0]),
-          customNavigationBarItem(1, Icons.search_outlined, screenTitles[1]),
+          customNavigationBarItem(1, Icons.favorite_border_outlined, screenTitles[1]),
           customNavigationBarItem(2, Icons.search_outlined, screenTitles[2]),
           customNavigationBarItem(3, Icons.search_outlined, screenTitles[3]),
           customNavigationBarItem(4, Icons.search_outlined, screenTitles[4]),
