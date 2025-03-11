@@ -15,7 +15,7 @@ class AccountScreen extends StatefulWidget {
 
 class _AccountScreenState extends State<AccountScreen> {
 
-  String _hostingTitle = 'Show my Dashboard';
+  String _hostingTitle = 'Show my Dashboard'; // 13:48 - 7
 
   modifyHostingMode() async
   {
