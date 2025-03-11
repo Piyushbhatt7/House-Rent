@@ -59,6 +59,14 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
       )
     ),
         ),
+        title: Text(
+          screenTitles[selectedIndex],
+          style: TextStyle(
+            fontSize: 18.0,
+            color: Colors.white
+          ),
+        ),
+        automaticallyImplyLeading: false,
       ) ,
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
