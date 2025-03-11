@@ -9,6 +9,25 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+
+  modifyHostingMode()
+  {
+    if(AppConstants.currentUser.isHost!)
+    {
+      if(AppConstants.currentUser.isCurrentlyHosting!)
+      {
+
+      }
+      else{
+        
+      }
+    
+    }
+    else{
+
+    }
+
+  }
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -138,7 +157,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 height: MediaQuery.of(context).size.height / 9.1,
                 onPressed: ()
                {
-
+                  modifyHostingMode(),
                },
                child: ListTile(
                 contentPadding: const EdgeInsets.all(0.0),
