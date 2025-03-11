@@ -17,6 +17,8 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
     'Profile',
   ];
 
+  final List<Widget> screens = [];
+
   @override
   Widget build(BuildContext context) {
     return Container();
