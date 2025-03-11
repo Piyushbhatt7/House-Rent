@@ -77,7 +77,7 @@ class UserViewModel
 addImageToFirebaseStorage(File imageFileofUser, currentUserID) async
 {
   Reference referenceStorage = FirebaseStorage.instance.ref()
-  .child("useImages")
+  .child("userImages")
   .child(currentUserID)
   .child(currentUserID + ".png");
 
@@ -130,23 +130,24 @@ getUserInfoFromFirestore (userID) async
   AppConstants.currentUser.isHost = snapshot['isHost'] ?? false;
 }
 
-getImageStorage (userID) async
-{
- getImageStorage(userID) async {
+getImageStorage(String userID) async {
   try {
     final ref = FirebaseStorage.instance.ref()
-      .child("userImages")
-      .child(userID)
-      .child("$userID.png");
+        .child("userImages")
+        .child(userID)
+        .child("$userID.png");
 
     final imageDataInBytes = await ref.getData(1024 * 1024);
+
     if (imageDataInBytes != null) {
       AppConstants.currentUser.displayImage = MemoryImage(imageDataInBytes);
+      print("Image successfully fetched for user: $userID");
+    } else {
+      print("Image is null, might not exist in Firebase Storage.");
     }
   } catch (e) {
-    print("Error fetching image: $e"); // Log error instead of crashing
+    print("Error fetching image: $e");
   }
 }
 
-}
 }
