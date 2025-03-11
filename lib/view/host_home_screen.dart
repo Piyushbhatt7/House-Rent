@@ -17,11 +17,11 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
   int selectedIndex = 0;
 
   final List<String> screenTitles = [
-    'Explore',
-    'Saved',
-    'Trips',
+    'Booking',
+    'My Posting',
     'Inbox',
     'Profile',
+    
   ];
 
   final List<Widget> screens = [
