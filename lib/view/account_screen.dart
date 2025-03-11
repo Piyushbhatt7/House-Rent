@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:house/model/app_constants.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -30,19 +31,17 @@ class _AccountScreenState extends State<AccountScreen> {
 
                   // image
                   
-                  MaterialButton(
-                     onPressed: () {},
-                
-                    child: CircleAvatar(
-                      backgroundColor: Colors.black,
-                      radius: MediaQuery.of(context).size.width / 4.5,
-
-                      child: CircleAvatar(
-                        backgroundImage: AppConstants.currentUser.displayImage,
-                         radius: MediaQuery.of(context).size.width / 4.6,
-                      ),
-                    ),
-                   ),
+                 Obx(() => MaterialButton(
+      onPressed: () {},
+      child: CircleAvatar(
+        backgroundColor: Colors.black,
+        radius: MediaQuery.of(context).size.width / 4.5,
+        child: CircleAvatar(
+          backgroundImage: AppConstants.currentUser.displayImage ?? AssetImage("assets/default_user.png"),
+          radius: MediaQuery.of(context).size.width / 4.6,
+        ),
+      ),
+    )),
 
                    const SizedBox(height: 10.0,),
 
