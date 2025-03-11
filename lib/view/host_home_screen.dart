@@ -4,6 +4,8 @@ import 'package:house/view/guestScreens/explore_screen.dart';
 import 'package:house/view/guestScreens/inbox_screen.dart';
 import 'package:house/view/guestScreens/saved_listings_screen.dart';
 import 'package:house/view/guestScreens/trips_screens.dart';
+import 'package:house/view/hostScreens/booking_screens.dart';
+import 'package:house/view/hostScreens/my_posting_screen.dart';
 
 class HostHomeScreen extends StatefulWidget {
   const HostHomeScreen({super.key});
@@ -25,9 +27,8 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
   ];
 
   final List<Widget> screens = [
-    ExploreScreen(),
-    SavedListingsScreen(),
-    TripsScreens(),
+    BookingScreens(),
+    MyPostingScreen(),
     InboxScreen(),
     AccountScreen(),
   ];
@@ -81,11 +82,10 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>
         [
-          customNavigationBarItem(0, Icons.search_outlined, screenTitles[0]),
-          customNavigationBarItem(1, Icons.favorite_border_outlined, screenTitles[1]),
-          customNavigationBarItem(2, Icons.hotel_outlined, screenTitles[2]),
-          customNavigationBarItem(3, Icons.message_outlined, screenTitles[3]),
-          customNavigationBarItem(4, Icons.person_outlined, screenTitles[4]),// 11:44 - 7
+          customNavigationBarItem(0, Icons.calendar_today_outlined, screenTitles[0]),
+          customNavigationBarItem(1, Icons.home_filled, screenTitles[1]),
+          customNavigationBarItem(3, Icons.message_outlined, screenTitles[2]),
+          customNavigationBarItem(4, Icons.person_outlined, screenTitles[3]),// 11:44 - 7
         ]
         ),
     );
