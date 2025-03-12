@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:house/view/splashscreen.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 const supabaseUrl = 'https://kgyywbichyoiqopyxpgb.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtneXl3YmljaHlvaXFvcHl4cGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE0MzI2NjQsImV4cCI6MjA1NzAwODY2NH0.X5mtQTxEEf8hOJzYLVYa5mJWqExhCXgh1Vzfcqy8f0s';
@@ -25,7 +24,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-       
+       appBarTheme: const AppBarTheme(
+        //iconTheme: IconThemeData(color: Colors.white),
+        color: Colors.black
+       ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: SplashScreen(),
