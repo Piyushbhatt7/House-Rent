@@ -405,9 +405,19 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                   minLines: 1,
 
                 ),
+                ),
+
+                // photos of residencee
+                const Padding(padding: 
+                EdgeInsets.only(top: 20.0),
+                child: Text(
+                  'Photos',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 )
-
-
                   ],
                 ),
                 
