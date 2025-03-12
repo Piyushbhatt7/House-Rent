@@ -331,7 +331,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                 const EdgeInsets.fromLTRB(15, 25, 15, 0),
                 child: Column(
                   children: <Widget>[
-
+                   
+                   // full bathroom
                     AmenitiesUi(
                       type: 'Full', 
                       startValue: _bathrooms!['full']!, 
@@ -347,6 +348,27 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       increasesValue: ()
                       {
                         _bathrooms!['full'] = _bathrooms!['full']! + 1;
+                      }
+                      
+                      ),
+
+
+                      // half bathroom
+                       AmenitiesUi(
+                      type: 'Half', 
+                      startValue: _bathrooms!['half']!, 
+                      decreaseValue: ()
+                      {
+                        _bathrooms!['half'] = _bathrooms!['half']! - 1;
+
+                        if(_bathrooms!['half']! < 0)
+                        {
+                          _bathrooms!['half'] = 0;
+                        }
+                      }, 
+                      increasesValue: ()
+                      {
+                        _bathrooms!['half'] = _bathrooms!['half']! + 1;
                       }
                       
                       )
