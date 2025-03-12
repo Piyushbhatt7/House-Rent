@@ -62,7 +62,32 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
               Form(
                 key: formKey,
-                child: child
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                   
+                   // Listing name
+                    Padding(padding: 
+                    const EdgeInsets.only(top: 1.0),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: "Listing name"
+                      ),
+                      style: const TextStyle(
+                        fontSize: 25.0
+                      ),
+                      controller: _nameTextEditingController,
+                      validator: (textInput) {
+                        if(textInput!.isEmpty)
+                        {
+                          return "please enter a valid name";
+                        }
+                        return null;
+                      },
+                    ),
+                    )
+                  ],
+                )
                 
                 )
             ],
