@@ -266,7 +266,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     }, 
                     increasesValue: ()
                     {
-                      
+                       _beds!['small'] = _beds!['small']! + 1;
                     }
                     ),
 
