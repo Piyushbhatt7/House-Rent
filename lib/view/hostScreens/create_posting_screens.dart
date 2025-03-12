@@ -315,7 +315,23 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                  ),
                  
                 // Bathroomm
-                
+                const Padding(padding: 
+                EdgeInsets.only(top: 20.0),
+                child: Text(
+                  'Bathrooms',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ),
+
+
+                Padding(padding: 
+                const EdgeInsets.fromLTRB(15, 25, 15, 0)
+                )
+
+
                   ],
                 ),
                 
