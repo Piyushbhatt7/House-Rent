@@ -65,7 +65,7 @@ class _AccountScreenState extends State<AccountScreen> {
     }
     else{
         
-      
+        _hostingTitle = 'Become a Host';
     }
     
   }
