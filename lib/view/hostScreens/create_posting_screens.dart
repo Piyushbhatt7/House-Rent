@@ -335,8 +335,19 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     AmenitiesUi(
                       type: 'Full', 
                       startValue: _bathrooms!['full']!, 
-                      decreaseValue: decreaseValue, 
-                      ncreasesValue: increasesValue
+                      decreaseValue: ()
+                      {
+                        _bathrooms!['full'] = _bathrooms!['full']! - 1;
+
+                        if(_bathrooms!['full']! < 0)
+                        {
+                          _bathrooms!['full'] = 0;
+                        }
+                      }, 
+                      increasesValue: ()
+                      {
+                        _bathrooms!['full'] = _bathrooms!['full']! + 1;
+                      }
                       
                       )
                   ],
