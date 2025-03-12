@@ -63,7 +63,25 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
             style: const TextStyle(
               fontSize: 20.0,
             ),
-           )
+           ),
+
+
+           IconButton(onPressed: ()
+           {
+              widget.increasesValue();
+              _valueDigit = _valueDigit! + 1;
+
+              if(_valueDigit! < 0)
+              {
+                _valueDigit = 0;
+              }
+
+              setState(() {
+                
+              });
+           }, 
+           icon: const Icon(Icons.add),
+           ),
 
           ],
          )
