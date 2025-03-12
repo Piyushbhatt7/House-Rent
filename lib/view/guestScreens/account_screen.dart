@@ -180,6 +180,8 @@ class _AccountScreenState extends State<AccountScreen> {
                ),
                 ),
              
+                const SizedBox(height: 10.0,),
+
                // change hosting button
 
                Container(
