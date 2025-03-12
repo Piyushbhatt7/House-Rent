@@ -372,7 +372,38 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       }
                       
                       )
+                  
+                  
+                  
+                  
+                  
                   ],
+                ),
+                ),
+
+                
+                // extra amenities
+
+                Padding(padding: 
+                const EdgeInsets.only(top: 21.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: "Amenities"
+                  ),
+                  style: const TextStyle(
+                    fontSize: 25.0,
+                  ),
+                  controller: _amenitiesTextEditingController,
+                  validator: (text) {
+                    if(text!.isEmpty)
+                    {
+                      return "please enter valid amenities";
+                    }
+                    return null;
+                  },
+                  maxLines: 3,
+                  minLines: 1,
+
                 ),
                 )
 
