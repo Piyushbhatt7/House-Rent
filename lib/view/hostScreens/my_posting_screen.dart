@@ -12,6 +12,10 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 25.0),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(26.0, 0, 26, 26)
+      
+      ),
     );
   }
 }
