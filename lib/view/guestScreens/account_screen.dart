@@ -45,6 +45,9 @@ class _AccountScreenState extends State<AccountScreen> {
     }
 
   }
+
+  init
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
