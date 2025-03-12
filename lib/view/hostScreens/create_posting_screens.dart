@@ -28,6 +28,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     'Studio',
   ];
 
+  String residenceTypeSelected = "";
+
   @override
   Widget build(BuildContext context) {
 
@@ -115,7 +117,12 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                             )
                             );
                       }).toList(),
-                      onChanged: onChanged
+                      onChanged: (valueItem)
+                      {
+                        setState(() {
+                          residenceTypeSelected = valueItem.toString();
+                        });
+                      }
                       ),
                     )
                   ],
