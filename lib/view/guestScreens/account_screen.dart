@@ -204,7 +204,7 @@ class _AccountScreenState extends State<AccountScreen> {
                child: ListTile(
                 contentPadding: const EdgeInsets.all(0.0),
                 leading: Text(
-                  "Personal Information",
+                  _hostingTitle,
                   style: TextStyle(
                     fontSize: 18.5,
                     fontWeight: FontWeight.normal,
