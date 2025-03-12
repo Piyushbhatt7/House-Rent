@@ -59,7 +59,7 @@ class _AccountScreenState extends State<AccountScreen> {
       }
       else{
         
-        
+         _hostingTitle = 'Show my Host Dashboard';
       }
     
     }
