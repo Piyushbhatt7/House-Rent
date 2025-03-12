@@ -17,6 +17,17 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
   TextEditingController _cityTextEditingController = TextEditingController();
   TextEditingController _countryTextEditingController = TextEditingController();
   TextEditingController _amenitiesTextEditingController = TextEditingController();
+
+  final List<String> residenceTypes = [
+    'Detached House',
+    'Villa',
+    'Apartment',
+    'Condo',
+    'Flat',
+    'Town House',
+    'Studio',
+  ];
+  
   @override
   Widget build(BuildContext context) {
 
@@ -85,6 +96,12 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                         return null;
                       },
                     ),
+                    ),
+                
+                    // Slect property type 
+
+                    Padding(padding: 
+                    const EdgeInsets.only(top: 28.0),
                     )
                   ],
                 )
