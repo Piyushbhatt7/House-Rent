@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:house/view/hostScreens/create_posting_screens.dart';
 import 'package:house/view/widgets/posting_list_tile.dart';
 
 class MyPostingScreen extends StatefulWidget {
@@ -17,7 +20,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
         padding: const EdgeInsets.fromLTRB(26.0, 0, 26, 26),
         child: InkResponse(
           onTap: () {
-            
+            Get.to(CreatePostingScreens());
           },
           child: Container(
             decoration: BoxDecoration(
