@@ -228,7 +228,20 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       return null;
                     },
                   ),
+                  ),
+                 
+                  
+                  const Padding(padding: 
+                     EdgeInsets.only(top: 30.0),
+                     child: Text(
+                      'Beds',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                     ),
                   )
+
                   ],
                 )
                 
