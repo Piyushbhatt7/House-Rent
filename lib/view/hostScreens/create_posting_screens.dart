@@ -332,7 +332,13 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                 child: Column(
                   children: <Widget>[
 
-                    
+                    AmenitiesUi(
+                      type: 'Full', 
+                      startValue: _bathrooms!['full']!, 
+                      decreaseValue: decreaseValue, 
+                      ncreasesValue: increasesValue
+                      
+                      )
                   ],
                 ),
                 )
