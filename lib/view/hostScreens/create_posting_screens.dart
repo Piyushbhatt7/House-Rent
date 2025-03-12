@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/view/widgets/amenities_ui.dart';
 
 class CreatePostingScreens extends StatefulWidget {
   const CreatePostingScreens({super.key});
@@ -27,6 +28,10 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     'Town House',
     'Studio',
   ];
+
+  Map<String, int>? _beds;
+  Map<String, int>? _bathrooms;
+  
 
   String residenceTypeSelected = "";
 
@@ -246,7 +251,16 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                  const EdgeInsets.only(top: 21.0, left: 15.0, right: 15.0),
                  child: Column(
                   children: <Widget>[
-
+                  
+                  AmenitiesUi(
+                    type: 'Single', 
+                    startValue: _beds!['small']!, 
+                    decreaseValue: ()
+                    {
+                      _beds!['small'] = _beds!['small']! - 1; // 14:21
+                    }, 
+                    increasesValue: increasesValue
+                    ),
 
                   ],
                  ),

@@ -71,11 +71,6 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
               widget.increasesValue();
               _valueDigit = _valueDigit! + 1;
 
-              if(_valueDigit! < 0)
-              {
-                _valueDigit = 0;
-              }
-
               setState(() {
                 
               });
