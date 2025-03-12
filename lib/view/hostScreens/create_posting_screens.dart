@@ -137,12 +137,12 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     // Price
                   
                   Padding(padding: 
-                  const EdgeInsets.only(top: 20.0),
+                  const EdgeInsets.only(top: 21.0),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
-
-                      // 7:47 - 10
+ 
+                      
                     ],
                   ),
                   ),
