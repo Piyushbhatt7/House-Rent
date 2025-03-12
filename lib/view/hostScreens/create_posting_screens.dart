@@ -29,7 +29,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
         title: Text(
           "Create / Update a Posting",
           style: TextStyle(
-            fontSize: 21
+            fontSize: 21 
           ),
         ),
         actions: [
