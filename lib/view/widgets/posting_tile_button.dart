@@ -12,7 +12,7 @@ class PostingTileButton extends StatelessWidget {
         children: [
           Icon(Icons.add),
           Text(
-            'Create a posting',
+            'Create a listing',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20.0,
