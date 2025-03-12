@@ -247,7 +247,7 @@ class _AccountScreenState extends State<AccountScreen> {
                child: ListTile(
                 contentPadding: const EdgeInsets.all(0.0),
                 leading: Text(
-                  "Personal Information",
+                  "Log Out",
                   style: TextStyle(
                     fontSize: 18.5,
                     fontWeight: FontWeight.normal,
@@ -255,7 +255,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 trailing: Icon(
                   size: 34,
-                  Icons.person_2_sharp,
+                  Icons.login_outlined,
                 ),
                ),
                ),
