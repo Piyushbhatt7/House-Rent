@@ -251,13 +251,52 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                  const EdgeInsets.only(top: 21.0, left: 15.0, right: 15.0),
                  child: Column(
                   children: <Widget>[
-                  
+                  // for single beds
+
                   AmenitiesUi(
                     type: 'Single', 
                     startValue: _beds!['small']!, 
                     decreaseValue: ()
                     {
                       _beds!['small'] = _beds!['small']! - 1; // 14:21
+
+                      if(_beds!['small']! < 0)
+                      {
+                        _beds!['small'] = 0;
+                      }
+                    }, 
+                    increasesValue: ()
+                    {
+                       _beds!['small'] = _beds!['small']! + 1;
+                    }
+                    ),
+
+                    // for double bed
+                    AmenitiesUi(
+                    type: 'Double', 
+                    startValue: _beds!['medium']!, 
+                    decreaseValue: ()
+                    {
+                      _beds!['medium'] = _beds!['medium']! - 1; // 14:21
+
+                      if(_beds!['medium']! < 0)
+                      {
+                        _beds!['medium'] = 0;
+                      }
+                    }, 
+                    increasesValue: ()
+                    {
+                       _beds!['medium'] = _beds!['medium']! + 1;
+                    }
+                    ),
+
+                    // king size bed 
+                    AmenitiesUi(
+                    type: 'King', 
+                    startValue: _beds!['large']!, 
+                    decreaseValue: ()
+                    {
+                      _beds!['large'] = _beds!['small']! - 1; // 14:21
 
                       if(_beds!['small']! < 0)
                       {
