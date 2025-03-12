@@ -142,7 +142,25 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
  
-                      
+                       Expanded(
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                            labelText: "Price"
+                          ),
+                          style: TextStyle(
+                            fontSize: 25.0,
+                          ),
+                          keyboardType: TextInputType.number,
+                          controller: _priceTextEditingController,
+                          validator: (text) {
+                            if(text!.isEmpty)
+                            {
+                              return "please enter a valid price";
+                            }
+                            return null;
+                          },
+                        )
+                       )
                     ],
                   ),
                   ),
