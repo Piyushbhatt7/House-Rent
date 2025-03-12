@@ -46,7 +46,30 @@ class _AccountScreenState extends State<AccountScreen> {
 
   }
 
-  init
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    if(AppConstants.currentUser.isCurrentlyHosting!)
+      {
+         
+      }
+      else{
+        
+        
+      }
+    
+    }
+    else{
+        
+      await  userViewModel.becomeHost(FirebaseAuth.instance.currentUser!.uid);
+
+      AppConstants.currentUser.isCurrentlyHosting = true;
+
+      Get.to(HostHomeScreen());
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
