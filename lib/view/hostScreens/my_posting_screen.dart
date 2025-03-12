@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/view/widgets/posting_tile_button.dart';
 
 class MyPostingScreen extends StatefulWidget {
   const MyPostingScreen({super.key});
@@ -26,7 +27,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
               ),
             ),
             
-            child: ,
+            child: PostingTileButton(),
          
           ),
         ),
