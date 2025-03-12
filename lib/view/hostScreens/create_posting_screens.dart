@@ -243,11 +243,11 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                   ),
 
                  Padding(padding: 
-                 const EdgeInsets.only(top: 21, left: 15.0, right: 15.0),
+                 const EdgeInsets.only(top: 21.0, left: 15.0, right: 15.0),
                  child: Column(
                   children: <Widget>[
 
-                    
+
                   ],
                  ),
                  )
