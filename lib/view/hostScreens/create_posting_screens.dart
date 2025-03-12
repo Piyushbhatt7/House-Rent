@@ -27,7 +27,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     'Town House',
     'Studio',
   ];
-  
+
   @override
   Widget build(BuildContext context) {
 
@@ -102,6 +102,21 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
                     Padding(padding: 
                     const EdgeInsets.only(top: 28.0),
+                    child: DropdownButton(
+                      items: residenceTypes.map((item)
+                      {
+                          return DropdownMenuItem(
+                            value: item,
+                            child: Text(
+                              item,
+                              style: TextStyle(
+                                fontSize: 20.0,
+                              ),
+                            )
+                            );
+                      }).toList(),
+                      onChanged: onChanged
+                      ),
                     )
                   ],
                 )
