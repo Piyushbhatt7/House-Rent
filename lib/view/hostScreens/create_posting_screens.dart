@@ -160,6 +160,18 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                             return null;
                           },
                         )
+                       ),
+
+                       const Padding(padding: 
+                       const EdgeInsets.only(
+                        left: 10.0, bottom: 10.0,
+                       ),
+                       child: Text(
+                        "\$ / night",
+                        style: TextStyle(
+                          fontSize: 18.0,
+                        ),
+                       ),
                        )
                     ],
                   ),
