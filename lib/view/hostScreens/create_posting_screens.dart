@@ -308,16 +308,18 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                        _beds!['large'] = _beds!['large']! + 1;
                     }
                     ),
-
+                    
+                   
                   ],
                  ),
-                 )
+                 ),
                  
-                 
-                  ],
-                )
+                // Bathroomm
                 
-                )
+                  ],
+                ),
+                
+                ),
             ],
           ),
           ),
