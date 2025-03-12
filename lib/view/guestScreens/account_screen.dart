@@ -55,7 +55,7 @@ class _AccountScreenState extends State<AccountScreen> {
     {
       if(AppConstants.currentUser.isCurrentlyHosting!)
       {
-         
+         _hostingTitle = 'Show my Guest Dashboard';
       }
       else{
         
