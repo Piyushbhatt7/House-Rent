@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PostingTileButton extends StatelessWidget {
-  const PostingTileButton({super.key});
+class PostingListTile extends StatelessWidget {
+  const PostingListTile({super.key});
 
   @override
   Widget build(BuildContext context) {
