@@ -29,7 +29,7 @@ class _AccountScreenState extends State<AccountScreen> {
       }
       else{
         
-        AppConstants.currentUser.isCurrentlyHosting = false;
+        AppConstants.currentUser.isCurrentlyHosting = true;
 
         Get.to(HostHomeScreen());
       }
