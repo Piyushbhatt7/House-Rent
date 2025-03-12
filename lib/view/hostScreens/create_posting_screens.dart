@@ -296,16 +296,16 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     startValue: _beds!['large']!, 
                     decreaseValue: ()
                     {
-                      _beds!['large'] = _beds!['small']! - 1; // 14:21
+                      _beds!['large'] = _beds!['large']! - 1; // 14:21
 
-                      if(_beds!['small']! < 0)
+                      if(_beds!['large']! < 0)
                       {
-                        _beds!['small'] = 0;
+                        _beds!['large'] = 0;
                       }
                     }, 
                     increasesValue: ()
                     {
-                       _beds!['small'] = _beds!['small']! + 1;
+                       _beds!['large'] = _beds!['large']! + 1;
                     }
                     ),
 
