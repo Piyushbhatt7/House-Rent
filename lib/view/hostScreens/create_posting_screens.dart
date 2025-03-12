@@ -413,7 +413,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                 child: Text(
                   'Photos',
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 20.0,              // 18:02 - 10
                     fontWeight: FontWeight.bold,
                   ),
                 ),
