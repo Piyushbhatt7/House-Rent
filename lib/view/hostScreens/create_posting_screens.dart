@@ -8,8 +8,12 @@ class CreatePostingScreens extends StatefulWidget {
 }
 
 class _CreatePostingScreensState extends State<CreatePostingScreens> {
+
+  final formKey = GlobalKey<FormState>();
+  TextEditingController _nameTextEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
@@ -44,7 +48,19 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
       body: Center(
         child: SingleChildScrollView(
           child: Padding(padding: 
-          const EdgeInsets.fromLTRB(26, 26, 26, 0)
+          const EdgeInsets.fromLTRB(26, 26, 26, 0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+              Form(
+                key: formKey,
+                child: child
+                
+                )
+            ],
+          ),
           ),
         ),
       ),
