@@ -11,6 +11,12 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
   final formKey = GlobalKey<FormState>();
   TextEditingController _nameTextEditingController = TextEditingController();
+  TextEditingController _priceTextEditingController = TextEditingController();
+  TextEditingController _descriptionTextEditingController = TextEditingController();
+  TextEditingController _addressTextEditingController = TextEditingController();
+  TextEditingController _cityTextEditingController = TextEditingController();
+  TextEditingController _countryTextEditingController = TextEditingController();
+  TextEditingController _amenitiesTextEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
 
