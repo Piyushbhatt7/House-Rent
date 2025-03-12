@@ -45,6 +45,7 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
            {
               widget.decreaseValue();
               _valueDigit = _valueDigit! - 1;
+
               if(_valueDigit! < 0)
               {
                 _valueDigit = 0;
@@ -55,6 +56,13 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
               });
            }, 
            icon: const Icon(Icons.remove),
+           ),
+
+           Text(
+            _valueDigit.toString(),
+            style: const TextStyle(
+              fontSize: 20.0,
+            ),
            )
 
           ],
