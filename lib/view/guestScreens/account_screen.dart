@@ -50,8 +50,10 @@ class _AccountScreenState extends State<AccountScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-
-    if(AppConstants.currentUser.isCurrentlyHosting!)
+    
+     if(AppConstants.currentUser.isHost!)
+    {
+      if(AppConstants.currentUser.isCurrentlyHosting!)
       {
          
       }
@@ -63,12 +65,9 @@ class _AccountScreenState extends State<AccountScreen> {
     }
     else{
         
-      await  userViewModel.becomeHost(FirebaseAuth.instance.currentUser!.uid);
-
-      AppConstants.currentUser.isCurrentlyHosting = true;
-
-      Get.to(HostHomeScreen());
+      
     }
+    
   }
 
   @override
