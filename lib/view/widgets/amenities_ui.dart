@@ -21,9 +21,45 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
+    _valueDigit = widget.startValue;
   }
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+      children: [
+         
+         Text(
+          widget.type,
+          style: const TextStyle(
+            fontSize: 18.0,
+          ),
+         ),
+
+         Row(
+          children: <Widget>[
+           
+           IconButton(onPressed: ()
+           {
+              widget.decreaseValue();
+              _valueDigit = _valueDigit! - 1;
+              if(_valueDigit! < 0)
+              {
+                _valueDigit = 0;
+              }
+
+              setState(() {
+                
+              });
+           }, 
+           icon: const Icon(Icons.remove),
+           )
+
+          ],
+         )
+      ],
+    );
   }
 }
