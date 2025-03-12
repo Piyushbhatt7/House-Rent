@@ -205,7 +205,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 contentPadding: const EdgeInsets.all(0.0),
                 leading: Text(
                   _hostingTitle,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18.5,
                     fontWeight: FontWeight.normal,
                   ),
