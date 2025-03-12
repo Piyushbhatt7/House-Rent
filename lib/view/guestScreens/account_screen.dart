@@ -56,7 +56,7 @@ class _AccountScreenState extends State<AccountScreen> {
       if(AppConstants.currentUser.isCurrentlyHosting!)
       {
          _hostingTitle = 'Show my Guest Dashboard';
-      }
+      } 
       else{
         
          _hostingTitle = 'Show my Host Dashboard';
@@ -202,10 +202,6 @@ class _AccountScreenState extends State<AccountScreen> {
                 onPressed: ()
                {
                   modifyHostingMode();
-
-                  setState(() {
-                    
-                  });
                },
                child: ListTile(
                 contentPadding: const EdgeInsets.all(0.0),
