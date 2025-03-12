@@ -163,20 +163,47 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                        ),
 
                        const Padding(padding: 
-                       const EdgeInsets.only(
+                        EdgeInsets.only(
                         left: 10.0, bottom: 10.0,
                        ),
                        child: Text(
-                        "\$ / night",
+                        "\₹ / night",
                         style: TextStyle(
                           fontSize: 18.0,
                         ),
                        ),
                        )
+                   
+                   
                     ],
                   ),
                   ),
                 
+                  // description
+
+                  Padding(padding: 
+                  const EdgeInsets.only(top: 21.0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: "Description"
+                    ),
+                    style: const TextStyle(
+                      fontSize: 25.0,
+                    ),
+                    controller: _descriptionTextEditingController,
+                    maxLines: 3,
+                    minLines: 1,
+                    validator: (text) {
+                      if(text!.isEmpty)
+                      {
+                        return "please enter a valid description";
+
+                      }
+                      return null;
+                    },
+                  ),
+                  ),
+                  
                   ],
                 )
                 
