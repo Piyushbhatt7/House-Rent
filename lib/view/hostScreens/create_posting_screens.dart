@@ -40,6 +40,15 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
           ),
         ],
       ),
+      
+      body: Center(
+        child: SingleChildScrollView(
+          child: Padding(padding: 
+          const EdgeInsets.fromLTRB(26, 26, 26, 0)
+          ),
+        ),
+      ),
+   
     );
 }
 }
