@@ -23,6 +23,9 @@ class PostingModel
    Map<String, int>? beds;
    Map<String, int>? bathrooms;
 
+   List<Booking>? bookings;
+   List<Review>? review;
+
    PostingModel({this.id = "", this.name = "", this.type = "", this.price = 0, this.description = "", this.address = "", this.city = "", this.country = "", this.host})
    {
      displayImages = [];
