@@ -500,7 +500,6 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       {
                         _selectImageFromGallery(-1);
                       },
-
                       );
                     }
                     return MaterialButton(onPressed: ()
