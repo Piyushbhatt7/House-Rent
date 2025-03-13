@@ -231,7 +231,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                         left: 10.0, bottom: 10.0,
                        ),
                        child: Text(
-                        "\₹ / night",
+                        "\₹ / month",
                         style: TextStyle(
                           fontSize: 18.0,
                         ),
