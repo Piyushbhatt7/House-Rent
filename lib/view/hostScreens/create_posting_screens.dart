@@ -70,6 +70,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     _cityTextEditingController = TextEditingController(text: "");
     _countryTextEditingController = TextEditingController(text: "");
     _amenitiesTextEditingController = TextEditingController(text: "");
+    residenceTypeSelected = residenceTypes.first;
 
     _beds = {
       'small': 0,
@@ -89,7 +90,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    
+
     initializeValues();
   }
 
