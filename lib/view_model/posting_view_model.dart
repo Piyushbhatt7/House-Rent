@@ -6,6 +6,10 @@ class PostingViewModel {
   {
     PostingModel posting  = PostingModel();
 
-    Map<String, dynamic> dataMap = {};
+    Map<String, dynamic> dataMap = 
+    {
+      "address": posting.address,
+      
+    };
   }
 }
