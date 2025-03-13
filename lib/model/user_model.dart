@@ -60,5 +60,13 @@ class UserModel extends ContactModel
     addPostingToMyPostings(PostingModel posting) async
     {
       myPostings!.add(posting);
+
+      List<String> myPostingIDsList = [];
+
+      myPostings!.forEach((element) 
+      {
+        myPostingIDsList.add(element.id!);
+      } 
+      );
     }
 }
