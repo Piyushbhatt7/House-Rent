@@ -155,7 +155,11 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
 
             // if this is new listing or old post to update
-             postingViewModel.saveOrUpdateListing();
+            posting.rating = 3.5;
+            posting.bookings = [];
+            posting.review = [];
+            postingViewModel.saveOrUpdateListing();
+
           }, 
           icon: const Icon(Icons.upload)
           ),
