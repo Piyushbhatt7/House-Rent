@@ -28,6 +28,6 @@ class PostingViewModel {
     DocumentReference ref = await FirebaseFirestore.instance.collection("postings").add(dataMap);
     posting.id = ref.id;
 
-    await AppConstants.currentUser
+    await AppConstants.currentUser.addPostingToMyPostings(posting);
   }
 }
