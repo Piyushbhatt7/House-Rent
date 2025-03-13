@@ -470,6 +470,15 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
                       );
                     }
+                    return MaterialButton(onPressed: ()
+                    {
+
+                    },
+                    child: Image(
+                      image: _imageList![index],
+                      fit: BoxFit.fill,
+                      ),
+                    );
                   }
                   ),
                 )
