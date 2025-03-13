@@ -499,6 +499,9 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       onLongPress: ()
                       {
                         _selectImageFromGallery(-1);
+                        setState(() {
+                          
+                        });
                       },
                       );
                     }
