@@ -426,7 +426,12 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                 child: GridView.builder(
                   shrinkWrap: true,
                   itemCount: _imageList!.length + 1,
-                  gridDelegate: gridDelegate, 
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 25,
+                    crossAxisSpacing: 25,
+                    childAspectRatio: 3 / 2
+                    ), 
                   itemBuilder: itemBuilder
                   ),
                 )
