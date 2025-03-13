@@ -1,0 +1,7 @@
+class PostingViewModel {
+
+  saveOrUpdateListinh () async
+  {
+    
+  }
+}

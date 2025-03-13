@@ -119,7 +119,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
           IconButton(onPressed: ()
           {
 
-          }, icon: const Icon(Icons.upload)
+          }, 
+          icon: const Icon(Icons.upload)
           ),
         ],
       ),
