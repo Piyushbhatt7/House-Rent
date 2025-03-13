@@ -1,9 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/utils.dart';
 import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/host_home_screen.dart';
 import 'package:house/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -136,32 +139,35 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
               return;
             }
             
-            PostingModel posting = PostingModel();
-            posting.name = _nameTextEditingController.text;
-            posting.price = double.parse(_priceTextEditingController.text);
-            posting.description = _descriptionTextEditingController.text;
-            posting.address = _addressTextEditingController.text;
-            posting.city = _cityTextEditingController.text;
-            posting.country = _countryTextEditingController.text;
-            posting.amenities = _amenitiesTextEditingController.text.split(",");
-            posting.type = residenceTypeSelected;
-            posting.beds = _beds;
-            posting.bathrooms = _bathrooms;
-            posting.displayImages = _imageList;
+            
 
-            posting.host = AppConstants.currentUser.createUserFromContact();
+            postingModel.name = _nameTextEditingController.text;
+            postingModel.price = double.parse(_priceTextEditingController.text);
+            postingModel.description = _descriptionTextEditingController.text;
+            postingModel.address = _addressTextEditingController.text;
+            postingModel.city = _cityTextEditingController.text;
+            postingModel.country = _countryTextEditingController.text;
+            postingModel.amenities = _amenitiesTextEditingController.text.split(",");
+            postingModel.type = residenceTypeSelected;
+            postingModel.beds = _beds;
+            postingModel.bathrooms = _bathrooms;
+            postingModel.displayImages = _imageList;
 
-            posting.setImagesNames();
+            postingModel.host = AppConstants.currentUser.createUserFromContact();
+
+            postingModel.setImagesNames();
 
 
             // if this is new listing or old post to update // 11:06
-            posting.rating = 3.5;
-            posting.bookings = [];
-            posting.review = [];
+            postingModel.rating = 3.5;
+            postingModel.bookings = [];
+            postingModel.review = [];
             
           await postingViewModel.addListingInfoToFirestore();
 
           await postingViewModel.addImagesToFirebaseStorage();
+
+          Get.to(HostHomeScreen());
 
           }, 
           icon: const Icon(Icons.upload)

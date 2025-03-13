@@ -36,6 +36,9 @@ class PostingModel
      beds = {};
      bathrooms = {};
      rating = 0; // 11  - 5:00; 
+
+     bookings = [];
+     review = [];
      
    }
 
@@ -49,5 +52,5 @@ class PostingModel
     }
    }
 
-  addImagesToFirebaseStorage() {}
+  //addImagesToFirebaseStorage() {}
 }

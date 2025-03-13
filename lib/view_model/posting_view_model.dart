@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
 
@@ -7,43 +8,45 @@ class PostingViewModel {
 
   addListingInfoToFirestore () async
   {
-    PostingModel posting  = PostingModel();
+    
+
+    postingModel.setImagesNames();
 
     Map<String, dynamic> dataMap = 
     {
-      "address": posting.address,
-      "amenities": posting.amenities,
-      "bathrooms": posting.bathrooms,
-      "description": posting.description,
-      "beds": posting.beds,
-      "city": posting.city,
-      "country": posting.country,
+      "address": postingModel.address,
+      "amenities": postingModel.amenities,
+      "bathrooms": postingModel.bathrooms,
+      "description": postingModel.description,
+      "beds": postingModel.beds,
+      "city": postingModel.city,
+      "country": postingModel.country,
       "hostID": AppConstants.currentUser.id,
-      "imageNames": posting.imageNames,
-      "name": posting.name,
-      "price": posting.price,
+      "imageNames": postingModel.imageNames,
+      "name": postingModel.name,
+      "price": postingModel.price,
       "rating": 3.5,
-      "type": posting.type,
+      "type": postingModel.type,
     };
 
     DocumentReference ref = await FirebaseFirestore.instance.collection("postings").add(dataMap);
-    posting.id = ref.id;
+    postingModel.id = ref.id;
 
-    await AppConstants.currentUser.addPostingToMyPostings(posting);
+    await AppConstants.currentUser.addPostingToMyPostings(postingModel);
   }
 
   addImagesToFirebaseStorage()async
   {
-    PostingModel posting = PostingModel();
+    
 
-    for(int i = 0; i < posting.displayImages!.length; i++)
+    for(int i = 0; i < postingModel.displayImages!.length; i++)
     {
       Reference ref = FirebaseStorage.instance.ref()
       .child("PostingImages")
-      .child(posting.id!)
-      .child(posting.imageNames![i]);
+      .child(postingModel.id!)
+      .child(postingModel.imageNames![i]);
 
-      await ref.putData(posting.displayImages![i].bytes).whenComplete(() {});
+      await ref.putData(postingModel.displayImages![i].bytes).whenComplete(() {});
     }
   }
 }
