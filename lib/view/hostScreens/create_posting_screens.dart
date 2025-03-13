@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:house/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
@@ -43,7 +45,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
      if(imageFilePickedFromGallery != null)
      {
-      
+       MemoryImage newImage = MemoryImage((File(imageFilePickedFromGallery.path)).readAsBytesSync());
      }
   }
 
