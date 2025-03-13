@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house/view/widgets/amenities_ui.dart';
+import 'package:image_picker/image_picker.dart';
 
 class CreatePostingScreens extends StatefulWidget {
   const CreatePostingScreens({super.key});
@@ -35,6 +36,11 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
   
 
   String residenceTypeSelected = "";
+
+  _selectImageFromGallery(int index) async
+  {
+    await ImagePicker().pickImage(source: ImageSource.gallery);
+  }
 
   @override
   Widget build(BuildContext context) {
