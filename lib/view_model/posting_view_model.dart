@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
 
@@ -29,5 +30,20 @@ class PostingViewModel {
     posting.id = ref.id;
 
     await AppConstants.currentUser.addPostingToMyPostings(posting);
+  }
+
+  addImagesToFirebaseStorage()async
+  {
+    PostingModel posting = PostingModel();
+
+    for(int i = 0; i < posting.displayImages!.length; i++)
+    {
+      Reference ref = FirebaseStorage.instance.ref()
+      .child("PostingImages")
+      .child(posting.id!)
+      .child(posting.imageNames![i]);
+
+      await ref.putData(posting.displayImages![i].bytes).whenComplete(() {});
+    }
   }
 }
