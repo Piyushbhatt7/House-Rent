@@ -129,9 +129,12 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
               return;
             }
 
-            if(_imageList!.isEmpty){
+            if(_imageList!.isEmpty)
+            {
               return;
             }
+
+            
              postingViewModel.saveOrUpdateListinh();
           }, 
           icon: const Icon(Icons.upload)
