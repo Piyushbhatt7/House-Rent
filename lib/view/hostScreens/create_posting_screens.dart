@@ -135,7 +135,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
             }
 
             
-             postingViewModel.saveOrUpdateListinh();
+             postingViewModel.saveOrUpdateListing();
           }, 
           icon: const Icon(Icons.upload)
           ),
