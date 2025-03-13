@@ -1,6 +1,6 @@
 class PostingViewModel {
 
-  saveOrUpdateListing () async
+  addListingInfoToFirestore () async
   {
     
   }

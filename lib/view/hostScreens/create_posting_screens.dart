@@ -159,7 +159,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
             posting.bookings = [];
             posting.review = [];
             
-            postingViewModel.saveOrUpdateListing();
+            postingViewModel.addListingInfoToFirestore();
 
           }, 
           icon: const Icon(Icons.upload)
