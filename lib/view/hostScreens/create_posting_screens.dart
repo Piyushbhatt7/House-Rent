@@ -418,7 +418,19 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                ),
+
+
+                Padding(padding: 
+                const EdgeInsets.only(top: 20.0, bottom: 25.0),
+                child: GridView.builder(
+                  gridDelegate: gridDelegate, 
+                  itemBuilder: itemBuilder
+                  ),
                 )
+
+
+
                   ],
                 ),
                 
