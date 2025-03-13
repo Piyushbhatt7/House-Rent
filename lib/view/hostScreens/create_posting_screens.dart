@@ -124,8 +124,12 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
               return;
             }
 
-            if(residenceTypeSelected == null)
+            if(residenceTypeSelected == "")
             {
+              return;
+            }
+
+            if(_imageList!.isEmpty){
               return;
             }
              postingViewModel.saveOrUpdateListinh();
