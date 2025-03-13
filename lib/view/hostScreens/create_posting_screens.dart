@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:house/global.dart';
+import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -133,7 +134,9 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
             {
               return;
             }
-
+            
+            PostingModel posting = PostingModel();
+            posting.name = _nameTextEditingController.text;
             
              postingViewModel.saveOrUpdateListing();
           }, 
