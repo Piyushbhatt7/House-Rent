@@ -432,7 +432,19 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     crossAxisSpacing: 25,
                     childAspectRatio: 3 / 2
                     ), 
-                  itemBuilder: itemBuilder
+                  itemBuilder: (context, index)
+                  {
+                    if(index == _imageList!.length)
+                    {
+                      return IconButton(onPressed: (){}, 
+                      icon: const Icon(Icons.add),
+                      onLongPress: ()
+                      {
+                        _selectImage(-1);
+                      },
+                      );
+                    }
+                  }
                   ),
                 )
 
