@@ -140,6 +140,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
             posting.price = double.parse(_priceTextEditingController.text);
             posting.description = _descriptionTextEditingController.text;
             posting.address = _addressTextEditingController.text;
+            posting.city = _cityTextEditingController.text;
+            posting.country = _countryTextEditingController.text;
             
              postingViewModel.saveOrUpdateListing();
           }, 
