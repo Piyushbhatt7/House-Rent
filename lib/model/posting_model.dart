@@ -30,6 +30,6 @@ class PostingModel
 
      beds = {};
      bathrooms = {};
-     rating = 0;
+     rating = 0; // 11  - 5:00;
    }
 }
