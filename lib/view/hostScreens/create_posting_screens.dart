@@ -39,24 +39,22 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
   String residenceTypeSelected = "";
 
-  _selectImageFromGallery(int index) async
-  {
-    var imageFilePickedFromGallery = await ImagePicker().pickImage(source: ImageSource.gallery);
+  _selectImageFromGallery(int index) async {
+    var imageFilePickedFromGalery =
+    await ImagePicker().pickImage(source: ImageSource.gallery);
 
-     if(imageFilePickedFromGallery != null)
-     {
-       MemoryImage imageFileInBytesForm = MemoryImage((File(imageFilePickedFromGallery.path)).readAsBytesSync());
+    if (imageFilePickedFromGalery != null) {
+      MemoryImage imageFileInBytesForm = MemoryImage(
+          (File(imageFilePickedFromGalery.path)).readAsBytesSync());
 
-       if(index < 0)
-       {
+      if (index < 0) {
         _imageList!.add(imageFileInBytesForm);
-       }
-       else{
+      } else {
         _imageList![index] = imageFileInBytesForm;
-       }
+      }
 
-       setState(() {});
-     }
+      setState(() {});
+    }
   }
 
   initializeValues()
@@ -492,13 +490,13 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                   {
                     if(index == _imageList!.length)
                     {
-                      return IconButton(onPressed: (){}, 
+                      return IconButton(
+                        onPressed: ()
+                        {
+                          _selectImageFromGallery(-1);
+                        }, 
                       icon: const Icon(Icons.add),
-                      onLongPress: ()
-                      {
-                        _selectImageFromGallery(-1);
-                        
-                      },
+                      
                       );
                     }
                     return MaterialButton(onPressed: ()
@@ -512,7 +510,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     );
                   }
                   ),
-                )
+                ),
 
 
 
