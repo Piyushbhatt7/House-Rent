@@ -1,3 +1,4 @@
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
 
 class PostingViewModel {
@@ -9,6 +10,15 @@ class PostingViewModel {
     Map<String, dynamic> dataMap = 
     {
       "address": posting.address,
+      "amenities": posting.amenities,
+      "bathrooms": posting.bathrooms,
+      "description": posting.description,
+      "beds": posting.beds,
+      "city": posting.city,
+      "country": posting.country,
+      "hostID": AppConstants.currentUser.id,
+      "imageNames": posting.imageNames,
+      "name": posting.name,
       
     };
   }
