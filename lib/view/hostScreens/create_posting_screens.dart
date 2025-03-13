@@ -32,7 +32,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     'Detached House',
     'Villa',
     'Apartment',
-    'Condo',
+    'Room',
     'Flat',
     'Town House',
     'Studio',
