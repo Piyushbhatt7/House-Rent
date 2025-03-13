@@ -45,7 +45,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
      if(imageFilePickedFromGallery != null)
      {
-       MemoryImage newImage = MemoryImage((File(imageFilePickedFromGallery.path)).readAsBytesSync());
+       MemoryImage ImageFileInBytesForm = MemoryImage((File(imageFilePickedFromGallery.path)).readAsBytesSync());
      }
   }
 
