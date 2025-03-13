@@ -321,7 +321,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                   Padding(padding: 
                   const EdgeInsets.all(21.0),
                   child: TextFormField(
-                    enabled: false,
+                    enabled: true,
                     decoration: const InputDecoration(
                       labelText: "Address",
                     ),
