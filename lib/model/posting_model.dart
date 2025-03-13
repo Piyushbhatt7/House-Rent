@@ -48,4 +48,6 @@ class PostingModel
       imageNames!.add("image${i}.png");
     }
    }
+
+  addImagesToFirebaseStorage() {}
 }
