@@ -19,6 +19,7 @@ class UserModel extends ContactModel
 
   List<BookingModel>? bookings;
   List<ReviewModel>? review;
+
   List<PostingModel>? myPostings;
 
   UserModel({
@@ -58,6 +59,6 @@ class UserModel extends ContactModel
 
     addPostingToMyPostings(PostingModel posting) async
     {
-
+      myPostings!.add(posting);
     }
 }
