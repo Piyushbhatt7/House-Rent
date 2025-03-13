@@ -39,7 +39,9 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
   _selectImageFromGallery(int index) async
   {
-    var imageFile = await ImagePicker().pickImage(source: ImageSource.gallery);
+    var imageFilePickedFromGallery = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+
   }
 
   @override
