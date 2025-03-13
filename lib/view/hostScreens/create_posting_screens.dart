@@ -55,9 +55,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
         _imageList![index] = imageFileInBytesForm;
        }
 
-       setState(() {
-         
-       });
+       setState(() {});
      }
   }
 
@@ -483,13 +481,13 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                 const EdgeInsets.only(top: 20.0, bottom: 25.0),
                 child: GridView.builder(
                   shrinkWrap: true,
-                  itemCount: _imageList!.length + 1,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 25,
                     crossAxisSpacing: 25,
                     childAspectRatio: 3 / 2
                     ), 
+                  itemCount: _imageList!.length + 1,
                   itemBuilder: (context, index)
                   {
                     if(index == _imageList!.length)
@@ -499,9 +497,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       onLongPress: ()
                       {
                         _selectImageFromGallery(-1);
-                        setState(() {
-                          
-                        });
+                        
                       },
                       );
                     }
