@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:house/model/booking_model.dart';
 import 'package:house/model/contact_model.dart';
+import 'package:house/model/posting_model.dart';
+import 'package:house/model/review_model.dart';
 
 class UserModel extends ContactModel
 {
@@ -12,6 +15,11 @@ class UserModel extends ContactModel
   bool? isHost;
   bool? isCurrentlyHosting;
   DocumentSnapshot? snapshot;
+  
+
+  List<BookingModel>? bookings;
+  List<ReviewModel>? review;
+  List<PostingModel>? myPostings;
 
   UserModel({
     String id = "",
@@ -48,5 +56,8 @@ class UserModel extends ContactModel
       await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
     }
 
-    
+    addPostingToMyPostings(PostingModel posting) async
+    {
+
+    }
 }
