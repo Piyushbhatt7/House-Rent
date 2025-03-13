@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:house/model/contact_model.dart';
+
 class PostingModel 
 {
    String? id;
@@ -9,5 +12,11 @@ class PostingModel
    String? city;
    String? country;
    double? rating;
+   
 
+   ContactModel? host;
+
+   List<String>? imageNames;
+   List<MemoryImage>? displayImages;
+   List<String>? amenities;
 }
