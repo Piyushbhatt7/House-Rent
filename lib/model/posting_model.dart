@@ -19,4 +19,7 @@ class PostingModel
    List<String>? imageNames;
    List<MemoryImage>? displayImages;
    List<String>? amenities;
+
+   Map<String, int>? beds;
+   Map<String, int>? bathrooms;
 }
