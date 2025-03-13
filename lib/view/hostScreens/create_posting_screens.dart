@@ -41,7 +41,10 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
   {
     var imageFilePickedFromGallery = await ImagePicker().pickImage(source: ImageSource.gallery);
 
-
+     if(imageFilePickedFromGallery != null)
+     {
+      
+     }
   }
 
   @override
