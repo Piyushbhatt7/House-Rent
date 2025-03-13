@@ -440,8 +440,9 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       icon: const Icon(Icons.add),
                       onLongPress: ()
                       {
-                        _selectImage(-1);
+                        _selectImageFromGallery(-1);
                       },
+
                       );
                     }
                   }
