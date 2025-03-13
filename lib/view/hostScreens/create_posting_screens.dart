@@ -70,6 +70,17 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     _cityTextEditingController = TextEditingController(text: "");
     _countryTextEditingController = TextEditingController(text: "");
     _amenitiesTextEditingController = TextEditingController(text: "");
+
+    _beds = {
+      'small': 0,
+      'medium': 0,
+      'large': 0,
+    };
+
+    _bathrooms = {
+      'full': 0,
+      'half': 0,
+    };
   }
 
   @override
