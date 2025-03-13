@@ -61,6 +61,17 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
      }
   }
 
+  initializeValues()
+  {
+    _nameTextEditingController = TextEditingController(text: "");
+    _priceTextEditingController = TextEditingController(text: "");
+    _descriptionTextEditingController = TextEditingController(text: "");
+    _addressTextEditingController = TextEditingController(text: "");
+    _cityTextEditingController = TextEditingController(text: "");
+    _countryTextEditingController = TextEditingController(text: "");
+    _amenitiesTextEditingController = TextEditingController(text: "");
+  }
+
   @override
   Widget build(BuildContext context) {
 
