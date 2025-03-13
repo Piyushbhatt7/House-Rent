@@ -154,10 +154,11 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
             posting.setImagesNames();
 
 
-            // if this is new listing or old post to update
+            // if this is new listing or old post to update // 11:06
             posting.rating = 3.5;
             posting.bookings = [];
             posting.review = [];
+            
             postingViewModel.saveOrUpdateListing();
 
           }, 
