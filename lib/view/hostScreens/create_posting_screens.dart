@@ -81,6 +81,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
       'full': 0,
       'half': 0,
     };
+
+    _imageList = [];
   }
 
   @override
