@@ -90,6 +90,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     // TODO: implement initState
     super.initState();
     
+    initializeValues();
   }
 
   @override
