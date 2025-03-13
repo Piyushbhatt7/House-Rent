@@ -31,6 +31,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
   Map<String, int>? _beds;
   Map<String, int>? _bathrooms;
+  List<MemoryImage>? _imageList;
   
 
   String residenceTypeSelected = "";
