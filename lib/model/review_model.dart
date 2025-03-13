@@ -6,4 +6,6 @@ class ReviewModel
   String? text;
   double? rating;
   DateTime? dateTime;
+
+  ReviewModel();
 }
