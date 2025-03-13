@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:house/global.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
@@ -147,6 +148,10 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
             posting.beds = _beds;
             posting.bathrooms = _bathrooms;
             posting.displayImages = _imageList;
+
+            posting.host = AppConstants.currentUser.createUserFromContact();
+
+            posting.
             
              postingViewModel.saveOrUpdateListing();
           }, 

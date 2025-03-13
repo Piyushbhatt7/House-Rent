@@ -33,4 +33,14 @@ class PostingModel
      rating = 0; // 11  - 5:00; 
      
    }
+
+   setImagesNames()
+   {
+    imageNames = [];
+
+    for(int i = 0; i < displayImages!.length; i++)
+    {
+      imageNames!.add("image${i}.png");
+    }
+   }
 }
