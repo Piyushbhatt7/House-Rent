@@ -67,7 +67,10 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
   initializeValues()
   {
-    _nameTextEditingController = TextEditingController(text: "");
+
+    if(widget.posting == null)
+    {
+      _nameTextEditingController = TextEditingController(text: "");
     _priceTextEditingController = TextEditingController(text: "");
     _descriptionTextEditingController = TextEditingController(text: "");
     _addressTextEditingController = TextEditingController(text: "");
@@ -88,6 +91,21 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     };
 
     _imageList = [];
+    }
+    else
+    {
+      _nameTextEditingController = TextEditingController(text: widget.posting!.name);
+      _priceTextEditingController = TextEditingController(text: widget.posting!.price.toString());
+      _descriptionTextEditingController = TextEditingController(text: widget.posting!.description);
+      _addressTextEditingController = TextEditingController(text: widget.posting!.address);
+      _cityTextEditingController = TextEditingController(text: widget.posting!.city);
+      _countryTextEditingController = TextEditingController(text: widget.posting!.country);
+      _amenitiesTextEditingController = TextEditingController(text: widget.posting!.getAmenitiesString());
+      _beds = widget.posting!.beds;
+      _bathrooms = widget.posting!.bathrooms;
+      _imageList = widget.posting!.displayImages;
+      residenceTypeSelected = widget.posting!.type!;
+    }
   }
 
   @override
