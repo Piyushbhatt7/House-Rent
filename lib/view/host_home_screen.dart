@@ -7,7 +7,7 @@ import 'package:house/view/hostScreens/my_posting_screen.dart';
 class HostHomeScreen extends StatefulWidget {
 
   int? index;
-  HostHomeScreen({super.key, this.index}); 
+  HostHomeScreen({super.key, this.index});  
 
   @override 
   State<HostHomeScreen> createState() => _HostHomeScreenState();
