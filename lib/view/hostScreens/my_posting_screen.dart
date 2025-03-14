@@ -16,10 +16,14 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 25.0),
-      child: Padding(
+      child: ListView.builder(
+        itemBuilder: (context, index)
+        {
+          return  Padding(
         padding: const EdgeInsets.fromLTRB(26.0, 0, 26, 26),
         child: InkResponse(
-          onTap: () {
+          onTap: ()
+           {
             Get.to(CreatePostingScreens());
           },
           child: Container(
@@ -35,7 +39,10 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
           ),
         ),
       
-      ),
+      );
+
+        }
+        ),
     );
   }
 }
