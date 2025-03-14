@@ -17,6 +17,14 @@ class _PostingListingingTileUIState extends State<PostingListingingTileUI>
   PostingModel? posting;
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    posting = widget.posting;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container();
   }
