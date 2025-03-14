@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/view/hostScreens/create_posting_screens.dart';
-import 'package:house/view/widgets/posting_list_tile.dart';
+import 'package:house/view/widgets/posting_list_tile_button.dart';
 
 class MyPostingScreen extends StatefulWidget {
   const MyPostingScreen({super.key});
@@ -39,7 +39,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
               ),
             ),
             
-            child: index == AppConstants.currentUser.myPostings!.length ? PostingListTile() : ,    
+            child: index == AppConstants.currentUser.myPostings!.length ? PostingListTileButton() : ,    
           ),
         ),
       
