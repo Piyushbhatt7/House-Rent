@@ -53,7 +53,7 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        flexibleSpace: Container(
+        flexibleSpace: Container( 
            decoration: BoxDecoration(
         gradient: LinearGradient(
         colors: [
