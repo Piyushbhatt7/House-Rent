@@ -108,5 +108,7 @@ class PostingModel
     }
 
     String amenitiesString = amenities.toString();
+
+    return amenitiesString.substring(1, amenitiesString.length - 1);
   }
 }

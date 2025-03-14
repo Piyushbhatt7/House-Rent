@@ -183,13 +183,23 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
 
             // if this is new listing or old post to update // 11:06
-            postingModel.rating = 3.5;
-            postingModel.bookings = [];
-            postingModel.review = [];
-            
-          await postingViewModel.addListingInfoToFirestore();
 
-          await postingViewModel.addImagesToFirebaseStorage();
+            if(widget.posting == null)
+            {
+              postingModel.rating = 3.5;
+              postingModel.bookings = [];
+              postingModel.review = [];
+            
+              await postingViewModel.addListingInfoToFirestore();
+
+              await postingViewModel.addImagesToFirebaseStorage();
+            }
+
+            else
+            {
+
+            }
+            
 
           Get.to(HostHomeScreen());
 
