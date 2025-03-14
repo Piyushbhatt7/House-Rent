@@ -113,6 +113,7 @@ login(email, password) async
 
         await getUserInfoFromFirestore(currentUserID);
         await getImageStorage(currentUserID);
+        await AppConstants.currentUser.getMyPostingsFromFirstore();
         
         Get.snackbar("Logged-In", "you are loggen-in successufully.");
         Get.to(GuestHomeScreen());
