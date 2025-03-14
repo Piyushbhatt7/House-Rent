@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
-import 'package:house/model/posting_model.dart';
+
 
 class PostingViewModel {
 
