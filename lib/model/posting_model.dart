@@ -62,6 +62,6 @@ class PostingModel
 
   getPostingInfoFromSnapshot(DocumentSnapshot snapshot)
   {
-    
+    snapshot['address']
   }
 }
