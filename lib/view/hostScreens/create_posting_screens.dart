@@ -10,8 +10,10 @@ import 'package:house/view/host_home_screen.dart';
 import 'package:house/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
 
-class CreatePostingScreens extends StatefulWidget {
-  const CreatePostingScreens({super.key});
+class CreatePostingScreens extends StatefulWidget 
+{
+  PostingModel? posting;
+   CreatePostingScreens({super.key, this.posting});
 
   @override
   State<CreatePostingScreens> createState() => _CreatePostingScreensState();

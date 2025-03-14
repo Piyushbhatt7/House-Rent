@@ -26,7 +26,9 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
         child: InkResponse(
           onTap: ()
            {
-             Get.to(CreatePostingScreens());
+             Get.to(CreatePostingScreens(
+               
+             ));
           },
           child: Container(
             decoration: BoxDecoration(
