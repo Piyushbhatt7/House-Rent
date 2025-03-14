@@ -54,7 +54,7 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
     return Scaffold(
       appBar:AppBar( 
         flexibleSpace: Container( 
-           decoration: BoxDecoration(
+           decoration: BoxDecoration( 
         gradient: LinearGradient(
         colors: [
         Colors.pinkAccent,
