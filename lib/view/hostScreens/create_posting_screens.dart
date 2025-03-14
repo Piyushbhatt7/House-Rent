@@ -197,7 +197,10 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
             else
             {
-
+              postingModel.rating = widget.posting!.rating;
+              postingModel.bookings = widget.posting!.bookings;
+              postingModel.review = widget.posting!.review;
+              postingModel.id = widget.posting!.id;
             }
             
 
