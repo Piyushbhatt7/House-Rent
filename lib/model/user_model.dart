@@ -82,6 +82,6 @@ class UserModel extends ContactModel
 
     getMyPostingsFromFirstore() async
     {
-      
+      List<String> savedPostingIDs
     }
 }
