@@ -94,7 +94,7 @@ class PostingModel
       .child(imageNames![i])
       .getData(1024 * 1024);
 
-      displayImages.add(MemoryImage(imageData!));
+      displayImages!.add(MemoryImage(imageData!));
     }
   }
 }
