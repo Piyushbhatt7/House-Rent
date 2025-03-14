@@ -75,6 +75,8 @@ class PostingModel
 
     imageNames = List<String>.from(snapshot['imagesNames']) ?? [];
     name = snapshot['names'] ?? "";
-    price = snapshot['price']
+    price = snapshot['price'].toDouble() ?? 0.0;
+    rating = snapshot['rating'].toDouble() ?? 2.5;
+    type = snapshot['type'] ?? "";
   }
 }
