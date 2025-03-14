@@ -39,9 +39,19 @@ class _PostingListingingTileUIState extends State<PostingListingingTileUI>
               fontWeight: FontWeight.bold
             ),
           ),
+          
         ),
-      ),
+        trailing: AspectRatio(
+          aspectRatio: 3 / 2,
+          child: Image(
+            image: posting!.displayImages!.first,
+            fit: BoxFit.fitWidth,
+          
+          ),
+          ),    
       
+      ),
+    
     
     );
   }
