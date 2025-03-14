@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house/view/guestScreens/account_screen.dart';
-import 'package:house/view/guestScreens/explore_screen.dart';
 import 'package:house/view/guestScreens/inbox_screen.dart';
-import 'package:house/view/guestScreens/saved_listings_screen.dart';
-import 'package:house/view/guestScreens/trips_screens.dart';
 import 'package:house/view/hostScreens/booking_screens.dart';
 import 'package:house/view/hostScreens/my_posting_screen.dart';
 
