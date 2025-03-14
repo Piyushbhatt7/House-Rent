@@ -193,6 +193,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
               await postingViewModel.addListingInfoToFirestore();
 
               await postingViewModel.addImagesToFirebaseStorage();
+
+              Get.snackbar("New Listing", "your listing is uploded successufully.");
             }
 
             else
@@ -211,7 +213,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                 }
               }
 
-              
+              await postingViewModel.updatePostingInfoToFirestore();
             }
             
 
