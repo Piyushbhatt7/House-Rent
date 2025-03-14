@@ -26,6 +26,23 @@ class _PostingListingingTileUIState extends State<PostingListingingTileUI>
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: ListTile(
+        leading: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text(
+            posting!.name!,
+            maxLines: 2,
+            style: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold
+            ),
+          ),
+        ),
+      ),
+      
+    
+    );
   }
 }
