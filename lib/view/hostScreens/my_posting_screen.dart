@@ -27,7 +27,8 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
           onTap: ()
            {
              Get.to(CreatePostingScreens(
-               posting: (index == AppConstants.currentUser.myPostings!.length) ? null : AppConstants.currentUser.myPostings![index],
+               posting: (index == AppConstants.currentUser.myPostings!.length) ? null 
+               : AppConstants.currentUser.myPostings![index],
              ));
           },
           child: Container(
