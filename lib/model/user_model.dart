@@ -87,6 +87,9 @@ class UserModel extends ContactModel
       for(String postingIDs in myPostingIDs)
       {
         PostingModel posting = PostingModel(id: postingIDs);
+        await posting.getMyPostingsFromFirstore();
+
+        myPostings!.add(posting);
       }
     }
 }
