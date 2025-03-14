@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/view/hostScreens/create_posting_screens.dart';
 import 'package:house/view/widgets/posting_list_tile.dart';
 
@@ -17,6 +18,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
     return Padding(
       padding: const EdgeInsets.only(top: 25.0),
       child: ListView.builder(
+        itemCount: AppConstants.currentUser.myPostings!.length + 1,
         itemBuilder: (context, index)
         {
           return  Padding(
@@ -34,8 +36,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
               ),
             ),
             
-            child: PostingListTile(),
-         
+            child: PostingListTile(),     
           ),
         ),
       
