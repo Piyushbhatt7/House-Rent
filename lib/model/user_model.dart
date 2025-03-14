@@ -88,6 +88,8 @@ class UserModel extends ContactModel
       {
         PostingModel posting = PostingModel(id: postingIDs);
         await posting.getMyPostingsFromFirstore();
+        
+        await posting.getAllImagesFromStorage();
 
         myPostings!.add(posting);
       }
