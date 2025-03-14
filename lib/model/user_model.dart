@@ -83,5 +83,10 @@ class UserModel extends ContactModel
     getMyPostingsFromFirstore() async
     {
       List<String> myPostingIDs = List<String>.from(snapshot!["myPostingIDs"]) ?? [];
+
+      for(String postingIDs in myPostingIDs)
+      {
+        PostingModel posting = PostingModel(id: postingIDs);
+      }
     }
 }
