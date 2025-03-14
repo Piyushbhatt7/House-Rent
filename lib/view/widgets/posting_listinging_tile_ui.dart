@@ -35,7 +35,7 @@ class _PostingListingingTileUIState extends State<PostingListingingTileUI>
             posting!.name!,
             maxLines: 2,
             style: const TextStyle(
-              fontSize: 15,
+              fontSize: 12,
               fontWeight: FontWeight.bold
             ),
           ),
