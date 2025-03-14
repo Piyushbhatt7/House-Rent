@@ -69,5 +69,12 @@ class PostingModel
     city = snapshot['city'] ?? "";
     country = snapshot['country'] ?? "";
     description = snapshot['description'] ?? "";
+
+    String hostID = snapshot['hostID'] ?? "";
+    host = ContactModel(id: hostID);
+
+    imageNames = List<String>.from(snapshot['imagesNames']) ?? [];
+    name = snapshot['names'] ?? "";
+    price = snapshot['price']
   }
 }
