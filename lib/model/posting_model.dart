@@ -1,4 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:house/model/booking_model.dart';
 import 'package:house/model/contact_model.dart';
@@ -86,7 +88,11 @@ class PostingModel
 
     for(int i = 0; i < imageNames!.length; i++)
     {
-      
+      final imageData = await FirebaseStorage.instance.ref()
+      .child("postingsImages")
+      .child(id!)
+      .child(imageNames![i])
+      .getData(1024 * 1024);
     }
   }
 }
