@@ -68,7 +68,7 @@ class UserModel extends ContactModel
 
       List<String> myPostingIDsList = [];
 
-      myPostings!.forEach((element) 
+      myPostings!.forEach((element)  // 12 - 0:00
       {
         myPostingIDsList.add(element.id!);
       } 
@@ -78,5 +78,10 @@ class UserModel extends ContactModel
         {
           'myPostingsIDs' : myPostingIDsList,
       });
+    }
+
+    getMyPostingsFromFirstore() async
+    {
+      
     }
 }
