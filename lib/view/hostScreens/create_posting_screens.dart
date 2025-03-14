@@ -1,8 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/utils.dart';
 import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
@@ -31,6 +29,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
   TextEditingController _amenitiesTextEditingController = TextEditingController();
 
   final List<String> residenceTypes = [
+
     'Detached House',
     'Villa',
     'Apartment',
@@ -38,6 +37,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     'Flat',
     'Town House',
     'Studio',
+    
   ];
 
   Map<String, int>? _beds;
@@ -52,8 +52,9 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
     await ImagePicker().pickImage(source: ImageSource.gallery);
 
     if (imageFilePickedFromGalery != null) {
+
       MemoryImage imageFileInBytesForm = MemoryImage(
-          (File(imageFilePickedFromGalery.path)).readAsBytesSync());
+      (File(imageFilePickedFromGalery.path)).readAsBytesSync());
 
       if (index < 0) {
         _imageList!.add(imageFileInBytesForm);
@@ -70,7 +71,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
     if(widget.posting == null)
     {
-      _nameTextEditingController = TextEditingController(text: "");
+
+    _nameTextEditingController = TextEditingController(text: "");
     _priceTextEditingController = TextEditingController(text: "");
     _descriptionTextEditingController = TextEditingController(text: "");
     _addressTextEditingController = TextEditingController(text: "");
@@ -219,7 +221,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
             }
             
 
-          Get.to(HostHomeScreen());
+          Get.to(HostHomeScreen(index: 1,)); 
 
           }, 
           icon: const Icon(Icons.upload)

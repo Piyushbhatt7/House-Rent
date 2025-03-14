@@ -5,7 +5,9 @@ import 'package:house/view/hostScreens/booking_screens.dart';
 import 'package:house/view/hostScreens/my_posting_screen.dart';
 
 class HostHomeScreen extends StatefulWidget {
-  const HostHomeScreen({super.key});
+
+  int? index;
+  HostHomeScreen({super.key, this.index});
 
   @override
   State<HostHomeScreen> createState() => _HostHomeScreenState();
@@ -37,6 +39,14 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
       activeIcon: Icon(iconData, color: Colors.blueAccent,),
       label: title,
       );
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    selectedIndex = widget.index ?? 3;
   }
 
   @override

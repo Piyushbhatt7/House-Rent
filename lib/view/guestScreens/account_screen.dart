@@ -37,7 +37,7 @@ class _AccountScreenState extends State<AccountScreen> {
     }
     else{
         
-      await  userViewModel.becomeHost(FirebaseAuth.instance.currentUser!.uid);
+      await userViewModel.becomeHost(FirebaseAuth.instance.currentUser!.uid);
 
       AppConstants.currentUser.isCurrentlyHosting = true;
 
