@@ -82,6 +82,6 @@ class UserModel extends ContactModel
 
     getMyPostingsFromFirstore() async
     {
-      List<String> savedPostingIDs
+      List<String> myPostingIDs = List<String>.from(snapShot)
     }
 }
