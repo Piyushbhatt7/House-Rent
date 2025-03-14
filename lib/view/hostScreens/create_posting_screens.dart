@@ -106,6 +106,10 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
       _imageList = widget.posting!.displayImages;
       residenceTypeSelected = widget.posting!.type!;
     }
+
+    setState(() {
+      
+    });
   }
 
   @override

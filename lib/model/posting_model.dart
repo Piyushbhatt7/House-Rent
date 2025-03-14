@@ -99,4 +99,14 @@ class PostingModel
 
     return displayImages;
   }
+
+  getAmenitiesString ()
+  {
+    if(amenities!.isEmpty)
+    {
+      return "";
+    }
+
+    String amenitiesString = amenities.toString();
+  }
 }
