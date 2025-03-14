@@ -79,4 +79,14 @@ class PostingModel
     rating = snapshot['rating'].toDouble() ?? 2.5;
     type = snapshot['type'] ?? "";
   }
+
+  getAllImagesFromStorage() async
+  {
+    displayImages = [];
+
+    for(int i = 0; i < imageNames!.length; i++)
+    {
+      
+    }
+  }
 }
