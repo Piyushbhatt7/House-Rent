@@ -12,7 +12,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   TextEditingController controllerSearch = TextEditingController();
   Stream stream = FirebaseFirestore.instance.collection('postings').snapshots();
-  String _searhType = "";
+  String searhType = "";
+
+  bool isNameButtonSelected = false;
+  bool isCityButtonSelected = false;
+  bool isTypeSelected = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
