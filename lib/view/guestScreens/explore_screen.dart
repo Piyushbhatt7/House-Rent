@@ -16,7 +16,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   bool isNameButtonSelected = false;
   bool isCityButtonSelected = false;
-  bool isTypeSelected = false;
+  bool isTypeButtonSelected = false;
 
   searchByField()
   {
@@ -25,7 +25,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   pressSerachByButton(String searchTypeStr, bool isNameButtonSelectedB, bool isCityButtonSelectedB, bool isTypeButtonSelectedB)
   {
-
+    searhType = searchTypeStr;
+    isNameButtonSelected = isNameButtonSelectedB;
+    isCityButtonSelected = isCityButtonSelectedB;
+    isTypeButtonSelected = isTypeButtonSelectedB;
   }
 
 
