@@ -1,3 +1,4 @@
+import 'package:custom_rating_bar/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:house/model/posting_model.dart';
 
@@ -73,7 +74,13 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
           Row(
             children: [
 
-              
+              RatingBar.readOnly(
+                size: 28.0,
+                maxRating: 5,
+                initialRating: posting.,
+                filledIcon: filledIcon, 
+                emptyIcon: emptyIcon
+                )
             ],
           )
       ],
