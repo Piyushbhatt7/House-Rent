@@ -120,7 +120,30 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   
                 ],
               ),
+            ),
+         
+          // display listing
+
+          StreamBuilder(
+            stream: stream, 
+            builder: (context, snapShots)
+            {
+              if(snapShots.hasData)
+              {
+                return GridView.builder(
+                  gridDelegate: gridDelegate, 
+                  itemBuilder: itemBuilder
+                  );
+              }
+
+              else{
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            }
             )
+         
           ],
         ),
       ),
