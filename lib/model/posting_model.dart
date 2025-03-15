@@ -137,7 +137,7 @@ class PostingModel
     return amenitiesString.substring(1, amenitiesString.length - 1);
   }
 
-  getCurrentRating()
+  double getCurrentRating()
   {
     if(review!.length == 0)
     {
