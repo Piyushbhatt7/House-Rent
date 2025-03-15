@@ -116,26 +116,29 @@ class PostingModel
 }
 
 
-  getFirstImageFromStorage() async {
-  if (displayImages!.isNotEmpty) {
+  Future<ImageProvider?> getFirstImageFromStorage() async {
+  if (displayImages != null && displayImages!.isNotEmpty) {
     return displayImages!.first;
   }
-
+ 
   if (imageNames == null || imageNames!.isEmpty) {
-    print("No images found in imageNames list.");
+    print("No image names found.");
     return null;
   }
 
   try {
-    String imagePath = "postingImages/$id/${imageNames!.first}";
-    print("Fetching from path: $imagePath"); // Debugging
+    final imageRef = FirebaseStorage.instance
+        .ref()
+        .child("postingImages")
+        .child(id!) // Ensure this matches the folder name
+        .child(imageNames!.first); // Get the first image name
 
-    final imageData = await FirebaseStorage.instance.ref(imagePath).getData(1024 * 1024);
+    final imageData = await imageRef.getData(1024 * 1024);
 
     if (imageData != null) {
-      MemoryImage image = MemoryImage(imageData);
-      displayImages!.add(image);
-      return image;
+      displayImages ??= [];
+      displayImages!.add(MemoryImage(imageData));
+      return MemoryImage(imageData);
     }
   } catch (e) {
     print("Error fetching image: $e");
