@@ -20,7 +20,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   searchByField()
   {
-    
+
   }
 
 
@@ -32,6 +32,31 @@ class _ExploreScreenState extends State<ExploreScreen> {
         child: Column(
           children: [
 
+            // searchBar
+
+            Padding(
+              padding: EdgeInsets.only(top: 0, bottom: 0),
+              child: TextField(
+                decoration: const InputDecoration(
+                  hintText: 'Search',
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.grey,
+                      width: 20.0,
+                    ),
+                  ),
+
+                  contentPadding: EdgeInsets.all(5.0)
+                ),
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.black,
+                ),
+                controller: controllerSearch,
+                onEditingComplete: searchByField,
+              ),
+            )
           ],
         ),
       ),
