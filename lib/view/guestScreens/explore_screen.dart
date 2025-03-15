@@ -158,7 +158,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       child: PostingGridTileUi(
                         posting: cPosting,
                       ),
-                     )
+                     );
                   }
                   );
               }
