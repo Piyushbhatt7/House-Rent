@@ -131,7 +131,15 @@ class _ExploreScreenState extends State<ExploreScreen> {
               if(snapShots.hasData)
               {
                 return GridView.builder(
-                  gridDelegate: gridDelegate, 
+                  physics: const ScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: snapShots.data.docs.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 12,
+                    mainAxisSpacing: 15,
+                    childAspectRatio: 3 / 4,
+                    ), 
                   itemBuilder: itemBuilder
                   );
               }
