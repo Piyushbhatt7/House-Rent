@@ -15,9 +15,9 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
   
   PostingModel? posting;
 
-  updateUI()
+  updateUI() async
   {
-     posting!.getFirstImageFromStorage();
+    await posting!.getFirstImageFromStorage();
   }
   @override
   void initState() {
@@ -26,9 +26,24 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
 
     posting =  widget.posting;
 
+    updateUI();
+
   }
   @override
-  Widget build(BuildContext context) {
-    return Container();
+  Widget build(BuildContext context) 
+  {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+
+        AspectRatio(
+          aspectRatio: 3 / 2,
+          child: (posting!.displayImages!.isEmpty) 
+          ? Container() 
+          : Container(decoration: BoxDecoration(image: DecorationImage(image: posting!.displayImages!.first, fit: BoxFit.fill)),),
+          )
+      ],
+    );
   }
 }
