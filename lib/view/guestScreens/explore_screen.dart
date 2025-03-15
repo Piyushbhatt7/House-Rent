@@ -148,6 +148,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
                      PostingModel cPosting  = PostingModel(id: snapshot.id);
 
                      cPosting.getPostingInfoFromSnapshot(snapshot);
+
+                     return InkResponse(
+                      enableFeedback: true,
+                      child: ,
+                     )
                   }
                   );
               }
