@@ -19,6 +19,10 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
     // TODO: implement initState
     super.initState();
 
+    posting =  widget.posting;
+
+    
+
   }
   @override
   Widget build(BuildContext context) {

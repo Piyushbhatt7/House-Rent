@@ -41,7 +41,7 @@ class PostingModel
 
      bookings = [];
      review = [];
-     
+       // 14 - 11:58
    }
 
    setImagesNames()
