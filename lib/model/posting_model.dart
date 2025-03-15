@@ -116,7 +116,7 @@ class PostingModel
 }
 
 
-  Future<ImageProvider?> getFirstImageFromStorage() async {
+ getFirstImageFromStorage() async {
   if (displayImages != null && displayImages!.isNotEmpty) {
     return displayImages!.first;
   }
