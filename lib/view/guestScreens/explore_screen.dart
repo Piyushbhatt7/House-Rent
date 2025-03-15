@@ -76,7 +76,48 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                 children: [
 
+                  MaterialButton(onPressed: ()
+                  {
+                    pressSerachByButton("name", true, false, false);
+                  },
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  color: isNameButtonSelected ? Colors.pinkAccent : Colors.white,
+                  child: const Text("Name"),
+                  ),
 
+                  const SizedBox(width: 6.0,),
+
+                  MaterialButton(onPressed: ()
+                  {
+                    pressSerachByButton("city", false, true, false);
+                  },
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  color: isNameButtonSelected ? Colors.pinkAccent : Colors.white,
+                  child: const Text("City"),
+                  ),
+
+                   const SizedBox(width: 6.0,),
+
+                  MaterialButton(onPressed: ()
+                  {
+                    pressSerachByButton("type", false, false, true);
+                  },
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  color: isNameButtonSelected ? Colors.pinkAccent : Colors.white,
+                  child: const Text("Type"),
+                  ),
+
+                   const SizedBox(width: 6.0,),
+
+                  MaterialButton(onPressed: ()
+                  {
+                    pressSerachByButton("", false, false, false);
+                  },
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  color: isNameButtonSelected ? Colors.pinkAccent : Colors.white,
+                  child: const Text("Clear"),
+                  ),
+                  
                 ],
               ),
             )
