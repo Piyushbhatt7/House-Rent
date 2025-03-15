@@ -61,25 +61,29 @@ class PostingModel
     getPostingInfoFromSnapshot(snapshot);
   }
 
-  getPostingInfoFromSnapshot(DocumentSnapshot snapshot)
-  {
-    address = snapshot['address'] ?? "";
-    amenities = List<String>.from(snapshot['amenities']) ?? [];
-    bathrooms = Map<String,int>.from(snapshot['bathrooms']) ?? {};
-    beds = Map<String,int>.from(snapshot['beds']) ?? {};
-    city = snapshot['city'] ?? "";
-    country = snapshot['country'] ?? "";
-    description = snapshot['description'] ?? "";
+  getPostingInfoFromSnapshot(DocumentSnapshot snapshot) {
+  Map<String, dynamic>? data = snapshot.data() as Map<String, dynamic>?;
 
-    String hostID = snapshot['hostID'] ?? "";
+  if (data != null) {
+    address = data['address'] ?? "";
+    amenities = data.containsKey('amenities') ? List<String>.from(data['amenities']) : [];
+    bathrooms = data.containsKey('bathrooms') ? Map<String, int>.from(data['bathrooms']) : {};
+    beds = data.containsKey('beds') ? Map<String, int>.from(data['beds']) : {};
+    city = data['city'] ?? "";
+    country = data['country'] ?? "";
+    description = data['description'] ?? "";
+
+    String hostID = data['hostID'] ?? "";
     host = ContactModel(id: hostID);
 
-    imageNames = List<String>.from(snapshot['imagesNames']) ?? [];
-    name = snapshot['names'] ?? "";
-    price = snapshot['price'].toDouble() ?? 0.0;
-    rating = snapshot['rating'].toDouble() ?? 2.5;
-    type = snapshot['type'] ?? "";
+    imageNames = data.containsKey('imagesNames') ? List<String>.from(data['imagesNames']) : [];
+    name = data['names'] ?? "";
+    price = data.containsKey('price') ? data['price'].toDouble() : 0.0;
+    rating = data.containsKey('rating') ? data['rating'].toDouble() : 2.5;
+    type = data['type'] ?? "";
   }
+}
+
 
   getAllImagesFromStorage() async
   {
@@ -88,7 +92,7 @@ class PostingModel
     for(int i = 0; i < imageNames!.length; i++)
     {
       final imageData = await FirebaseStorage.instance.ref()
-      .child("postingsImages")
+      .child("postingImages")
       .child(id!)
       .child(imageNames![i])
       .getData(1024 * 1024);
@@ -107,14 +111,17 @@ class PostingModel
     }
 
     final imageData = await FirebaseStorage.instance.ref()
-    .child("postingImages")
-    .child(id!)
-    .child(imageNames!.first)
-    .getData(1024 * 1024);
+      .child("postingImages")
+      .child(id!)
+      .child(imageNames != null && imageNames!.isNotEmpty ? imageNames!.first : "")
+      .getData(1024*1024);
 
-    displayImages!.add(MemoryImage(imageData!));
+     if (imageData != null) {
+      displayImages!.add(MemoryImage(imageData));
+    }
 
-    return displayImages!.first;
+
+    return displayImages!.isNotEmpty ? displayImages!.first : null;
    
   }
 
