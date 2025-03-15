@@ -119,19 +119,19 @@ class PostingModel
   Future<ImageProvider?> getFirstImageFromStorage() async {
   if (displayImages != null && displayImages!.isNotEmpty) {
     return displayImages!.first;
-  } 
-  
-  if (imageNames == null || imageNames!.isEmpty) {   
+  }
+
+  if (imageNames == null || imageNames!.isEmpty) {
     print("No image names found.");
     return null;
-  }  
-   
+  }
+
   try {
     final imageRef = FirebaseStorage.instance
         .ref()
         .child("postingImages")
-        .child(id!) // Ensure this matches the folder name
-        .child(imageNames!.first); // Get the first image name
+        .child(id!) 
+        .child(imageNames!.first); // First image
 
     final imageData = await imageRef.getData(1024 * 1024);
 
@@ -146,7 +146,6 @@ class PostingModel
 
   return null;
 }
-
 
 
   getAmenitiesString ()
