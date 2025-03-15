@@ -147,6 +147,21 @@ class PostingModel
   return null;
 }
 
+Future<void> listFiles() async {
+  final storageRef = FirebaseStorage.instance.ref().child('postingImages');
+
+  final ListResult result = await storageRef.listAll();
+  for (var folderRef in result.prefixes) {
+    print('Folder found: ${folderRef.name}');
+    
+    final ListResult images = await folderRef.listAll();
+    for (var imageRef in images.items) {
+      print('Image found: ${imageRef.fullPath}');
+    }
+  }
+}
+
+
 
   getAmenitiesString ()
   {
