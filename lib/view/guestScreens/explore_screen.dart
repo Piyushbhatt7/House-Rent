@@ -18,11 +18,23 @@ class _ExploreScreenState extends State<ExploreScreen> {
   bool isCityButtonSelected = false;
   bool isTypeSelected = false;
 
+  searchByField()
+  {
+    
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(25, 15, 20, 0)
-      )
+      padding: const EdgeInsets.fromLTRB(25, 15, 20, 0),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+
+          ],
+        ),
+      ),
+      );
   }
 }
