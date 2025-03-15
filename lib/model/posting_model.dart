@@ -117,16 +117,15 @@ class PostingModel
   }
 
   if (imageNames == null || imageNames!.isEmpty) {
-    print("No image names found.");
+    print("No images found in imageNames list.");
     return null;
   }
 
   try {
-    final imageData = await FirebaseStorage.instance.ref()
-        .child("postingImages")
-        .child(id!)
-        .child(imageNames!.first)
-        .getData(1024 * 1024);
+    String imagePath = "postingImages/$id/${imageNames!.first}";
+    print("Fetching from path: $imagePath"); // Debugging
+
+    final imageData = await FirebaseStorage.instance.ref(imagePath).getData(1024 * 1024);
 
     if (imageData != null) {
       MemoryImage image = MemoryImage(imageData);
@@ -134,11 +133,12 @@ class PostingModel
       return image;
     }
   } catch (e) {
-    print("Error loading first image: $e");
+    print("Error fetching image: $e");
   }
 
   return null;
 }
+
 
 
   getAmenitiesString ()
