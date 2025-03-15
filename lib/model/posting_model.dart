@@ -119,7 +119,7 @@ class PostingModel
   Future<ImageProvider?> getFirstImageFromStorage() async {
   if (displayImages != null && displayImages!.isNotEmpty) {
     return displayImages!.first;
-  }
+  } 
   
   if (imageNames == null || imageNames!.isEmpty) {   
     print("No image names found.");
