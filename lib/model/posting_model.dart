@@ -44,16 +44,21 @@ class PostingModel
        // 14 - 11:58
    }
 
-   setImagesNames()
-   {
-    imageNames = [];
+   setImagesNames() {
+  imageNames = [];
 
-    for(int i = 0; i < displayImages!.length; i++)
-    {
-      imageNames!.add("image${i}.png");
-    }
-   }
+  if (displayImages == null || displayImages!.isEmpty) {
+    print("displayImages is empty. No images to set.");
+    return;
+  }
 
+  for (int i = 0; i < displayImages!.length; i++) {
+    String imageName = "image$i.png";
+    imageNames!.add(imageName);
+  }
+
+  print("Image names set: $imageNames");
+}
   getMyPostingsFromFirstore () async
   {
     DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('postings').doc(id).get();
