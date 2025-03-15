@@ -20,6 +20,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   searchByField()
   {
+   
+  }
+
+  pressSerachByButton(String searchTypeStr, bool isNameButtonSelectedB, bool isCityButtonSelectedB, bool isTypeButtonSelectedB)
+  {
 
   }
 
@@ -66,6 +71,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                children: [
+
+
+                ],
               ),
             )
           ],
