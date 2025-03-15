@@ -56,6 +56,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 controller: controllerSearch,
                 onEditingComplete: searchByField,
               ),
+            ),
+
+            // name - city - type - clear button
+
+            Container(
+              height: 48,
+              width: MediaQuery.of(context).s,
             )
           ],
         ),
