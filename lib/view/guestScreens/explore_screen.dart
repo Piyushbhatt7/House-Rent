@@ -62,7 +62,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
             Container(
               height: 48,
-              width: MediaQuery.of(context).s,
+              width: MediaQuery.of(context).size.width / .5,
             )
           ],
         ),
