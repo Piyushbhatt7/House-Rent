@@ -17,10 +17,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
   bool isNameButtonSelected = false;
   bool isCityButtonSelected = false;
   bool isTypeSelected = false;
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
-    );
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(25, 15, 20, 0)
+      )
   }
 }
