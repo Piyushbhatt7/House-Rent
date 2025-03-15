@@ -121,7 +121,7 @@ class PostingModel
     return displayImages!.first;
   }
   
-  if (imageNames == null || imageNames!.isEmpty) { 
+  if (imageNames == null || imageNames!.isEmpty) {  
     print("No image names found.");
     return null;
   }  
