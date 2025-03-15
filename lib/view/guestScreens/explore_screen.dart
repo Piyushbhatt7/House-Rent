@@ -68,7 +68,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
             // name - city - type - clear button
 
-            Container(
+            SizedBox(
               height: 48,
               width: MediaQuery.of(context).size.width / .5,
               child: ListView(
