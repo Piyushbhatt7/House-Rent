@@ -221,7 +221,8 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                Get.snackbar("Update Listing", "your is updated successufully.");
             }
           
-        postingModel = PostingModel();
+          // clear posting model
+          postingModel = PostingModel();
 
           Get.to(GuestHomeScreen()); 
 
