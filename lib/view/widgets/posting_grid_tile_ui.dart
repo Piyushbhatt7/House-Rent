@@ -14,14 +14,17 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
 {
   
   PostingModel? posting;
+
+  updateUI()
+  {
+     posting!.getFirstImageFromStorage();
+  }
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
     posting =  widget.posting;
-
-    
 
   }
   @override

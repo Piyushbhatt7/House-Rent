@@ -105,6 +105,17 @@ class PostingModel
     {
       return displayImages!.first;
     }
+
+    final imageData = await FirebaseStorage.instance.ref()
+    .child("postingImages")
+    .child(id!)
+    .child(imageNames!.first)
+    .getData(1024 * 1024);
+
+    displayImages!.add(MemoryImage(imageData!));
+
+    return displayImages!.first;
+   
   }
 
   getAmenitiesString ()
