@@ -140,7 +140,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     mainAxisSpacing: 15,
                     childAspectRatio: 3 / 4,
                     ), 
-                  itemBuilder: itemBuilder
+                  itemBuilder: (context, index)
+                  {
+                     DocumentSnapshot snapshot = snapShots.data.docs[index];
+                  }
                   );
               }
 
