@@ -63,12 +63,19 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
           ),
 
           Text(
-            '\₹${posting!.price} / month',
+            '₹${posting!.price} / month',
             style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w500,
             ),
           ),
+
+          Row(
+            children: [
+
+              
+            ],
+          )
       ],
     );
   }

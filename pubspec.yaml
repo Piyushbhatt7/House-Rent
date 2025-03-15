@@ -41,7 +41,7 @@ dependencies:
   cloud_firestore:
   firebase_storage: ^12.4.4
   image_picker:
-
+  custom_rating_bar: 
 dev_dependencies:
   flutter_test:
     sdk: flutter
