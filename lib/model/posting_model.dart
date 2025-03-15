@@ -44,21 +44,16 @@ class PostingModel
        // 14 - 11:58
    }
 
-   setImagesNames() {
-  imageNames = [];
+   setImagesNames()
+   {
+    imageNames = [];
 
-  if (displayImages == null || displayImages!.isEmpty) {
-    print("displayImages is empty. No images to set.");
-    return;
-  }
+    for(int i = 0; i < displayImages!.length; i++)
+    {
+      imageNames!.add("image${i}.png");
+    }
+   }
 
-  for (int i = 0; i < displayImages!.length; i++) {
-    String imageName = "image$i.png";
-    imageNames!.add(imageName);
-  }
-
-  print("Image names set: $imageNames");
-}
   getMyPostingsFromFirstore () async
   {
     DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('postings').doc(id).get();
@@ -116,49 +111,32 @@ class PostingModel
 }
 
 
- getFirstImageFromStorage() async {
-  if (displayImages != null && displayImages!.isNotEmpty) {
+  getFirstImageFromStorage() async {
+  if (displayImages!.isNotEmpty) {
     return displayImages!.first;
   }
 
   if (imageNames == null || imageNames!.isEmpty) {
-    print("No image names found.");
+    print("No images found in imageNames list.");
     return null;
   }
 
   try {
-    final imageRef = FirebaseStorage.instance
-        .ref()
-        .child("postingImages")
-        .child(id!) 
-        .child(imageNames!.first); // First image
+    String imagePath = "postingImages/$id/${imageNames!.first}";
+    print("Fetching from path: $imagePath"); // Debugging
 
-    final imageData = await imageRef.getData(1024 * 1024);
+    final imageData = await FirebaseStorage.instance.ref(imagePath).getData(1024 * 1024);
 
     if (imageData != null) {
-      displayImages ??= [];
-      displayImages!.add(MemoryImage(imageData));
-      return MemoryImage(imageData);
+      MemoryImage image = MemoryImage(imageData);
+      displayImages!.add(image);
+      return image;
     }
   } catch (e) {
     print("Error fetching image: $e");
   }
 
   return null;
-}
-
-Future<void> listFiles() async {
-  final storageRef = FirebaseStorage.instance.ref().child('postingImages');
-
-  final ListResult result = await storageRef.listAll();
-  for (var folderRef in result.prefixes) {
-    print('Folder found: ${folderRef.name}');
-    
-    final ListResult images = await folderRef.listAll();
-    for (var imageRef in images.items) {
-      print('Image found: ${imageRef.fullPath}');
-    }
-  }
 }
 
 
