@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/guest_home_screen.dart';
 import 'package:house/view/host_home_screen.dart';
 import 'package:house/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
@@ -220,9 +221,9 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                Get.snackbar("Update Listing", "your is updated successufully.");
             }
           
-         PostingModel newPosting = PostingModel();
+        postingModel = PostingModel();
 
-          Get.to(HostHomeScreen(index: 1,)); 
+          Get.to(GuestHomeScreen()); 
 
           }, 
           icon: const Icon(Icons.upload)
