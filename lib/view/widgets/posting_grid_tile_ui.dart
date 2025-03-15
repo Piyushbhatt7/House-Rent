@@ -42,6 +42,15 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
           child: (posting!.displayImages!.isEmpty) 
           ? Container() 
           : Container(decoration: BoxDecoration(image: DecorationImage(image: posting!.displayImages!.first, fit: BoxFit.fill)),),
+          ),
+
+          Text(
+            "${posting!.type} - ${posting!.city}, ${posting!.country}",
+            maxLines: 2,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+            ),
           )
       ],
     );
