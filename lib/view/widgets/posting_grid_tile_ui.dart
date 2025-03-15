@@ -51,6 +51,23 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
               fontSize: 12,
               fontWeight: FontWeight.bold,
             ),
+          ),
+
+          Text(
+            posting!.name!,
+            maxLines: 1,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w200,
+            ),
+          ),
+
+          Text(
+            ' / month',
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+            ),
           )
       ],
     );
