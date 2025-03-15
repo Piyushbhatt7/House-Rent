@@ -85,45 +85,61 @@ class PostingModel
 }
 
 
-  getAllImagesFromStorage() async
-  {
-    displayImages = [];
+  getAllImagesFromStorage() async {
+  displayImages = [];
 
-    for(int i = 0; i < imageNames!.length; i++)
-    {
+  for (int i = 0; i < imageNames!.length; i++) {
+    try {
       final imageData = await FirebaseStorage.instance.ref()
-      .child("postingImages")
-      .child(id!)
-      .child(imageNames![i])
-      .getData(1024 * 1024);
+          .child("postingImages")
+          .child(id!)
+          .child(imageNames![i])
+          .getData(1024 * 1024);
 
-      displayImages!.add(MemoryImage(imageData!));
+      if (imageData != null) {
+        displayImages!.add(MemoryImage(imageData));
+        print("Image loaded successfully: ${imageNames![i]}");
+      } else {
+        print("Image data is null for: ${imageNames![i]}");
+      }
+    } catch (e) {
+      print("Error loading image ${imageNames![i]}: $e");
     }
-
-    return displayImages;
   }
 
-  getFirstImageFromStorage() async
-  {
-    if(displayImages!.isNotEmpty)
-    {
-      return displayImages!.first;
-    }
+  return displayImages;
+}
 
+
+  getFirstImageFromStorage() async {
+  if (displayImages!.isNotEmpty) {
+    return displayImages!.first;
+  }
+
+  if (imageNames == null || imageNames!.isEmpty) {
+    print("No image names found.");
+    return null;
+  }
+
+  try {
     final imageData = await FirebaseStorage.instance.ref()
-      .child("postingImages")
-      .child(id!)
-      .child(imageNames != null && imageNames!.isNotEmpty ? imageNames!.first : "")
-      .getData(1024*1024);
+        .child("postingImages")
+        .child(id!)
+        .child(imageNames!.first)
+        .getData(1024 * 1024);
 
-     if (imageData != null) {
-      displayImages!.add(MemoryImage(imageData));
+    if (imageData != null) {
+      MemoryImage image = MemoryImage(imageData);
+      displayImages!.add(image);
+      return image;
     }
-
-
-    return displayImages!.isNotEmpty ? displayImages!.first : null;
-   
+  } catch (e) {
+    print("Error loading first image: $e");
   }
+
+  return null;
+}
+
 
   getAmenitiesString ()
   {
