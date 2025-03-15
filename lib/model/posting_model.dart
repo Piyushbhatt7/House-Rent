@@ -144,7 +144,7 @@ class PostingModel
       rating += review.rating!;
     });
 
-    rating = rating / review!.length;
+    rating /= review!.length;
 
     return rating;
   }
