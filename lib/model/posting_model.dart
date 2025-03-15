@@ -143,5 +143,9 @@ class PostingModel
     {
       rating += review.rating!;
     });
+
+    rating = rating / review!.length;
+
+    return rating;
   }
 }
