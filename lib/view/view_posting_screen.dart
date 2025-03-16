@@ -77,6 +77,10 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
               itemBuilder: (context, index)
               {
                 MemoryImage currentImage = posting!.displayImages![index];
+                return Image(
+                  image: currentImage,
+                  fit: BoxFit.fill,
+                  )
               }
             
             ),
