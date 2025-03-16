@@ -116,8 +116,8 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                           maxLines: 3,
                         ),
                       ),
-                    ],
-                  ),   // 9:26 - 15
+                    
+                    // 9:26 - 15
 
                   // book now button - price
                   Column(
@@ -155,8 +155,9 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         ),
                       )
                     ],
+                  ),
+                    ],
                   )
-
                 ],
               ),
             )
