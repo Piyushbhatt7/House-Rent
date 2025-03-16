@@ -107,7 +107,45 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                       ),
+                      maxLines: 3,
                     ),
+                  ),
+
+                  // book now button
+                  Column(
+                    children: <Widget>[
+
+                      Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.pinkAccent,
+                              Colors.amber,
+                            ],
+                            begin: FractionalOffset(0.0, 0.0),
+                            end: FractionalOffset(1.0, 0.0),
+                            stops: [0.0, 1.0],
+                            tileMode: TileMode.clamp,
+                            )
+                        ),
+                        child: MaterialButton(onPressed: ()
+                        {
+                          
+                        }, child: const Text(
+                          'Book Now',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),),
+                      ),
+
+                      Text(
+                        '₹${posting!.price} / night',
+                        style: const TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )
+                    ],
                   )
 
                 ],
