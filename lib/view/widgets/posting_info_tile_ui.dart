@@ -21,6 +21,13 @@ class _PostingInfoTileUiState extends State<PostingInfoTileUi>
         widget.iconData,
         size: 30,
       ),
+      title: Text(
+        widget.category!,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 25,
+        ),
+      ),
     );
   }
 }
