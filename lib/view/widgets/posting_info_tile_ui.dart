@@ -28,6 +28,9 @@ class _PostingInfoTileUiState extends State<PostingInfoTileUi>
           fontSize: 25,
         ),
       ),
+      subtitle: Text(
+        widget.categoryInfo!
+      ),
     );
   }
 }
