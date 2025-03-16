@@ -92,7 +92,10 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
             // amenities 
             // the location
 
+            Padding(
+              padding: const EdgeInsets.fromLTRB(14, 14, 14, 0)
             
+            )
 
 
 
