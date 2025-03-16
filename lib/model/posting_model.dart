@@ -183,8 +183,8 @@ class PostingModel
     int? numGuests = 0;
 
     numGuests + numGuests + beds!['small']!; 
-    numGuests += numGuests + beds!['medium']! * 2;
-    numGuests += numGuests + beds!['large']! * 2;
+    numGuests = numGuests + beds!['medium']! * 2;
+    numGuests = numGuests + beds!['large']! * 2;
     
 
     return numGuests;

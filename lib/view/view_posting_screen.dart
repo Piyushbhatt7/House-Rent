@@ -226,7 +226,19 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                           iconData: Icons.home,
                           category: posting!.type!,
                           categoryInfo: '${posting!.getGuestsNumber()} guests',
-                        )
+                        ),
+
+                        PostingInfoTileUi(
+                          iconData: Icons.home,
+                          category: posting!.type!,
+                          categoryInfo: '${posting!.getGuestsNumber()} guests',
+                        ),
+
+                        PostingInfoTileUi(
+                          iconData: Icons.home,
+                          category: posting!.type!,
+                          categoryInfo: '${posting!.getGuestsNumber()} guests',
+                        ),
                       ],
                     ),
                      )
