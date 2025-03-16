@@ -55,11 +55,12 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
     title: const Text('Posting Information'),
     actions: [
 
-      IconButton(onPressed: ()
+      IconButton(
+        onPressed: ()
       {
-
+        
       },
-       icon: icon
+       icon: Icon(Icons.save, color: Colors.white,),
        )
     ],
       ),
