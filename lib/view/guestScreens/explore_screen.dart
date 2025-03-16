@@ -152,7 +152,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
                      return InkResponse(
                       onTap: () {
-                        
+                        Get.to
                       },
                       enableFeedback: true,
                       child: PostingGridTileUi(
