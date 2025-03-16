@@ -70,7 +70,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
           children: [
 
 
-            // image
+            // listing images
             AspectRatio(aspectRatio: 3 / 2,
             child: PageView.builder(
               itemCount: posting!.displayImages!.length,
@@ -85,6 +85,14 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
             
             ),
             ),
+
+            // posting name button // book now button
+            // description - profile pic
+            // apartment - beds - bathrooms
+
+            
+
+
           ],
         ),
       ),
