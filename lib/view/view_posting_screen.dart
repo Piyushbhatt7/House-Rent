@@ -201,7 +201,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                             Padding(
                               padding: const EdgeInsets.only(top: 10.0),
                               child: Text(
-                                posting!.host!.getContactInfoFromFirestore()
+                                posting!.host!.getFullNameofUser()
                               ),
                               )
                           ],
