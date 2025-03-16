@@ -32,6 +32,8 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
     super.initState();
 
    posting = widget.posting;
+
+   getRequiredInfo();
   }
   @override
   Widget build(BuildContext context) {
