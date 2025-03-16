@@ -10,7 +10,10 @@ class ViewPostingScreen extends StatefulWidget {
   State<ViewPostingScreen> createState() => _ViewPostingScreenState();
 }
 
-class _ViewPostingScreenState extends State<ViewPostingScreen> {
+class _ViewPostingScreenState extends State<ViewPostingScreen> 
+{
+
+  PostingModel? posting;
   @override
   Widget build(BuildContext context) {
     return Container();
