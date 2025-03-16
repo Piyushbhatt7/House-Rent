@@ -177,4 +177,6 @@ class PostingModel
     await host!.getContactInfoFromFirestore();
     await host!.getImageFromStorage();
   }
+
+  int getGuestsNumber() 
 }
