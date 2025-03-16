@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/widgets/posting_info_tile_ui.dart';
 
 class ViewPostingScreen extends StatefulWidget {
 
@@ -221,7 +222,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                       shrinkWrap: true,
                       children: [
 
-                        
+                        PostingInfoTileUi()
                       ],
                     ),
                      )
