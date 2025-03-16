@@ -89,8 +89,11 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
             // posting name button // book now button
             // description - profile pic
             // apartment - beds - bathrooms
+            // amenities 
+            // the location
 
             
+
 
 
           ],
