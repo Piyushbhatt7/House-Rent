@@ -189,4 +189,24 @@ class PostingModel
 
     return numGuests;
   }
+
+  String getBedroomText()
+  {
+    String text = "";
+
+    if(beds!["small"] != 0)
+    {
+      text = text + beds!["small"].toString() + "single";
+    }
+
+     if(beds!["medium"] != 0)
+    {
+      text = text + beds!["medium"].toString() + "double";
+    }
+
+     if(beds!["small"] != 0)
+    {
+      text = text + beds!["small"].toString() + "single";
+    }
+  }
 }
