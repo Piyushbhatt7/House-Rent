@@ -80,7 +80,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                 return Image(
                   image: currentImage,
                   fit: BoxFit.fill,
-                  )
+                  );
               }
             
             ),
