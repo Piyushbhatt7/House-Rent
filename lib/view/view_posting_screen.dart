@@ -222,7 +222,11 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                       shrinkWrap: true,
                       children: [
 
-                        PostingInfoTileUi()
+                        PostingInfoTileUi(
+                          iconData: Icons.home,
+                          category: posting!.type!,
+                          categoryInfo: '${posting!.getGuestsNumber()} guests',
+                        )
                       ],
                     ),
                      )
