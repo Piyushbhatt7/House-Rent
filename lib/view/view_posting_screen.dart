@@ -53,6 +53,15 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
       )
     ),),
     title: const Text('Posting Information'),
+    actions: [
+
+      IconButton(onPressed: ()
+      {
+
+      },
+       icon: icon
+       )
+    ],
       ),
     );
   }
