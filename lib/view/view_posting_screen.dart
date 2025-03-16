@@ -157,7 +157,15 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                     ],
                   ),
                     ],
+                  ),
+                
+                  
+                  // description - profile pic
+                  Padding(
+                    padding: const EdgeInsets.only(top: 25.0, bottom: 25.0),
+                    child: ,
                   )
+                
                 ],
               ),
             )
