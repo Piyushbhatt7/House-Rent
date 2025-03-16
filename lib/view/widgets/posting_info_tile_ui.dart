@@ -12,9 +12,15 @@ class PostingInfoTileUi extends StatefulWidget
   State<PostingInfoTileUi> createState() => _PostingInfoTileUiState();
 }
 
-class _PostingInfoTileUiState extends State<PostingInfoTileUi> {
+class _PostingInfoTileUiState extends State<PostingInfoTileUi> 
+{
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListTile(
+      leading: Icon(
+        widget.iconData,
+        size: 30,
+      ),
+    );
   }
 }
