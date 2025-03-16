@@ -171,4 +171,9 @@ class PostingModel
 
     return rating;
   }
+
+  getHostFromFirestore() async
+  {
+    
+  }
 }
