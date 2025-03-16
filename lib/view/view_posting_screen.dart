@@ -15,6 +15,12 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
 
   PostingModel? posting;
 
+  getRequiredInfo()
+  {
+    posting.getAllImagesFromStorage();
+    
+  }
+
   @override
   void initState() {
     // TODO: implement initState
