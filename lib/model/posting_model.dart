@@ -211,4 +211,22 @@ class PostingModel
 
     return text;
   }
+
+  String getBathroomText()
+  {
+
+    String text = "";
+
+    if(bathrooms!['full'] !=0 )
+    {
+      text = text + bathrooms!["full"].toString() + " full ";
+    }
+
+    if(bathrooms!["half"] != 0)
+    {
+      text = text + bathrooms!["half"].toString() + " half ";
+    }
+
+    return text;
+  }
 }
