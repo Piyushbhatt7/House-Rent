@@ -163,7 +163,24 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                   // description - profile pic
                   Padding(
                     padding: const EdgeInsets.only(top: 25.0, bottom: 25.0),
-                    child: ,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 1.75,
+                          child: Text(
+                            posting!.description!,
+                            textAlign: TextAlign.justify,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
+                            maxLines: 5,
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 
                 ],
