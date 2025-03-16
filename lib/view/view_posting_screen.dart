@@ -58,12 +58,33 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
       IconButton(
         onPressed: ()
       {
-        
+
       },
        icon: Icon(Icons.save, color: Colors.white,),
        )
     ],
       ),
+      
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+
+
+            // image
+            AspectRatio(aspectRatio: 3 / 2,
+            child: PageView.builder(
+              itemCount: posting!.displayImages!.length,
+              itemBuilder: (context, index)
+              {
+                MemoryImage currentImage = posting!.displayImages![index];
+              }
+            
+            ),
+            ),
+          ],
+        ),
+      ),
+   
     );
   }
 }
