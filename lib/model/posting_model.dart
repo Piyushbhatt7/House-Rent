@@ -227,6 +227,6 @@ class PostingModel
       text = text + bathrooms!["half"].toString() + " half ";
     }
 
-    return text;
+    return text; // 14:13 - 15
   }
 }
