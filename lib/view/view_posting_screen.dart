@@ -196,7 +196,14 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                                   radius: MediaQuery.of(context).size.width / 13,
                                 ),
                               ),
-                            )
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.only(top: 10.0),
+                              child: Text(
+                                posting!.host!.getContactInfoFromFirestore()
+                              ),
+                              )
                           ],
 
 
