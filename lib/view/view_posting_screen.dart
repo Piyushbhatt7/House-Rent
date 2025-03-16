@@ -20,6 +20,10 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
     await posting!.getAllImagesFromStorage();
 
     await posting!.getHostFromFirestore();
+
+    setState(() {
+      
+    });
   }
 
   @override
