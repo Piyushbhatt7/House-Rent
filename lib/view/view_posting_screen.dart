@@ -98,20 +98,28 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
 
-                    // posting name and book now button
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width / 1.55,
-                    child: Text(
-                      posting!.name!.toUpperCase(),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                    // posting name and price - book now button
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+
+                      
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 1.55,
+                        child: Text(
+                          posting!.name!.toUpperCase(),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                          maxLines: 3,
+                        ),
                       ),
-                      maxLines: 3,
-                    ),
+                    ],
                   ),
 
-                  // book now button
+                  // book now button - price
                   Column(
                     children: <Widget>[
 
