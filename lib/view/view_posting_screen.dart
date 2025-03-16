@@ -15,11 +15,11 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
 
   PostingModel? posting;
 
-  getRequiredInfo()
+  getRequiredInfo() async
   {
-    posting!.getAllImagesFromStorage();
+    await posting!.getAllImagesFromStorage();
 
-    posting!.getHostFromFirestore();
+    await posting!.getHostFromFirestore();
   }
 
   @override
