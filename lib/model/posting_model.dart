@@ -179,4 +179,10 @@ class PostingModel
   }
 
   int getGuestsNumber() 
+  {
+    int? numGuests = 0;
+
+    numGuests + beds!['small']!;
+
+  }
 }
