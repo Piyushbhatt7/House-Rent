@@ -40,4 +40,13 @@ class ContactModel {
     firstName = snapshot['firstName'] ?? "";
     lastName = snapshot['lastName'] ?? "";
   }
+
+  getImageFromStorage() async
+  {
+    if(displayImage != null)
+    {
+      return displayImage!;
+
+    }
+  }
 }  
