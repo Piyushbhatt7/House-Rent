@@ -204,9 +204,9 @@ class PostingModel
       text = text + beds!["medium"].toString() + "double";
     }
 
-     if(beds!["small"] != 0)
+     if(beds!["large"] != 0)
     {
-      text = text + beds!["small"].toString() + "single";
+      text = text + beds!["large"].toString() + "queen / king";
     }
   }
 }
