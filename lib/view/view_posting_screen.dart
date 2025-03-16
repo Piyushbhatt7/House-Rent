@@ -139,7 +139,8 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         child: MaterialButton(onPressed: ()
                         {
                           
-                        }, child: const Text(
+                        },
+                         child: const Text(
                           'Book Now',
                           style: TextStyle(
                             color: Colors.white,
