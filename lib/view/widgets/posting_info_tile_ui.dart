@@ -29,7 +29,10 @@ class _PostingInfoTileUiState extends State<PostingInfoTileUi>
         ),
       ),
       subtitle: Text(
-        widget.categoryInfo!
+        widget.categoryInfo!,
+        style: const TextStyle(
+          fontSize: 20.0,
+        ),
       ),
     );
   }
