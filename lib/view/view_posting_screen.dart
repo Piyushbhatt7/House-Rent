@@ -104,7 +104,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
 
-                      
+
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 1.55,
                         child: Text(
@@ -117,7 +117,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         ),
                       ),
                     ],
-                  ),
+                  ),   // 9:26 - 15
 
                   // book now button - price
                   Column(
