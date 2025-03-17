@@ -231,13 +231,13 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         PostingInfoTileUi(
                           iconData: Icons.hotel,
                           category: 'Beds',
-                          categoryInfo: '${posting!.getGuestsNumber()} guests',
+                          categoryInfo: posting!.getBedroomText(),
                         ),
 
                         PostingInfoTileUi(
                           iconData: Icons.wc,
                           category: 'Bathrooms',
-                          categoryInfo: '${posting!.getGuestsNumber()} guests',
+                          categoryInfo: posting!.getBathroomText(),
                         ),
                       ],
                     ),
