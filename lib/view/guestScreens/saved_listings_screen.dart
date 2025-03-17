@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house/model/app_constants.dart';
+import 'package:house/model/posting_model.dart';
 
 class SavedListingsScreen extends StatefulWidget {
   const SavedListingsScreen({super.key});
@@ -25,7 +26,7 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
           ), 
         itemBuilder: (context, index)
         {
-
+          PostingModel currentPosting = AppConstants.currentUser.savedPostings![index];
         }
         ),
     );
