@@ -54,7 +54,14 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
                     color: Colors.white,
                   ),
 
-                  child: IconButton(onPressed: onPressed, icon: icon),
+                  child: IconButton(
+                    onPressed: ()
+                    {
+
+                    }, 
+                  
+                  icon: icon
+                  ),
                 ),
                 ),
               )
