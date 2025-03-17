@@ -17,7 +17,10 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
         physics: const ScrollPhysics(),
         shrinkWrap: true,
         itemCount: AppConstants.currentUser.savedPostings!.length,
-        gridDelegate: gridDelegate, 
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 15,
+          ), 
         itemBuilder: itemBuilder
         ),
     );
