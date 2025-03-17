@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house/model/posting_model.dart';
-import 'package:house/view/widgets/posting_grid_tile_ui.dart';
+
 
 class BookListingScreen extends StatefulWidget
  {
@@ -14,6 +14,16 @@ class BookListingScreen extends StatefulWidget
 }
 
 class _BookListingScreenState extends State<BookListingScreen> {
+
+  PostingModel? posting;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  
   @override
   Widget build(BuildContext context) {
     return Container();
