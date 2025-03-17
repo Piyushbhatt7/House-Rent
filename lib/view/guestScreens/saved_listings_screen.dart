@@ -10,8 +10,8 @@ class SavedListingsScreen extends StatefulWidget {
 class _SavedListingsScreenState extends State<SavedListingsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
+    return Padding(
+      padding:  const EdgeInsets.fromLTRB(25, 15, 25, 0)
     );
   }
 }
