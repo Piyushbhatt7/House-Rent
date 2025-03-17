@@ -60,7 +60,10 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
 
                     }, 
                   padding: const EdgeInsets.all(0),
-                  icon: Icon(Icons.clear)
+                  icon: Icon(
+                    Icons.clear,
+                    color: Colors.black,
+                  )
                   ),
                 ),
                 ),
