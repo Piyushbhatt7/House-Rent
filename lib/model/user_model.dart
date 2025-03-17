@@ -110,6 +110,13 @@ class UserModel extends ContactModel
         }
 
         savedPostings!.add(posting);
+
+        List<String> savedPostingIDs = [];
+
+        savedPostings!.forEach((savedPosting)
+        {
+          savedPostingIDs.add(savedPosting.id!);
+        });
       }
     }
 }
