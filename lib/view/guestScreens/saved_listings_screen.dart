@@ -39,7 +39,7 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
                 ),
               )
             ],
-          )
+          );
         }
         ),
     );
