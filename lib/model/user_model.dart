@@ -131,6 +131,6 @@ class UserModel extends ContactModel
 
     removeSavedPosting(PostingModel posting) async
     {
-      
+      await
     }
 } // 6:28 - 16
