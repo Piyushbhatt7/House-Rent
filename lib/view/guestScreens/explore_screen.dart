@@ -121,7 +121,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: isNameButtonSelected ? Colors.pinkAccent : Colors.white,
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
+                    padding: const EdgeInsets.only(right: 10.0),
                     child: const Text("Clear"),
                   ),
                   ),
