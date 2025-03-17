@@ -20,6 +20,8 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
+          childAspectRatio: 3 / 4,
           ), 
         itemBuilder: itemBuilder
         ),
