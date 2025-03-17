@@ -253,22 +253,22 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                     childAspectRatio: 3.6,
                     children: List.generate(
                       posting!.amenities!.length,
-                      index()
-                      {
+                      (index) {
                         String currentAmenity = posting!.amenities![index];
                         return Chip(
-                          label: Padding(padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Text(
-                            currentAmenity,
-                            style: const TextStyle(
-                              color: Colors.black45,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
+                          label: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: Text(
+                              currentAmenity,
+                              style: const TextStyle(
+                                color: Colors.black45,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                          ),
                           backgroundColor: Colors.white10,
-                          )
+                        );
                       }
                       
                       
