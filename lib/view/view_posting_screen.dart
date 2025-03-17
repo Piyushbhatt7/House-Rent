@@ -229,8 +229,8 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         ),
 
                         PostingInfoTileUi(
-                          iconData: Icons.hotel,
-                          category: 'Beds',
+                          iconData: Icons.hotel, 
+                          category: 'Beds', 
                           categoryInfo: posting!.getBedroomText(),
                         ),
 
