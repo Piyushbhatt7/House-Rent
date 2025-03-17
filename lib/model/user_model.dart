@@ -94,4 +94,9 @@ class UserModel extends ContactModel
         myPostings!.add(posting);
       }
     }
+
+    addSavedPosting(PostingModel posting) async
+    {
+      
+    }
 }
