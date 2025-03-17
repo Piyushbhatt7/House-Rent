@@ -109,7 +109,7 @@ class UserModel extends ContactModel
           return;
         }
 
-        savedPostings.add(posting);
+        savedPostings!.add(posting);
       }
     }
 }
