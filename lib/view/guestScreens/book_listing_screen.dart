@@ -50,7 +50,24 @@ class _BookListingScreenState extends State<BookListingScreen> {
         
     ),
    
-      body: Padding(padding: const EdgeInsets.fromLTRB(25, 25, 25, 0)),
+      body: Padding(padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+           
+           const Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+            children: [
+
+              
+            ],
+           )
+    
+        ],
+      ),
+      ),
     );
   }
 }
