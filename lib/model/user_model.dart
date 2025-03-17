@@ -108,8 +108,9 @@ class UserModel extends ContactModel
         {
           return;
         }
+      }
 
-        savedPostings!.add(posting);
+       savedPostings!.add(posting);
 
         List<String> savedPostingIDs = [];
 
@@ -123,6 +124,5 @@ class UserModel extends ContactModel
             'savedPostingIDs' : savedPostingIDs,
           }
         );
-      }
     }
 }
