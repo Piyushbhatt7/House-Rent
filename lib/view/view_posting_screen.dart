@@ -228,7 +228,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                           categoryInfo: '${posting!.getGuestsNumber()} guests',
                         ),
 
-                        PostingInfoTileUi(
+                        PostingInfoTileUi( 
                           iconData: Icons.hotel, 
                           category: 'Beds', 
                           categoryInfo: posting!.getBedroomText(),
@@ -241,8 +241,22 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         ),
                       ],
                     ),
-                     )
-               
+                     ),
+                
+                 // amenities
+
+                 Padding(
+                  padding: const EdgeInsets.only(top: 5.0, bottom: 25),
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    childAspectRatio: 3.6,
+                    children: [
+
+                      
+                    ],
+                    )
+                  ),
                
                 ],
               ),
