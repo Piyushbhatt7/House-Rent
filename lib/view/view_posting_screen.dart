@@ -236,7 +236,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
 
                         PostingInfoTileUi(
                           iconData: Icons.wc,
-                          category: posting!.type!,
+                          category: 'Bathrooms',
                           categoryInfo: '${posting!.getGuestsNumber()} guests',
                         ),
                       ],
