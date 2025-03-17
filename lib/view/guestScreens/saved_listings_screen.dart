@@ -37,6 +37,26 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
                 child: PostingGridTileUi(
                   posting: currentPosting,
                 ),
+                onTap: () 
+                {
+                  
+                },
+              ),
+
+
+              Align(
+                alignment: Alignment.topRight,
+                child: Padding(padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
+                  width: 30,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  ),
+
+                  child: IconButton(onPressed: onPressed, icon: icon),
+                ),
+                ),
               )
             ],
           );
