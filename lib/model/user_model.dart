@@ -138,6 +138,7 @@ class UserModel extends ContactModel
           savedPostings!.removeAt(i);
           break;
         }
+      }
 
         List<String> savedPostingIDs = [];
 
@@ -153,7 +154,5 @@ class UserModel extends ContactModel
         );
 
         Get.snackbar("Listing Removed", "Listing removed from favorite list");
-  
-      }
     }
 } // 6:28 - 16
