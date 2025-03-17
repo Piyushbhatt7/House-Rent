@@ -131,6 +131,9 @@ class UserModel extends ContactModel
 
     removeSavedPosting(PostingModel posting) async
     {
-      await
+      for(int i = 0; i < savedPostings!.length; i++)
+      {
+        if(savedPostings![i].id == posting.id)
+      }
     }
 } // 6:28 - 16
