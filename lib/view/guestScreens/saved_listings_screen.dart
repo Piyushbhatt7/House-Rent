@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/widgets/posting_grid_tile_ui.dart';
 
 class SavedListingsScreen extends StatefulWidget {
   const SavedListingsScreen({super.key});
@@ -33,7 +34,9 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
 
               InkResponse(
                 enableFeedback: true,
-                
+                child: PostingGridTileUi(
+                  posting: currentPosting,
+                ),
               )
             ],
           )
