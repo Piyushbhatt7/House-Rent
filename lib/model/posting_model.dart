@@ -229,4 +229,9 @@ class PostingModel
 
     return text; // 14:13 - 15
   }
+
+  String getFullAddress ()
+  {
+    return address! + ", " + city! + ", " + country!;
+  }
 }
