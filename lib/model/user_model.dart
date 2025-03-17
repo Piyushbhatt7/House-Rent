@@ -42,6 +42,8 @@ class UserModel extends ContactModel
       bookings = [];
       review = [];
 
+      savedPostings = [];
+
       myPostings = [];
     }
 
