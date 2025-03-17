@@ -27,6 +27,16 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
         itemBuilder: (context, index)
         {
           PostingModel currentPosting = AppConstants.currentUser.savedPostings![index];
+
+          return Stack(
+            children: [
+
+              InkResponse(
+                enableFeedback: true,
+                
+              )
+            ],
+          )
         }
         ),
     );
