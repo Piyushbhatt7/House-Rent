@@ -251,10 +251,9 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                     crossAxisCount: 2,
                     shrinkWrap: true,
                     childAspectRatio: 3.6,
-                    children: [
-
-                      
-                    ],
+                    children: List.generate(
+                      length, generator
+                      )
                     )
                   ),
                
