@@ -117,6 +117,12 @@ class UserModel extends ContactModel
         {
           savedPostingIDs.add(savedPosting.id!);
         });
+
+        await FirebaseFirestore.instance.collection("users").doc(id).update(
+          {
+            'savedPostingIDs' : savedPostingIDs,
+          }
+        );
       }
     }
 }
