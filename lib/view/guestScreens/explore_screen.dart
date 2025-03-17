@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/view_posting_screen.dart';
 import 'package:house/view/widgets/posting_grid_tile_ui.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -152,7 +154,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
                      return InkResponse(
                       onTap: () {
-                        Get.to
+                        Get.to(ViewPostingScreen());
                       },
                       enableFeedback: true,
                       child: PostingGridTileUi(
