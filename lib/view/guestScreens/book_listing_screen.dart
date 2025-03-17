@@ -44,7 +44,11 @@ class _BookListingScreenState extends State<BookListingScreen> {
       )
     ),
       ),
-    )
+        title: Text(
+          "Book ${posting!.name}"
+        ),
+        
+    ),
     );
   }
 }
