@@ -152,7 +152,7 @@ class UserModel extends ContactModel
           }
         );
 
-        Get.snackbar("Marked as Favorite", "Saved to your Favorite List");
+        Get.snackbar("Listing Removed", "Saved to your Favorite List");
   
       }
     }
