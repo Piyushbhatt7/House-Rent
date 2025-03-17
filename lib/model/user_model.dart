@@ -138,6 +138,22 @@ class UserModel extends ContactModel
           savedPostings!.removeAt(i);
           break;
         }
+
+        List<String> savedPostingIDs = [];
+
+         savedPostings!.forEach((savedPosting)
+        {
+          savedPostingIDs.add(savedPosting.id!);
+        });
+
+        await FirebaseFirestore.instance.collection("users").doc(id).update(
+          {
+            'savedPostingIDs' : savedPostingIDs,
+          }
+        );
+
+        Get.snackbar("Marked as Favorite", "Saved to your Favorite List");
+  
       }
     }
 } // 6:28 - 16
