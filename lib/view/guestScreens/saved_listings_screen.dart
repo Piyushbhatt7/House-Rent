@@ -23,7 +23,10 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
           mainAxisSpacing: 15,
           childAspectRatio: 3 / 4,
           ), 
-        itemBuilder: itemBuilder
+        itemBuilder: (context, index)
+        {
+
+        }
         ),
     );
   }
