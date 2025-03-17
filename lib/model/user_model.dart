@@ -19,8 +19,11 @@ class UserModel extends ContactModel
 
   List<BookingModel>? bookings;
   List<ReviewModel>? review;
-
+  
+  List<PostingModel>? savedPostings;
   List<PostingModel>? myPostings;
+
+
 
   UserModel({
     String id = "",
@@ -97,6 +100,6 @@ class UserModel extends ContactModel
 
     addSavedPosting(PostingModel posting) async
     {
-      
+
     }
 }
