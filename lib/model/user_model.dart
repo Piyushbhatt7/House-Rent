@@ -128,4 +128,4 @@ class UserModel extends ContactModel
 
         Get.snackbar("Marked as Favorite", "Saved to your Favorite List");
     }
-}
+} // 6:28 - 16
