@@ -128,4 +128,9 @@ class UserModel extends ContactModel
 
         Get.snackbar("Marked as Favorite", "Saved to your Favorite List");
     }
+
+    removeSavedPosting(PostingModel posting) async
+    {
+      
+    }
 } // 6:28 - 16
