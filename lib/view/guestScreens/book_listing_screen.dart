@@ -21,9 +21,11 @@ class _BookListingScreenState extends State<BookListingScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
+    posting = widget.posting;
   }
 
-  
+
   @override
   Widget build(BuildContext context) {
     return Container();
