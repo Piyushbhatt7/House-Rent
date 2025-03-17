@@ -60,7 +60,11 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
                   child: IconButton(
                     onPressed: ()
                     {
+                      AppConstants.currentUser.removeSavedPosting(currentPosting);
 
+                      setState(() {
+                        
+                      });
                     }, 
                   padding: const EdgeInsets.all(0),
                   icon: Icon(
