@@ -134,6 +134,10 @@ class UserModel extends ContactModel
       for(int i = 0; i < savedPostings!.length; i++)
       {
         if(savedPostings![i].id == posting.id)
+        {
+          savedPostings!.removeAt(i);
+          break;
+        }
       }
     }
 } // 6:28 - 16
