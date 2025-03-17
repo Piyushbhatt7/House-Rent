@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/posting_info_tile_ui.dart';
 
@@ -61,7 +62,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
       IconButton(
         onPressed: ()
       {
-        
+        AppConstants.currentUser.addSavedPosting(posting!);
       },
        icon: Icon(Icons.save, color: Colors.white,),
        )
