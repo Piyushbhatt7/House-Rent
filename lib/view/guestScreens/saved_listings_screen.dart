@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/app_constants.dart';
 
 class SavedListingsScreen extends StatefulWidget {
   const SavedListingsScreen({super.key});
@@ -13,6 +14,9 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
     return Padding(
       padding:  const EdgeInsets.fromLTRB(25, 15, 25, 0),
       child: GridView.builder(
+        physics: const ScrollPhysics(),
+        shrinkWrap: true,
+        itemCount: AppConstants.currentUser.savedPostings!.length,
         gridDelegate: gridDelegate, 
         itemBuilder: itemBuilder
         ),
