@@ -153,7 +153,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                       ),
 
                       Text(
-                        '₹${posting!.price} / night',
+                        '₹${posting!.price} / month',
                         style: const TextStyle(
                           fontSize: 14.0,
                         ),
@@ -300,7 +300,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                  )
                 ],
               ),
-            )
+            ),
 
 
 
