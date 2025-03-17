@@ -40,7 +40,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(25, 15, 20, 0),
+      padding: const EdgeInsets.fromLTRB(18, 15, 20, 0),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -75,7 +75,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
             SizedBox(
               height: 48,
-              width: MediaQuery.of(context).size.width / .5,
+              width: MediaQuery.of(context).size.width / .4,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
@@ -90,7 +90,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   child: const Text("Name"),
                   ),
 
-                  const SizedBox(width: 6.0,),
+                  const SizedBox(width: 5.0,),
 
                   MaterialButton(onPressed: ()
                   {
@@ -101,7 +101,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   child: const Text("City"),
                   ),
 
-                   const SizedBox(width: 6.0,),
+                   const SizedBox(width: 5.0,),
 
                   MaterialButton(onPressed: ()
                   {
@@ -112,7 +112,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   child: const Text("Type"),
                   ),
 
-                   const SizedBox(width: 6.0,),
+                   const SizedBox(width: 5.0,),
 
                   MaterialButton(onPressed: ()
                   {
@@ -120,7 +120,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   },
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: isNameButtonSelected ? Colors.pinkAccent : Colors.white,
-                  child: const Text("Clear"),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: const Text("Clear"),
+                  ),
                   ),
                   
                 ],
