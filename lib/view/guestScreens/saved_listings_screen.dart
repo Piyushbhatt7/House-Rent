@@ -11,7 +11,11 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsets.fromLTRB(25, 15, 25, 0)
+      padding:  const EdgeInsets.fromLTRB(25, 15, 25, 0),
+      child: GridView.builder(
+        gridDelegate: gridDelegate, 
+        itemBuilder: itemBuilder
+        ),
     );
   }
 }
