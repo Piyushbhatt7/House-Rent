@@ -103,5 +103,11 @@ class UserModel extends ContactModel
     addSavedPosting(PostingModel posting) async
     {
       for(var savedPosting in savedPostings!)
+      {
+        if(savedPosting.id == posting.id)
+        {
+          return;
+        }
+      }
     }
 }
