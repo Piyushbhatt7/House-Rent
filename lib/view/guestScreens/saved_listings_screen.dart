@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:get/utils.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/view_posting_screen.dart';
 import 'package:house/view/widgets/posting_grid_tile_ui.dart';
 
 class SavedListingsScreen extends StatefulWidget {
@@ -39,7 +42,7 @@ class _SavedListingsScreenState extends State<SavedListingsScreen> {
                 ),
                 onTap: () 
                 {
-                  
+                  Get.to(ViewPostingScreen(posting: currentPosting,));
                 },
               ),
 
