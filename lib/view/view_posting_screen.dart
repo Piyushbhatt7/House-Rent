@@ -276,6 +276,22 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                     )
                   ),
                
+               
+                 // location
+
+                 const Text(
+                  'The Location',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                 ),
+
+                 Padding(padding: const EdgeInsets.only(top: 2.0, bottom: 8.0),
+                 child: Text(
+                  
+                 ),
+                 )
                 ],
               ),
             )
