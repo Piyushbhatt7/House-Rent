@@ -49,6 +49,8 @@ class _BookListingScreenState extends State<BookListingScreen> {
         ),
         
     ),
+   
+      body: Padding(padding: const EdgeInsets.fromLTRB(25, 25, 25, 0)),
     );
   }
 }
