@@ -24,5 +24,9 @@ class BookingModel
 
     String contactID = snapshot['userID'] ?? "";
     String fullName = snapshot['name'] ?? "";
+
+    _loadContactInfo(id, fullName);
+
+    contact = ContactModel(id: contactID);
   }
 }
