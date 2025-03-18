@@ -27,10 +27,10 @@ class _BookListingScreenState extends State<BookListingScreen> {
     {
       calenderWidgets.add(
         CalenderUi(
-          monthIndex: ,
-          bookedDates: [],
-          selectDates: ,
-          getSelectedDates: ,
+          monthIndex: i,
+          bookedDates: bookedDates,
+          selectDates: _selectDates,
+          getSelectedDates: _getSelectedDates,
         )
       );
 
@@ -38,6 +38,11 @@ class _BookListingScreenState extends State<BookListingScreen> {
         
       });
     }
+  }
+
+  List<DateTime> _getSelectedDates()
+  {
+    return selectedDates;
   }
 
   _selectDates(DateTime date)
@@ -98,7 +103,11 @@ class _BookListingScreenState extends State<BookListingScreen> {
     ),
       ),
         title: Text(
-          "Book ${posting!.name}"
+          "Book ${posting!.name}",
+          style: TextStyle(
+            color: Colors.white, 
+            fontSize: 14,
+          ),
         ),
         
     ),
