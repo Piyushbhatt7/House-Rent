@@ -38,6 +38,13 @@ class _CalenderUiState extends State<CalenderUi> {
       {
         _monthTiles.add(MonthTileWidget(dateTime: null,));
       }
+
+    }
+
+    for(int i = 1; i <= daysInMonth; i++)
+    {
+      DateTime date = DateTime(_currentYearInt!, _currentMonthInt!, 1);
+      _monthTiles.add(MonthTileWidget(dateTime: date,));
     }
   }
 
