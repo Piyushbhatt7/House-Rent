@@ -15,9 +15,17 @@ class CalenderUi extends StatefulWidget {
 
 class _CalenderUiState extends State<CalenderUi> {
 
-  
+
+  List<DateTime> _selectedDates = [];
+  List<> _monthTiles = [];
+  int? _currentMonthInt;
+  int? _currentYearInt;
+
+
   @override
   Widget build(BuildContext context) {
     return Container();
   }
 }
+
+
