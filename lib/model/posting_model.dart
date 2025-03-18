@@ -237,8 +237,13 @@ class PostingModel
 
   getAllBookingsFromFirestore() async
   {
-    QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('postings')
+    QuerySnapshot snapshots = await FirebaseFirestore.instance.collection('postings')
     .doc(id).collection('bookings')
     .get();
+
+    for(var snapshot in snapshots.docs)
+    {
+      
+    }
   }
 }
