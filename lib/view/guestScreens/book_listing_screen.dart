@@ -26,7 +26,12 @@ class _BookListingScreenState extends State<BookListingScreen> {
     for(int i = 0; i < 12; i++)
     {
       calenderWidgets.add(
-        CalenderUi()
+        CalenderUi(
+          monthIndex: ,
+          bookedDates: [],
+          selectDates: ,
+          getSelectedDates: ,
+        )
       );
     }
   }
