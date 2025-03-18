@@ -33,7 +33,27 @@ class _BookListingScreenState extends State<BookListingScreen> {
           getSelectedDates: ,
         )
       );
+
+      setState(() {
+        
+      });
     }
+  }
+
+  _selectDates(DateTime date)
+  {
+    if(selectedDates.contains(date))
+    {
+      selectedDates.remove(date);
+    }
+
+    else{
+      selectedDates.add(date);
+    }
+
+    setState(() {
+      
+    });
   }
 
   @override
