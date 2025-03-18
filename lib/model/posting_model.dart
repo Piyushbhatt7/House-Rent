@@ -251,8 +251,8 @@ class PostingModel
     }
   }
 
-  getBookingInfoFromFirestoreFromPosting()
+  getBookingInfoFromFirestoreFromPosting(PostingModel posting, DocumentSnapshot snapshot) async
   {
-    
+
   }
 }
