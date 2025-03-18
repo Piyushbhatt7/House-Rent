@@ -37,7 +37,10 @@ DateTime? dateTime;
   @override
   Widget build(BuildContext context) {
     return Text(
-      dateTime == null ? "" : dateTime!.day.toString()
+      dateTime == null ? "" : dateTime!.day.toString(),
+      style: const TextStyle(
+        fontSize: 4
+      ),
     );
   }
 }
