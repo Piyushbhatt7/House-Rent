@@ -36,6 +36,8 @@ DateTime? dateTime;
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Text(
+      dateTime == null ? "" : dateTime!.day.toString()
+    );
   }
 }
