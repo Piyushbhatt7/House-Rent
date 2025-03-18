@@ -60,7 +60,12 @@ class _BookListingScreenState extends State<BookListingScreen> {
 
   _loadBookedDates()
   {
-    
+    posting!.getAllBookingsFromFirestore().whenComplete(()
+    {
+
+      bookedDates = posting!.getAllBookedDates();
+      _buildCalenderWidgets();
+    });
   }
 
   @override
