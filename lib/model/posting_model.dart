@@ -243,7 +243,11 @@ class PostingModel
 
     for(var snapshot in snapshots.docs)
     {
-      
+       BookingModel newBooking = BookingModel();
+
+       await newBooking.getBookingInfoFromFirestoreFromPosting(this, snapshot);
+
+       bookings!.add(newBooking); // 21:02 - 17
     }
   }
 }
