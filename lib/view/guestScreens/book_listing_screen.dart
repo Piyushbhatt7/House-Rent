@@ -18,6 +18,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
   PostingModel? posting;
   List<DateTime> bookedDates = [];
   List<DateTime> selectedDates = [];
+  List<CalenderUi> calenderWidgets = [];
 
   @override
   void initState() {
