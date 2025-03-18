@@ -21,5 +21,8 @@ class BookingModel
     {
       dates!.add((timestamps.toDate()));
     });
+
+    String contactID = snapshot['userID'] ?? "";
+    String fullName = snapshot['name'] ?? "";
   }
 }
