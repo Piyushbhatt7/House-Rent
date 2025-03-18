@@ -29,6 +29,8 @@ class _CalenderUiState extends State<CalenderUi> {
     int daysInMonth = AppConstants.daysInMonths![_currentMonthInt]!;
 
     DateTime firstDaysOfMonth = DateTime(_currentYearInt!, _currentMonthInt!, 1);
+
+    int firstWeekOfMonth = firstDaysOfMonth.weekday;
   }
 
 
