@@ -6,8 +6,8 @@ class CalenderUi extends StatefulWidget {
   List<DateTime>? bookedDates;
   Function? selectDates;
   Function? getSelectedDates;
-  
-  CalenderUi({super.key});
+
+  CalenderUi({super.key, this.monthIndex, this.bookedDates, this.selectDates, this.getSelectedDates});
 
   @override
   State<CalenderUi> createState() => _CalenderUiState();
