@@ -119,8 +119,19 @@ class _CalenderUiState extends State<CalenderUi> {
 
             if(monthTile.dateTime == null)
             {
+              return const MaterialButton(
+                onPressed: null,
+              child: Text(""),
+              );
+            }
+
+            if(widget.bookedDates!.contains((monthTile.dateTime)))
+            {
               return MaterialButton(onPressed: null,
-              child: Text(""),);
+              color: Colors.yellow,
+              disabledColor: Colors.yellow,
+              child: monthTile,
+              )
             }
           },
 
