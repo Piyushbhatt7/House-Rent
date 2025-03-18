@@ -91,7 +91,7 @@ class _CalenderUiState extends State<CalenderUi> {
     _selectedDates.addAll(widget.getSelectedDates!());
 
     _setMonthTiles();
-  }
+  } 
 
 
   @override
@@ -112,6 +112,10 @@ class _CalenderUiState extends State<CalenderUi> {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 7,
           childAspectRatio: 1 / 1
           ),
+
+          itemBuilder: (context, index) {
+            
+          },
 
         )
       ],
