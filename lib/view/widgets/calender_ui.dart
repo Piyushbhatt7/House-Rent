@@ -169,7 +169,7 @@ DateTime? dateTime;
     return Text(
       dateTime == null ? "" : dateTime!.day.toString(),
       style: const TextStyle(
-        fontSize: 4
+        fontSize: 10
       ),
     );
   }
