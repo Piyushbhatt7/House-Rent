@@ -69,7 +69,12 @@ class _BookListingScreenState extends State<BookListingScreen> {
               Text('Thus'),
               Text('Fri'),
               Text('Sat'),
+
             ],
+           ),
+
+           SizedBox(
+            height: MediaQuery.of(context).size.height / 2,
            )
     
         ],
