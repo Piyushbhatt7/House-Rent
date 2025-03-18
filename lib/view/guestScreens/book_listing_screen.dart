@@ -16,8 +16,8 @@ class BookListingScreen extends StatefulWidget
 class _BookListingScreenState extends State<BookListingScreen> {
 
   PostingModel? posting;
-  List<DateTime> _bookedDates = [];
-  List<DateTime> _selectedDates = [];
+  List<DateTime> bookedDates = [];
+  List<DateTime> selectedDates = [];
 
   @override
   void initState() {
