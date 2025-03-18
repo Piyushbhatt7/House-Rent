@@ -114,10 +114,14 @@ class _CalenderUiState extends State<CalenderUi> {
           ),
 
           itemBuilder: (context, index) 
-          {
+          {  
             MonthTileWidget monthTile = _monthTiles[index];  
 
-            
+            if(monthTile.dateTime == null)
+            {
+              return MaterialButton(onPressed: null,
+              child: Text(""),);
+            }
           },
 
         )
