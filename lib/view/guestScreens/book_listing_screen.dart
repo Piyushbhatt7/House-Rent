@@ -51,9 +51,16 @@ class _BookListingScreenState extends State<BookListingScreen> {
       selectedDates.add(date);
     }
 
+    selectedDates.sort();
+
     setState(() {
       
     });
+  }
+
+  _loadBookedDates()
+  {
+    
   }
 
   @override
