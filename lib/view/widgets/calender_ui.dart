@@ -31,6 +31,14 @@ class _CalenderUiState extends State<CalenderUi> {
     DateTime firstDaysOfMonth = DateTime(_currentYearInt!, _currentMonthInt!, 1);
 
     int firstWeekOfMonth = firstDaysOfMonth.weekday;
+
+    if(firstWeekOfMonth != 7)
+    {
+      for(int i = 0; i < firstWeekOfMonth; i++)
+      {
+        _monthTiles.add(MonthTileWidget(dateTime: null,));
+      }
+    }
   }
 
 
