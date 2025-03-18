@@ -109,7 +109,10 @@ class _CalenderUiState extends State<CalenderUi> {
         GridView.builder(
           itemCount: _monthTiles.length,
           shrinkWrap: true,
-          
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 7,
+          childAspectRatio: 1 / 1
+          ),
+
         )
       ],
     );
