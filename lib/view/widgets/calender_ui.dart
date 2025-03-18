@@ -68,6 +68,15 @@ class _CalenderUiState extends State<CalenderUi> {
 
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _currentMonthInt = (DateTime.now().month + widget.monthIndex!) % 12;
+  }
+
+
+  @override
   Widget build(BuildContext context) {
     return Container();
   }
