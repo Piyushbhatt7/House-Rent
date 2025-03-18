@@ -79,6 +79,15 @@ class _BookListingScreenState extends State<BookListingScreen> {
 
            SizedBox(
             height: MediaQuery.of(context).size.height / 2,
+
+            child: (calenderWidgets.isEmpty) ? Container() : PageView.builder(
+              itemCount: _calen,
+              itemBuilder: (context, index)
+              {
+                
+              }
+            
+            ),
            )
     
         ],
