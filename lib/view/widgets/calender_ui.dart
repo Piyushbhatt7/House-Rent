@@ -85,16 +85,41 @@ class _CalenderUiState extends State<CalenderUi> {
     {
       _currentYearInt = _currentYearInt! + 1;
     }
+
+    _selectedDates.sort();
+
+    _selectedDates.addAll(widget.getSelectedDates!());
+
+    _setMonthTiles();
   }
 
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+
+      children: [
+        Padding(padding: const EdgeInsets.only(bottom: 20.0),
+        child: Text(
+          "${AppConstants.monthDict[_currentMonthInt]} - ${_currentYearInt}",
+
+        ),
+        ),
+
+        GridView.builder(
+          itemCount: _monthTiles.length,
+          shrinkWrap: true,
+          
+        )
+      ],
+    );
   }
 }
 
 
+
+
+//////////////////////////////////////////
 class MonthTileWidget extends StatelessWidget {
 DateTime? dateTime;
 
