@@ -29,3 +29,11 @@ class _CalenderUiState extends State<CalenderUi> {
 }
 
 
+class MonthTileWidget extends StatelessWidget {
+  const MonthTileWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
