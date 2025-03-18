@@ -74,6 +74,8 @@ class _BookListingScreenState extends State<BookListingScreen> {
     super.initState();
 
     posting = widget.posting;
+
+    _loadBookedDates();
   }
 
 
