@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/app_constants.dart';
 
 class CalenderUi extends StatefulWidget {
 
@@ -24,6 +25,8 @@ class _CalenderUiState extends State<CalenderUi> {
   _setMonthTiles()
   {
     _monthTiles = [];
+
+    int daysInMonth = AppConstants.daysInMonths![_currentMonthInt]!;
   }
 
 
