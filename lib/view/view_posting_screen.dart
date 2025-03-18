@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/route_manager.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/guestScreens/book_listing_screen.dart';
 import 'package:house/view/widgets/posting_info_tile_ui.dart';
 
 class ViewPostingScreen extends StatefulWidget {
@@ -142,7 +145,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         ),
                         child: MaterialButton(onPressed: ()
                         {
-                          
+                          Get.to(BookListingScreen(posting: posting,));
                         },
                          child: const Text(
                           'Book Now',
