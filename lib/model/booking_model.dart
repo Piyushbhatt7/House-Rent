@@ -13,6 +13,7 @@ class BookingModel
 
   getBookingInfoFromFirestoreFromPosting(PostingModel posting, DocumentSnapshot snapshot) async
   {
-
+    posting = posting;
+    List<Timestamp> timestamps = List<Timestamp>.from(snapshot['dates']) ?? [];
   }
 }
