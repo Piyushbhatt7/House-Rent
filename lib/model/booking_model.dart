@@ -35,6 +35,6 @@ class BookingModel
     String firstName = "";
     String lastName = "";
     firstName = fullName.split(" ")[0];
-    
+    lastName = fullName.split(" ")[1];
   }
 }
