@@ -78,6 +78,13 @@ class _CalenderUiState extends State<CalenderUi> {
     {
       _currentMonthInt = 12;
     }
+
+    _currentYearInt = DateTime.now().year;
+
+    if(_currentMonthInt! < DateTime.now().month)
+    {
+      _currentYearInt = _currentYearInt! + 1;
+    }
   }
 
 
