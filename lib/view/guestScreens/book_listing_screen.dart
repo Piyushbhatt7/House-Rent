@@ -62,6 +62,13 @@ class _BookListingScreenState extends State<BookListingScreen> {
             children: [
 
               // 17 - 2:26
+              Text('Sun'),
+              Text('Mon'),
+              Text('Tues'),
+              Text('Wed'),
+              Text('Thus'),
+              Text('Fri'),
+              Text('Sat'),
             ],
            )
     
