@@ -36,5 +36,7 @@ class BookingModel
     String lastName = "";
     firstName = fullName.split(" ")[0];
     lastName = fullName.split(" ")[1];
+
+    contact = ContactModel(id: id, firstName: firstName, lastName: lastName);
   }
 }
