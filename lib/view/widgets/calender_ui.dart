@@ -48,6 +48,24 @@ class _CalenderUiState extends State<CalenderUi> {
     }
   }
 
+  _selectDates(DateTime date)
+  {
+    if(_selectedDates.contains(date))
+    {
+      _selectedDates.remove(date);
+    }
+
+    else {
+      _selectedDates.add(date);
+    }
+
+    widget.selectDates!(date);
+
+    setState(() {
+      
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
