@@ -250,4 +250,9 @@ class PostingModel
        bookings!.add(newBooking); // 21:02 - 17
     }
   }
+
+  getBookingInfoFromFirestoreFromPosting()
+  {
+    
+  }
 }
