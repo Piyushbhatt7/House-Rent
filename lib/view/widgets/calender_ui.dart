@@ -17,9 +17,14 @@ class _CalenderUiState extends State<CalenderUi> {
 
 
   List<DateTime> _selectedDates = [];
-  List<> _monthTiles = [];
+  List<MonthTileWidget> _monthTiles = [];
   int? _currentMonthInt;
   int? _currentYearInt;
+
+  _setMonthTiles()
+  {
+    _monthTiles = [];
+  }
 
 
   @override
