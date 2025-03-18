@@ -234,4 +234,11 @@ class PostingModel
   {
     return address! + ", " + city! + ", " + country!;
   }
+
+  getAllBookingsFromFirestore() async
+  {
+    QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('postings')
+    .doc(id).collection('bookings')
+    .get();
+  }
 }
