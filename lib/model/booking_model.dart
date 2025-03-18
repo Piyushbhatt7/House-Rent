@@ -15,5 +15,11 @@ class BookingModel
   {
     posting = posting;
     List<Timestamp> timestamps = List<Timestamp>.from(snapshot['dates']) ?? [];
+
+    dates = [];
+    timestamps.forEach((timestamps)
+    {
+      dates!.add((timestamps.toDate()));
+    });
   }
 }
