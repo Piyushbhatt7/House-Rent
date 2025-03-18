@@ -251,5 +251,8 @@ class PostingModel
     }
   }
 
-  
+  List<DateTime> getAllBookedDates()
+  {
+    
+  }
 }
