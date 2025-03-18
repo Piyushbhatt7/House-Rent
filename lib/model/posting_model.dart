@@ -253,6 +253,13 @@ class PostingModel
 
   List<DateTime> getAllBookedDates()
   {
-    
+    List<DateTime> dates = [];
+
+    bookings!.forEach((booking)
+    {
+      dates.addAll(booking.dates!);
+    });
+
+    return dates;
   }
 }
