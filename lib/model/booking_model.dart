@@ -29,4 +29,12 @@ class BookingModel
 
     contact = ContactModel(id: contactID);
   }
+
+  _loadContactInfo(String id, String fullName)
+  {
+    String firstName = "";
+    String lastName = "";
+    firstName = fullName.split(" ")[0];
+    
+  }
 }
