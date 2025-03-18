@@ -81,10 +81,10 @@ class _BookListingScreenState extends State<BookListingScreen> {
             height: MediaQuery.of(context).size.height / 2,
 
             child: (calenderWidgets.isEmpty) ? Container() : PageView.builder(
-              itemCount: _calen,
+              itemCount: calenderWidgets.length,
               itemBuilder: (context, index)
               {
-                
+
               }
             
             ),
