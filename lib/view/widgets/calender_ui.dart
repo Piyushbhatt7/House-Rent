@@ -73,6 +73,11 @@ class _CalenderUiState extends State<CalenderUi> {
     super.initState();
 
     _currentMonthInt = (DateTime.now().month + widget.monthIndex!) % 12;
+
+    if(_currentMonthInt == 0)
+    {
+      _currentMonthInt = 12;
+    }
   }
 
 
