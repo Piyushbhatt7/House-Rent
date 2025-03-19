@@ -65,23 +65,22 @@ class _BookListingScreenState extends State<BookListingScreen> {
     }
   }
 
-  _makeBooking() 
-  {
-    if(selectedDates.isEmpty)
-    {
+  _makeBooking() {
+    if (selectedDates.isEmpty) {
       return;
     }
 
-    posting!.makeNewBooking(selectedDates, context).whenComplete(()
-    {
+    posting!.makeNewBooking(selectedDates, context).whenComplete(() {
       Get.back();
     });
   }
 
-  calculateAmountForOverStay()
-  {
-    bookingPrice = price;
-    double totalPriceForAllNights = dates.length * price!;
+  calculateAmountForOverStay() {
+    if (selectedDates.isEmpty) {
+      return;
+    }
+
+    double totalPriceForAllNights = selectedDates.length * posting!.price!;
     bookingPrice = totalPriceForAllNights;
   }
 
@@ -140,6 +139,21 @@ class _BookListingScreenState extends State<BookListingScreen> {
                       ),
             ),
 
+            bookingPrice == 0.0
+                ? MaterialButton(
+                  onPressed: () {
+                    calculateAmountForOverStay();
+                  },
+                  minWidth: double.infinity,
+                  height: MediaQuery.of(context).size.height / 14,
+                  color: Colors.green,
+                  child: const Text(
+                    'Proceed',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )
+                : Container(),
+
             paymentResult != ""
                 ? MaterialButton(
                   onPressed: () {
@@ -157,6 +171,9 @@ class _BookListingScreenState extends State<BookListingScreen> {
                     style: TextStyle(color: Colors.white),
                   ),
                 )
+                : Container(),
+            bookingPrice == 0.0
+                ? Container()
                 : Platform.isIOS
                 ? ApplePayButton(
                   paymentConfiguration: PaymentConfiguration.fromJsonString(
