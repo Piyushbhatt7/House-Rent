@@ -164,5 +164,15 @@ class UserModel extends ContactModel
      {
       earningsOld = dataSnap["earnings"].toString();
      });
+
+     Map<String, dynamic> data = 
+     {
+      'dates': booking.dates,
+      'postingID': booking.posting!.id,
+     };
+
+     await FirebaseFirestore.instance.doc('users/${this.id}/bookings/${booking.id}').set(data);
+     
    }
+
 } 
