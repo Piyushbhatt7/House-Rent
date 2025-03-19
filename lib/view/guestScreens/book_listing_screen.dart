@@ -1,8 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/route_manager.dart';
 import 'package:house/global.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/view/guest_home_screen.dart';
 import 'package:house/view/widgets/calender_ui.dart';
 import 'package:pay/pay.dart';
 
@@ -118,8 +121,12 @@ class _BookListingScreenState extends State<BookListingScreen> {
 
             paymentResult != "" 
             ? MaterialButton(
-              onPressed: () => {
+              onPressed: ()  {
+                  Get.to(GuestHomeScreen());
 
+                  setState(() {
+                    paymentResult = "";
+                  });
               },
               minWidth: double.infinity,
               height: MediaQuery.of(context).size.height / 14,
