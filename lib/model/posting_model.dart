@@ -291,8 +291,5 @@ class PostingModel
     Get.snackbar("", "Booked successfully");
   }
 
-  createBooking(PostingModel posting, ContactModel contact, List<DateTime> dates)
-  {
-    
-  }
+  
 }

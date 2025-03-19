@@ -155,4 +155,9 @@ class UserModel extends ContactModel
 
         Get.snackbar("Listing Removed", "Listing removed from favorite list");
     }
-} // 6:28 - 16
+
+   Future<void> addBookingToFirestore(BookingModel booking, int totalPriceForAllNights) async
+   {
+    
+   }
+} 
