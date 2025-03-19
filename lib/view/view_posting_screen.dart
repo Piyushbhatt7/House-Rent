@@ -145,7 +145,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen>
                         ),
                         child: MaterialButton(onPressed: ()
                         {
-                          Get.to(BookListingScreen(posting: posting,));
+                          Get.to(BookListingScreen(posting: posting, hostID: posting!.host!.id!));
                         },
                          child: const Text(
                           'Book Now',
