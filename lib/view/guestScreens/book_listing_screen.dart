@@ -154,7 +154,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
                 print("Payment Resulr = $result");
                 setState(() {
                   paymentResult = result.toString();
-                  bookingPrice;
+                  //bookingPrice;
                 });
                 
               },
@@ -167,6 +167,19 @@ class _BookListingScreenState extends State<BookListingScreen> {
               paymentItems: [],
               type: GooglePayButtonType.pay,
               margin: const EdgeInsets.only(top: 15.0),
+
+              onPaymentResult: (result) {
+                print("Payment Resulr = $result");
+                setState(() {
+                  paymentResult = result.toString();
+                  //bookingPrice;
+                });   
+                
+              },
+
+               loadingIndicator: const Center(
+                child: CircularProgressIndicator(),
+              ),
 
             ),
           ],
