@@ -150,6 +150,9 @@ class _BookListingScreenState extends State<BookListingScreen> {
               height: 50,
               type: ApplePayButtonType.buy,
               margin: const EdgeInsets.only(top: 15.0),
+              onPaymentResult: (result) {
+                print("Payment Resulr = $result");
+              },
             ) 
             : GooglePayButton(),
           ],
