@@ -286,9 +286,9 @@ class PostingModel
     newBooking.id = reference.id;
 
     bookings!.add(newBooking);
-    await AppConstants.currentUser.addBookingToFirestore(newBooking, bookingPrice);
+    await AppConstants.currentUser.addBookingToFirestore(newBooking, bookingPrice!);
 
-    Get.snackbar("", "Booked successfully");
+    Get.snackbar("", "Booked successfully"); // 18 :24 
   }
 
   
