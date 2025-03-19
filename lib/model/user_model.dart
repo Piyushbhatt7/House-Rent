@@ -158,6 +158,11 @@ class UserModel extends ContactModel
 
    Future<void> addBookingToFirestore(BookingModel booking, int totalPriceForAllNights) async
    {
-    
+     String earningsOld = "";
+
+     await FirebaseFirestore.instance.collection("users").doc(id).get().then((dataSnap)
+     {
+      earningsOld = dataSnap["earnings"].toString();
+     });
    }
 } 
