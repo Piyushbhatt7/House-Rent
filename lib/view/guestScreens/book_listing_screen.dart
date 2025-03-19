@@ -11,9 +11,10 @@ import 'package:house/view/widgets/calender_ui.dart';
 import 'package:pay/pay.dart';
 
 class BookListingScreen extends StatefulWidget {
-  final PostingModel? posting;
+   PostingModel? posting;
+   String? hostID;
 
-  BookListingScreen({super.key, this.posting});
+  BookListingScreen({super.key, this.posting, this.hostID});
 
   @override
   State<BookListingScreen> createState() => _BookListingScreenState();
@@ -22,7 +23,7 @@ class BookListingScreen extends StatefulWidget {
 class _BookListingScreenState extends State<BookListingScreen> {
   PostingModel? posting;
   
-  String? hostID;
+  
 
   List<DateTime> bookedDates = [];
   List<DateTime> selectedDates = [];
