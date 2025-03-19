@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:house/global.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/calender_ui.dart';
+import 'package:pay/pay.dart';
 
 class BookListingScreen extends StatefulWidget {
   final PostingModel? posting;
@@ -113,12 +116,11 @@ class _BookListingScreenState extends State<BookListingScreen> {
                       ),
             ),
 
-            paymentResult != "" ? MaterialButton(
-              onPressed: ()
-
-            {
-              
-            }),
+            paymentResult != "" 
+            ? MaterialButton() 
+            : Platform.isIOS 
+            ? ApplePayButton() 
+            : GooglePayButton(),
           ],
         ),
       ),
