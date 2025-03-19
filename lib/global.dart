@@ -7,3 +7,6 @@ PostingModel postingModel = PostingModel();
 UserViewModel userViewModel = UserViewModel();
 
 PostingViewModel postingViewModel = PostingViewModel();
+
+String paymentResult = "";
+int? bookingPrice = 0;
