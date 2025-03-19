@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/global.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/calender_ui.dart';
 
@@ -18,20 +19,19 @@ class _BookListingScreenState extends State<BookListingScreen> {
   List<CalenderUi> calenderWidgets = [];
 
   void _buildCalenderWidgets() {
-  List<CalenderUi> tempWidgets = List.generate(12, (index) {
-    return CalenderUi(
-      monthIndex: index, // Ensure each instance gets a different month index
-      bookedDates: bookedDates,
-      selectDates: _selectDates,
-      getSelectedDates: _getSelectedDates,
-    );
-  });
+    List<CalenderUi> tempWidgets = List.generate(12, (index) {
+      return CalenderUi(
+        monthIndex: index, // Ensure each instance gets a different month index
+        bookedDates: bookedDates,
+        selectDates: _selectDates,
+        getSelectedDates: _getSelectedDates,
+      );
+    });
 
-  setState(() {
-    calenderWidgets = tempWidgets;
-  });
-}
-
+    setState(() {
+      calenderWidgets = tempWidgets;
+    });
+  }
 
   List<DateTime> _getSelectedDates() {
     return selectedDates;
@@ -80,10 +80,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
         ),
         title: Text(
           posting != null ? "Book ${posting!.name}" : "Book Listing",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-          ),
+          style: TextStyle(color: Colors.white, fontSize: 14),
         ),
       ),
       body: Padding(
@@ -104,17 +101,24 @@ class _BookListingScreenState extends State<BookListingScreen> {
               ],
             ),
             SizedBox(
-  height: MediaQuery.of(context).size.height / 2,
-  child: calenderWidgets.isEmpty
-      ? Center(child: CircularProgressIndicator())
-      : PageView.builder(
-          itemCount: calenderWidgets.length,
-          itemBuilder: (context, index) {
-            return calenderWidgets[index]; // Correctly passing the index
-          },
-        ),
-),
+              height: MediaQuery.of(context).size.height / 2,
+              child:
+                  calenderWidgets.isEmpty
+                      ? Center(child: CircularProgressIndicator())
+                      : PageView.builder(
+                        itemCount: calenderWidgets.length,
+                        itemBuilder: (context, index) {
+                          return calenderWidgets[index]; // Correctly passing the index
+                        },
+                      ),
+            ),
 
+            paymentResult != "" ? MaterialButton(
+              onPressed: ()
+
+            {
+              
+            }),
           ],
         ),
       ),
