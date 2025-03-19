@@ -139,11 +139,11 @@ class _BookListingScreenState extends State<BookListingScreen> {
               paymentConfiguration: PaymentConfiguration.fromJsonString(defaultApplePay),
               paymentItems: [
 
-                PaymentItem(
-                  amount: '0.01', 
-                  label: 'Item A',
-                  status: PaymentItemStatus.final_price
-                  )
+                // PaymentItem(
+                //   amount: '0.01', 
+                //   label: 'Item A',
+                //   status: PaymentItemStatus.final_price
+                //   )
               ],
               style: ApplePayButtonStyle.black,
               width: double.infinity,
@@ -158,7 +158,12 @@ class _BookListingScreenState extends State<BookListingScreen> {
                 child: CircularProgressIndicator(),
               ),
             ) 
-            : GooglePayButton(),
+            : GooglePayButton(
+              paymentConfiguration: PaymentConfiguration.fromJsonString(defaultGooglePay),
+              paymentItems: [],
+              type: GooglePayButtonType.pay,
+              margin: const EdgeInsets.only(top: 15.0),
+            ),
           ],
         ),
       ),
