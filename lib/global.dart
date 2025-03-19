@@ -9,4 +9,4 @@ UserViewModel userViewModel = UserViewModel();
 PostingViewModel postingViewModel = PostingViewModel();
 
 String paymentResult = "";
-double? bookingPrice = 0;
+double? bookingPrice = 0.0;
