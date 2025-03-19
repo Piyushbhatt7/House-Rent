@@ -123,6 +123,8 @@ class _BookListingScreenState extends State<BookListingScreen> {
               },
               minWidth: double.infinity,
               height: MediaQuery.of(context).size.height / 14,
+              color: Colors.green,
+              child: const Text('Amount Paid Successfully', style: TextStyle(color: Colors.white),),
             ) 
             : Platform.isIOS 
             ? ApplePayButton() 
