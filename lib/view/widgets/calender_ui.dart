@@ -22,31 +22,29 @@ class _CalenderUiState extends State<CalenderUi> {
   int? _currentMonthInt;
   int? _currentYearInt;
 
-  _setMonthTiles()
-  {
-    _monthTiles = [];
+  void _setMonthTiles() {
+  _monthTiles = [];
 
-    int daysInMonth = AppConstants.daysInMonths![_currentMonthInt]!;
+  int daysInMonth = AppConstants.daysInMonths![_currentMonthInt]!;
+  DateTime firstDayOfMonth = DateTime(_currentYearInt!, _currentMonthInt!, 1);
+  int firstWeekOfMonth = firstDayOfMonth.weekday;
 
-    DateTime firstDaysOfMonth = DateTime(_currentYearInt!, _currentMonthInt!, 1);
-
-    int firstWeekOfMonth = firstDaysOfMonth.weekday;
-
-    if(firstWeekOfMonth != 7)
-    {
-      for(int i = 0; i < firstWeekOfMonth; i++)
-      {
-        _monthTiles.add(MonthTileWidget(dateTime: null,));
-      }
-
-    }
-
-    for(int i = 1; i <= daysInMonth; i++)
-    {
-      DateTime date = DateTime(_currentYearInt!, _currentMonthInt!, 1);
-      _monthTiles.add(MonthTileWidget(dateTime: date,));
+  // Fill empty spaces before first day
+  if (firstWeekOfMonth != 7) {
+    for (int i = 0; i < firstWeekOfMonth; i++) {
+      _monthTiles.add(MonthTileWidget(dateTime: null));
     }
   }
+
+  // Fill actual dates
+  for (int i = 1; i <= daysInMonth; i++) {
+    DateTime date = DateTime(_currentYearInt!, _currentMonthInt!, i);
+    _monthTiles.add(MonthTileWidget(dateTime: date));
+  }
+
+  setState(() {}); // Ensure UI updates
+}
+
 
   _selectDates(DateTime date)
   {
@@ -72,7 +70,8 @@ class _CalenderUiState extends State<CalenderUi> {
     // TODO: implement initState
     super.initState();
 
-    _currentMonthInt = (DateTime.now().month + widget.monthIndex!) % 12;
+    _currentMonthInt = (DateTime.now().month - 1 + widget.monthIndex!) % 12 + 1;
+
 
     if(_currentMonthInt == 0)
     {
@@ -169,7 +168,7 @@ DateTime? dateTime;
     return Text(
       dateTime == null ? "" : dateTime!.day.toString(),
       style: const TextStyle(
-        fontSize: 10
+        fontSize: 8
       ),
     );
   }
