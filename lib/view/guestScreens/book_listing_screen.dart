@@ -74,7 +74,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
       return;
     }
 
-    posting!.makeNewBooking(selectedDates, context).whenComplete(() {
+    posting!.makeNewBooking(selectedDates, context, widget.hostID).whenComplete(() {
       Get.back();
     });
   }
