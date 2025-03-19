@@ -74,7 +74,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
 
     posting!.makeNewBooking(selectedDates, context).whenComplete(()
     {
-      Get.back()
+      Get.back();
     });
   }
 

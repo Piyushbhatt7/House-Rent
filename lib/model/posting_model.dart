@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:house/global.dart';
 import 'package:house/model/booking_model.dart';
 import 'package:house/model/contact_model.dart';
 import 'package:house/model/review_model.dart';
@@ -261,5 +262,10 @@ class PostingModel
     });
 
     return dates;
+  }
+
+  Future<void> makeNewBooking(List<DateTime> dates, context) async
+  {
+    double totalPriceForAllNights = dates.length * bookingPrice!;
   }
 }
