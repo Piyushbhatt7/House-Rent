@@ -171,8 +171,18 @@ class UserModel extends ContactModel
       'postingID': booking.posting!.id,
      };
 
-     await FirebaseFirestore.instance.doc('users/${this.id}/bookings/${booking.id}').set(data);
-     
+     await FirebaseFirestore.instance.doc('users/${id}/bookings/${booking.id}').set(data);
+
+     await FirebaseFirestore.instance.collection("users")
+     .doc(id)
+     .update(
+      {
+        "earnings": totalPriceForAllNights + int.parse(earningsOld),
+      }
+     );
+
+     bookings!.add(booking);
+
    }
 
 } 
