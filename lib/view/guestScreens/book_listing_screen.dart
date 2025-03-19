@@ -211,7 +211,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
                     PaymentItem(
                       amount: bookingPrice.toString(),
                       status: PaymentItemStatus.final_price, 
-                      label: 'Total Amount',
+                      label: 'Total Amounts',
                       )
                   ],
                   type: GooglePayButtonType.pay,

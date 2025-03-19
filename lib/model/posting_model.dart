@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:house/global.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/booking_model.dart';
 import 'package:house/model/contact_model.dart';
 import 'package:house/model/review_model.dart';
@@ -266,6 +267,20 @@ class PostingModel
 
   Future<void> makeNewBooking(List<DateTime> dates, context) async
   {
-    
+    Map<String, dynamic> bookingData = {
+      'dates': dates,
+      'name': AppConstants.currentUser.getFullNameofUser(),
+      'userID': AppConstants.currentUser.id,
+      'payment': bookingPrice,
+    };
+
+    DocumentReference reference = await FirebaseFirestore.instance.collection('postings')
+    .doc(id)
+    .collection('bookings').add(bookingData);
+
+    BookingModel newBooking = BookingModel();
+
+    newBooking.createBooking(this, AppConstants.currentUser.createUserFromContact(), dates);
+    newBooking.id = refere
   }
 }
