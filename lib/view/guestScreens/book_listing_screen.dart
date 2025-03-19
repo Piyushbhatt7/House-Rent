@@ -5,6 +5,7 @@ import 'package:get/get_core/get_core.dart';
 import 'package:get/route_manager.dart';
 import 'package:house/global.dart';
 import 'package:house/model/posting_model.dart';
+import 'package:house/payment_gateway/payment_config.dart';
 import 'package:house/view/guest_home_screen.dart';
 import 'package:house/view/widgets/calender_ui.dart';
 import 'package:pay/pay.dart';
@@ -134,7 +135,22 @@ class _BookListingScreenState extends State<BookListingScreen> {
               child: const Text('Amount Paid Successfully', style: TextStyle(color: Colors.white),),
             ) 
             : Platform.isIOS 
-            ? ApplePayButton() 
+            ? ApplePayButton(
+              paymentConfiguration: PaymentConfiguration.fromJsonString(defaultApplePay),
+              paymentItems: [
+
+                PaymentItem(
+                  amount: '0.01', 
+                  label: 'Item A',
+                  status: PaymentItemStatus.final_price
+                  )
+              ],
+              style: ApplePayButtonStyle.black,
+              width: double.infinity,
+              height: 50,
+              type: ApplePayButtonType.buy,
+              margin: const EdgeInsets.only(top: 15.0),
+            ) 
             : GooglePayButton(),
           ],
         ),
