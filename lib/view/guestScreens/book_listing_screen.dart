@@ -78,6 +78,13 @@ class _BookListingScreenState extends State<BookListingScreen> {
     });
   }
 
+  calculateAmountForOverStay()
+  {
+    bookingPrice = price;
+    double totalPriceForAllNights = dates.length * price!;
+    bookingPrice = totalPriceForAllNights;
+  }
+
   @override
   void initState() {
     super.initState();

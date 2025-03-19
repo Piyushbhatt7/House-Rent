@@ -266,7 +266,6 @@ class PostingModel
 
   Future<void> makeNewBooking(List<DateTime> dates, context) async
   {
-    bookingPrice = price;
-    double totalPriceForAllNights = dates.length * bookingPrice!;
+    
   }
 }
