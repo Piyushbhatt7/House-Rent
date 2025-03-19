@@ -173,7 +173,7 @@ class UserModel extends ContactModel
      await FirebaseFirestore.instance.collection("users").doc(id).get().then((dataSnap)
      {
       earningsOld = dataSnap["earnings"].toString();
-     });         
+     });          
 
      await FirebaseFirestore.instance.collection("users")
      .doc(hostID)
