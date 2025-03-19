@@ -281,6 +281,9 @@ class PostingModel
     BookingModel newBooking = BookingModel();
 
     newBooking.createBooking(this, AppConstants.currentUser.createUserFromContact(), dates);
-    newBooking.id = refere
+    newBooking.id = reference.id;
+
+    bookings!.add(newBooking);
+    await AppConstants.currentUser.addBookingToFirestore(newBooking, bookingPrice);
   }
 }
