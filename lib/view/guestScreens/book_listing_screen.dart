@@ -65,6 +65,19 @@ class _BookListingScreenState extends State<BookListingScreen> {
     }
   }
 
+  _makeBooking() 
+  {
+    if(selectedDates.isEmpty)
+    {
+      return;
+    }
+
+    posting!.makeNewBooking(selectedDates, context).whenComplete(()
+    {
+      Get.back()
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -120,68 +133,73 @@ class _BookListingScreenState extends State<BookListingScreen> {
                       ),
             ),
 
-            paymentResult != "" 
-            ? MaterialButton(
-              onPressed: ()  {
-                  Get.to(GuestHomeScreen());
+            paymentResult != ""
+                ? MaterialButton(
+                  onPressed: () {
+                    Get.to(GuestHomeScreen());
 
-                  setState(() {
-                    paymentResult = "";
-                  });
-              },
-              minWidth: double.infinity,
-              height: MediaQuery.of(context).size.height / 14,
-              color: Colors.green,
-              child: const Text('Amount Paid Successfully', style: TextStyle(color: Colors.white),),
-            ) 
-            : Platform.isIOS 
-            ? ApplePayButton(
-              paymentConfiguration: PaymentConfiguration.fromJsonString(defaultApplePay),
-              paymentItems: [
+                    setState(() {
+                      paymentResult = "";
+                    });
+                  },
+                  minWidth: double.infinity,
+                  height: MediaQuery.of(context).size.height / 14,
+                  color: Colors.green,
+                  child: const Text(
+                    'Amount Paid Successfully',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )
+                : Platform.isIOS
+                ? ApplePayButton(
+                  paymentConfiguration: PaymentConfiguration.fromJsonString(
+                    defaultApplePay,
+                  ),
+                  paymentItems: [
+                    // PaymentItem(
+                    //   amount: '0.01',
+                    //   label: 'Item A',
+                    //   status: PaymentItemStatus.final_price
+                    //   )
+                  ],
+                  style: ApplePayButtonStyle.black,
+                  width: double.infinity,
+                  height: 50,
+                  type: ApplePayButtonType.buy,
+                  margin: const EdgeInsets.only(top: 15.0),
+                  onPaymentResult: (result) {
+                    print("Payment Resulr = $result");
+                    setState(() {
+                      paymentResult = result.toString();
+                      //bookingPrice;
+                    });
+                  },
+                  loadingIndicator: const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                )
+                : GooglePayButton(
+                  paymentConfiguration: PaymentConfiguration.fromJsonString(
+                    defaultGooglePay,
+                  ),
+                  paymentItems: [],
+                  type: GooglePayButtonType.pay,
+                  margin: const EdgeInsets.only(top: 15.0),
 
-                // PaymentItem(
-                //   amount: '0.01', 
-                //   label: 'Item A',
-                //   status: PaymentItemStatus.final_price
-                //   )
-              ],
-              style: ApplePayButtonStyle.black,
-              width: double.infinity,
-              height: 50,
-              type: ApplePayButtonType.buy,
-              margin: const EdgeInsets.only(top: 15.0),
-              onPaymentResult: (result) {
-                print("Payment Resulr = $result");
-                setState(() {
-                  paymentResult = result.toString();
-                  //bookingPrice;
-                });
-                
-              },
-              loadingIndicator: const Center(
-                child: CircularProgressIndicator(),
-              ),
-            ) 
-            : GooglePayButton(
-              paymentConfiguration: PaymentConfiguration.fromJsonString(defaultGooglePay),
-              paymentItems: [],
-              type: GooglePayButtonType.pay,
-              margin: const EdgeInsets.only(top: 15.0),
+                  onPaymentResult: (result) {
+                    print("Payment Resulr = $result");
+                    setState(() {
+                      paymentResult = result.toString();
+                      //bookingPrice;
+                    });
 
-              onPaymentResult: (result) {
-                print("Payment Resulr = $result");
-                setState(() {
-                  paymentResult = result.toString();
-                  //bookingPrice;
-                });   
-                
-              },
+                    _makeBooking();
+                  },
 
-               loadingIndicator: const Center(
-                child: CircularProgressIndicator(),
-              ),
-
-            ),
+                  loadingIndicator: const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                ),
           ],
         ),
       ),
