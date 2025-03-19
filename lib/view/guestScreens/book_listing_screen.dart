@@ -180,11 +180,11 @@ class _BookListingScreenState extends State<BookListingScreen> {
                     defaultApplePay,
                   ),
                   paymentItems: [
-                    // PaymentItem(
-                    //   amount: '0.01',
-                    //   label: 'Item A',
-                    //   status: PaymentItemStatus.final_price
-                    //   )
+                    PaymentItem(
+                      amount: bookingPrice.toString(),
+                      label: 'Booking Amount',
+                      status: PaymentItemStatus.final_price
+                      )
                   ],
                   style: ApplePayButtonStyle.black,
                   width: double.infinity,
@@ -206,7 +206,14 @@ class _BookListingScreenState extends State<BookListingScreen> {
                   paymentConfiguration: PaymentConfiguration.fromJsonString(
                     defaultGooglePay,
                   ),
-                  paymentItems: [],
+                  paymentItems: [
+
+                    PaymentItem(
+                      amount: bookingPrice.toString(),
+                      status: PaymentItemStatus.final_price, 
+                      label: 'Total Amount',
+                      )
+                  ],
                   type: GooglePayButtonType.pay,
                   margin: const EdgeInsets.only(top: 15.0),
 
