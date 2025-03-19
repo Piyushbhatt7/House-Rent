@@ -2,154 +2,121 @@ import 'package:flutter/material.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/calender_ui.dart';
 
+class BookListingScreen extends StatefulWidget {
+  final PostingModel? posting;
 
-class BookListingScreen extends StatefulWidget
- {
-  PostingModel? posting;
-
-  
-   BookListingScreen({super.key, this.posting});
+  BookListingScreen({super.key, this.posting});
 
   @override
   State<BookListingScreen> createState() => _BookListingScreenState();
 }
 
 class _BookListingScreenState extends State<BookListingScreen> {
-
   PostingModel? posting;
   List<DateTime> bookedDates = [];
   List<DateTime> selectedDates = [];
   List<CalenderUi> calenderWidgets = [];
 
-  _buildCalenderWidgets()
-  {
-    for(int i = 0; i < 12; i++)
-    {
-      calenderWidgets.add(
-        CalenderUi(
-          monthIndex: i,
-          bookedDates: bookedDates,
-          selectDates: _selectDates,
-          getSelectedDates: _getSelectedDates,
-        )
-      );
+  void _buildCalenderWidgets() {
+  List<CalenderUi> tempWidgets = List.generate(12, (index) {
+    return CalenderUi(
+      monthIndex: index, // Ensure each instance gets a different month index
+      bookedDates: bookedDates,
+      selectDates: _selectDates,
+      getSelectedDates: _getSelectedDates,
+    );
+  });
 
+  setState(() {
+    calenderWidgets = tempWidgets;
+  });
+}
+
+
+  List<DateTime> _getSelectedDates() {
+    return selectedDates;
+  }
+
+  void _selectDates(DateTime date) {
+    setState(() {
+      if (selectedDates.contains(date)) {
+        selectedDates.remove(date);
+      } else {
+        selectedDates.add(date);
+      }
+      selectedDates.sort();
+    });
+  }
+
+  Future<void> _loadBookedDates() async {
+    if (posting != null) {
+      await posting!.getAllBookingsFromFirestore();
       setState(() {
-        
+        bookedDates = posting!.getAllBookedDates();
+        _buildCalenderWidgets();
       });
     }
   }
 
-  List<DateTime> _getSelectedDates()
-  {
-    return selectedDates;
-  }
-
-  _selectDates(DateTime date)
-  {
-    if(selectedDates.contains(date))
-    {
-      selectedDates.remove(date);
-    }
-
-    else{
-      selectedDates.add(date);
-    }
-
-    selectedDates.sort();
-
-    setState(() {
-      
-    });
-  }
-
-  _loadBookedDates()
-  {
-    posting!.getAllBookingsFromFirestore().whenComplete(()
-    {
-
-      bookedDates = posting!.getAllBookedDates();
-      _buildCalenderWidgets();
-    });
-  }
-
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-
     posting = widget.posting;
-
     _loadBookedDates();
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace:  Container(
-        decoration: BoxDecoration(
-        gradient: LinearGradient(
-        colors: [
-        Colors.pinkAccent,
-        Colors.amberAccent
-        ],
-        begin: FractionalOffset(0, 0),
-        end: FractionalOffset(1, 0),
-        stops: [0, 1],
-        tileMode: TileMode.clamp,
-      )
-    ),
-      ),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.pinkAccent, Colors.amberAccent],
+              begin: Alignment.topLeft,
+              end: Alignment.topRight,
+            ),
+          ),
+        ),
         title: Text(
-          "Book ${posting!.name}",
+          posting != null ? "Book ${posting!.name}" : "Book Listing",
           style: TextStyle(
-            color: Colors.white, 
+            color: Colors.white,
             fontSize: 14,
           ),
         ),
-        
-    ),
-   
-      body: Padding(padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-           
-           const Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-
-            children: [
-
-              // 17 - 2:26
-              Text('Sun'),
-              Text('Mon'),
-              Text('Tues'),
-              Text('Wed'),
-              Text('Thus'),
-              Text('Fri'),
-              Text('Sat'),
-
-            ],
-           ),
-
-           SizedBox(
-            height: MediaQuery.of(context).size.height / 2,
-
-            child: (calenderWidgets.isEmpty) ? Container() : PageView.builder(
-              itemCount: calenderWidgets.length,
-              itemBuilder: (context, index)
-              {
-                 return calenderWidgets[index];
-              }
-            
-            ),
-           )
-    
-        ],
       ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text('Sun'),
+                Text('Mon'),
+                Text('Tues'),
+                Text('Wed'),
+                Text('Thus'),
+                Text('Fri'),
+                Text('Sat'),
+              ],
+            ),
+            SizedBox(
+  height: MediaQuery.of(context).size.height / 2,
+  child: calenderWidgets.isEmpty
+      ? Center(child: CircularProgressIndicator())
+      : PageView.builder(
+          itemCount: calenderWidgets.length,
+          itemBuilder: (context, index) {
+            return calenderWidgets[index]; // Correctly passing the index
+          },
+        ),
+),
+
+          ],
+        ),
       ),
     );
   }
