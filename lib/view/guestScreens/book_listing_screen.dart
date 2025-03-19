@@ -117,7 +117,13 @@ class _BookListingScreenState extends State<BookListingScreen> {
             ),
 
             paymentResult != "" 
-            ? MaterialButton() 
+            ? MaterialButton(
+              onPressed: () => {
+
+              },
+              minWidth: double.infinity,
+              height: MediaQuery.of(context).size.height / 14,
+            ) 
             : Platform.isIOS 
             ? ApplePayButton() 
             : GooglePayButton(),
