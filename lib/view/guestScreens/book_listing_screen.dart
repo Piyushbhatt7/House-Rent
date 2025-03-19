@@ -152,6 +152,10 @@ class _BookListingScreenState extends State<BookListingScreen> {
               margin: const EdgeInsets.only(top: 15.0),
               onPaymentResult: (result) {
                 print("Payment Resulr = $result");
+                setState(() {
+                  paymentResult = result.toString();
+                  bookingPrice;
+                });
                 
               },
               loadingIndicator: const Center(
@@ -163,6 +167,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
               paymentItems: [],
               type: GooglePayButtonType.pay,
               margin: const EdgeInsets.only(top: 15.0),
+
             ),
           ],
         ),
