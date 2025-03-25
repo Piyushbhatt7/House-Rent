@@ -174,7 +174,7 @@ class UserModel extends ContactModel
      {
       earningsOld = dataSnap["earnings"].toString();
      });                 
-               
+                 
      await FirebaseFirestore.instance.collection("users")
      .doc(hostID)  
      .update(
