@@ -151,7 +151,7 @@ class UserModel extends ContactModel
           {
             'savedPostingIDs' : savedPostingIDs,
           } 
-        );    
+        );     
 
         Get.snackbar("Listing Removed", "Listing removed from favorite list");
     }
