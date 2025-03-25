@@ -176,10 +176,10 @@ class UserModel extends ContactModel
      });            
      
      await FirebaseFirestore.instance.collection("users")
-     .doc(hostID)
+     .doc(hostID) 
      .update(
       {
-        "earnings": totalPriceForAllNights + int.parse(earningsOld), // 7:03 ff
+        "earnings": totalPriceForAllNights + int.parse(earningsOld), // 7:03 19
       }
      );
 
