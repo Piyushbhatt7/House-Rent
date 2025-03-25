@@ -150,7 +150,7 @@ class UserModel extends ContactModel
         await FirebaseFirestore.instance.collection("users").doc(id).update(
           {
             'savedPostingIDs' : savedPostingIDs,
-          } 
+          }  
         );      
 
         Get.snackbar("Listing Removed", "Listing removed from favorite list");
