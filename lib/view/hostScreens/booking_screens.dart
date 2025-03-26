@@ -111,7 +111,7 @@ class _BookingScreensState extends State<BookingScreens> {
                   'Filter by Listing',
                   style: TextStyle(
                     fontSize: 20,
-                    
+                    fontWeight: FontWeight.bold
                   ),
                 )
               ],
