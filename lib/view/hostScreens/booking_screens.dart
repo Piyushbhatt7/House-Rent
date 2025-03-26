@@ -116,8 +116,11 @@ class _BookingScreensState extends State<BookingScreens> {
                 ),
 
                 MaterialButton(
-                  onPressed: _clearSelectedPosting
-                  
+                  onPressed:()
+                  {
+                    _clearSelectedPosting();
+                  }
+                  child: const ,
                   )
               ],
              ),
