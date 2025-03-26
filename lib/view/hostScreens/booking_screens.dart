@@ -28,7 +28,7 @@ class _BookingScreensState extends State<BookingScreens> {
      
   }
 
-  void _selectPostings(PostingModel posting)
+  _selectPostings(PostingModel posting)
   {
     _selectedPosting = posting;
     _bookedDates = posting.getAllBookedDates();
