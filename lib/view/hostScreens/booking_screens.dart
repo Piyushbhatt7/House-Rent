@@ -91,7 +91,7 @@ class _BookingScreensState extends State<BookingScreens> {
                     return CalenderUi(
                       monthIndex: index,
                       bookedDates: _bookedDates,
-                      selectDates: _selectDates(date),
+                      selectDates: _selectDates,
                     )
                   }),
               ),
