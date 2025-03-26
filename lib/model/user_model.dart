@@ -194,7 +194,13 @@ class UserModel extends ContactModel
    {
      List<DateTime> getAllBookedDates = [];
 
-     myPostings!.forEach((postingModel))
+     myPostings!.forEach((posting)
+     {
+      posting.bookings!.forEach((booking)
+      {
+        getAllBookedDates.addAll(booking.dates!);
+      });
+     });
    }
 
 } 
