@@ -105,6 +105,9 @@ class _BookingScreensState extends State<BookingScreens> {
              const EdgeInsets.fromLTRB(25, 25, 0, 25),
              child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                
+              ],
              ),
              )
           ],
