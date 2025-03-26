@@ -28,6 +28,12 @@ class _BookingScreensState extends State<BookingScreens> {
      
   }
 
+  void _selectPostings(PostingModel posting)
+  {
+    _selectedPosting = posting;
+    _bookedDates = posting.getAllBookedDates();
+  }
+
   @override
   void initState() {
     // TODO: implement initState
