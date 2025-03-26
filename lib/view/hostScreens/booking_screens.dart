@@ -22,6 +22,8 @@ class _BookingScreensState extends State<BookingScreens> {
     return [];
   }
 
+  void _selectDates(DateTime date) {}
+
   @override
   void initState() {
     // TODO: implement initState
