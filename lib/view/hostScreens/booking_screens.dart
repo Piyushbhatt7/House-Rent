@@ -15,7 +15,12 @@ class _BookingScreensState extends State<BookingScreens> {
         padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
         child: Column(
           children: [
-            
+
+            const Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              
+            )
           ],
         ),
         )
