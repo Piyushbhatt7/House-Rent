@@ -146,7 +146,9 @@ class _BookingScreensState extends State<BookingScreens> {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 26.0),
                 child: InkResponse(
-
+                  onTap: () {
+                    
+                  },
                 ),
               );
             })
