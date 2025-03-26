@@ -139,10 +139,11 @@ class _BookingScreensState extends State<BookingScreens> {
         
            // display  host listings
            ListView.builder(
+            itemCount: AppConstants.currentUser.myPostings!.length,
             itemBuilder: 
             (context, index)
             {
-              
+
             })
         
           ],
