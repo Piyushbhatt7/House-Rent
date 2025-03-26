@@ -82,7 +82,7 @@ class _BookingScreensState extends State<BookingScreens> {
             Padding(
               padding: 
               const EdgeInsets.only(top: 15, bottom: 35),
-              child: Container(
+              child: SizedBox(
                 height: MediaQuery.of(context).size.height / 1.8,
                 child: PageView.builder(
                   itemCount: 12,
