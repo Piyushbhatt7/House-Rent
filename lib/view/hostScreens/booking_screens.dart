@@ -113,7 +113,7 @@ class _BookingScreensState extends State<BookingScreens> {
                     fontSize: 20,
                     fontWeight: FontWeight.bold
                   ),
-                )
+                ),
               ],
              ),
              )
