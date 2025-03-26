@@ -129,7 +129,8 @@ class _BookingScreensState extends State<BookingScreens> {
                   ),
                   ),
 
-                  
+                  Padding(
+                    padding: const EdgeInsets.only(top: 25.0, bottom: 25.0),)
               ],
              ),
              )
