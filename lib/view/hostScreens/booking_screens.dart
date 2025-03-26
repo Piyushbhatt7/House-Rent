@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/view/widgets/calender_ui.dart';
 
 class BookingScreens extends StatefulWidget {
@@ -10,7 +11,12 @@ class BookingScreens extends StatefulWidget {
 
 class _BookingScreensState extends State<BookingScreens> {
 
-  
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    AppConstants.currentUser.getAllBookedDates();
+  }
 
   @override
   Widget build(BuildContext context) {
