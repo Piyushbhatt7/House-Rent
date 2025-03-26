@@ -11,7 +11,9 @@ class _BookingScreensState extends State<BookingScreens> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
+        )
     );
   }
 }
