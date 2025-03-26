@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house/model/app_constants.dart';
+import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/calender_ui.dart';
 
 class BookingScreens extends StatefulWidget {
@@ -10,6 +11,10 @@ class BookingScreens extends StatefulWidget {
 }
 
 class _BookingScreensState extends State<BookingScreens> {
+
+  List<DateTime> _bookedDates = [];
+  List<DateTime> _allBookedDates = [];
+  PostingModel? _selectedPosting;
 
   @override
   void initState() {
