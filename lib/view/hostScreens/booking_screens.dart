@@ -136,6 +136,9 @@ class _BookingScreensState extends State<BookingScreens> {
               ],
              ),
              )
+        
+           // display  host listings
+        
           ],
         ),
         )
