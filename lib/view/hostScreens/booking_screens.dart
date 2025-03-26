@@ -143,7 +143,10 @@ class _BookingScreensState extends State<BookingScreens> {
             itemBuilder: 
             (context, index)
             {
-
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 25.0),
+              
+              )
             })
         
           ],
