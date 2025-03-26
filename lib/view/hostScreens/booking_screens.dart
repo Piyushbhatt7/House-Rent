@@ -32,6 +32,10 @@ class _BookingScreensState extends State<BookingScreens> {
   {
     _selectedPosting = posting;
     _bookedDates = posting.getAllBookedDates();
+
+    setState(() {
+      
+    });
   }
 
   @override
