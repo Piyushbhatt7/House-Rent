@@ -79,6 +79,8 @@ class _BookingScreensState extends State<BookingScreens> {
               ],
             ),
 
+            // calender UI
+
             Padding(
               padding: 
               const EdgeInsets.only(top: 15, bottom: 35),
@@ -93,10 +95,12 @@ class _BookingScreensState extends State<BookingScreens> {
                       bookedDates: _bookedDates,
                       selectDates: _selectDates,
                       getSelectedDates: _getSelectedDates,
-                    )
+                    );
                   }),
               ),
-              )
+              ),
+
+
           ],
         ),
         )
