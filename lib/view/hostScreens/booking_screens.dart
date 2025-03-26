@@ -149,6 +149,9 @@ class _BookingScreensState extends State<BookingScreens> {
                   onTap: () {
                     _selectPostings(AppConstants.currentUser.myPostings![index]);
                   },
+                  child: Container(
+                    
+                  ),
                 ),
               );
             })
