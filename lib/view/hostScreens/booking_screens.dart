@@ -102,7 +102,7 @@ class _BookingScreensState extends State<BookingScreens> {
 
              Padding(
               padding: 
-             const EdgeInsets.fromLTRB(25, 25, 0, bottom)
+             const EdgeInsets.fromLTRB(25, 25, 0, 25)
              )
           ],
         ),
