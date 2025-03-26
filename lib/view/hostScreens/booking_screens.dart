@@ -38,6 +38,16 @@ class _BookingScreensState extends State<BookingScreens> {
     });
   }
 
+  _clearSelectedPosting()
+  {
+    _bookedDates = _allBookedDates;
+    _selectedPosting = null;
+
+    setState(() {
+      
+    });
+  }
+
   @override
   void initState() {
     // TODO: implement initState
