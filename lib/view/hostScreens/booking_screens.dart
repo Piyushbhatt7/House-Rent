@@ -13,6 +13,11 @@ class _BookingScreensState extends State<BookingScreens> {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
+        child: Column(
+          children: [
+            
+          ],
+        ),
         )
     );
   }
