@@ -10,6 +10,8 @@ class BookingScreens extends StatefulWidget {
 class _BookingScreensState extends State<BookingScreens> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SingleChildScrollView(
+      child
+    );
   }
 }
