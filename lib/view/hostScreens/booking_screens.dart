@@ -119,8 +119,14 @@ class _BookingScreensState extends State<BookingScreens> {
                   onPressed:()
                   {
                     _clearSelectedPosting();
-                  }
-                  child: const ,
+                  },
+                  child: const Text(
+                    'Reset',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   )
               ],
              ),
