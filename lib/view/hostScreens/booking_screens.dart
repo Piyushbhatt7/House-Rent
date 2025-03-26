@@ -92,7 +92,7 @@ class _BookingScreensState extends State<BookingScreens> {
                       monthIndex: index,
                       bookedDates: _bookedDates,
                       selectDates: _selectDates,
-                      getSelectedDates: _,
+                      getSelectedDates: _getSelectedDates,
                     )
                   }),
               ),
