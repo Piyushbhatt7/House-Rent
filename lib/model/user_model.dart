@@ -189,4 +189,6 @@ class UserModel extends ContactModel
 
    }
 
+   List<DateTime> getAllBookedDates();
+
 } 
