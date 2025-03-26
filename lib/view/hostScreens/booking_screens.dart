@@ -106,7 +106,14 @@ class _BookingScreensState extends State<BookingScreens> {
              child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                
+
+                const Text(
+                  'Filter by Listing',
+                  style: TextStyle(
+                    fontSize: 20,
+                    
+                  ),
+                )
               ],
              ),
              )
