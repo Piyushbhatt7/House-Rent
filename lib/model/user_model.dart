@@ -201,6 +201,8 @@ class UserModel extends ContactModel
         getAllBookedDates.addAll(booking.dates!);
       });
      });
+
+     return getAllBookedDates;
    }
 
 } 
