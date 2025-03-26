@@ -147,7 +147,7 @@ class _BookingScreensState extends State<BookingScreens> {
                 padding: const EdgeInsets.only(bottom: 26.0),
                 child: InkResponse(
                   onTap: () {
-                    
+                    _selectPostings(AppConstants.currentUser.myPostings![index]);
                   },
                 ),
               );
