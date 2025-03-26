@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/view/widgets/calender_ui.dart';
 
 class BookingScreens extends StatefulWidget {
   const BookingScreens({super.key});
@@ -8,6 +9,9 @@ class BookingScreens extends StatefulWidget {
 }
 
 class _BookingScreensState extends State<BookingScreens> {
+
+  
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -36,6 +40,15 @@ class _BookingScreensState extends State<BookingScreens> {
               const EdgeInsets.only(top: 15, bottom: 35),
               child: Container(
                 height: MediaQuery.of(context).size.height / 1.8,
+                child: PageView.builder(
+                  itemCount: 12,
+                  itemBuilder: (context, index)
+                  {
+                    return CalenderUi(
+                      monthIndex: index,
+                      bookedDates: ,
+                    )
+                  }),
               ),
               )
           ],
