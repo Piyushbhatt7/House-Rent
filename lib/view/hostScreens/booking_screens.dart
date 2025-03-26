@@ -150,7 +150,7 @@ class _BookingScreensState extends State<BookingScreens> {
                     _selectPostings(AppConstants.currentUser.myPostings![index]);
                   },
                   child: Container(
-                    
+                    // 9:38 - 20
                   ),
                 ),
               );
