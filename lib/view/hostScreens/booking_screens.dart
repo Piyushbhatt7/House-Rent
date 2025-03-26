@@ -16,6 +16,12 @@ class _BookingScreensState extends State<BookingScreens> {
   List<DateTime> _allBookedDates = [];
   PostingModel? _selectedPosting;
 
+
+  List<DateTime> _getSelectedDates()
+  {
+    return [];
+  }
+
   @override
   void initState() {
     // TODO: implement initState
