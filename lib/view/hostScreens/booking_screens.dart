@@ -144,9 +144,11 @@ class _BookingScreensState extends State<BookingScreens> {
             (context, index)
             {
               return Padding(
-                padding: const EdgeInsets.only(bottom: 25.0),
-              
-              )
+                padding: const EdgeInsets.only(bottom: 26.0),
+                child: InkWell(
+
+                ),
+              );
             })
         
           ],
