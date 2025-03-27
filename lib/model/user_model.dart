@@ -186,7 +186,7 @@ class UserModel extends ContactModel
 
      bookings!.add(booking);
 
-//     await addBookingConversation(booking);
+    await addBookingConversation(booking);
 
    }
 
