@@ -159,7 +159,7 @@ class _BookingScreensState extends State<BookingScreens> {
                       borderRadius: BorderRadius.circular(6.0),
                     ),
                     child: PostingListingingTileUI(
-                      posting: ,
+                      posting: AppConstants.currentUser.myPostings![index],
                     ),
                     // 9:38 - 20
                   ),
