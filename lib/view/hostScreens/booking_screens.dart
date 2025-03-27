@@ -59,117 +59,119 @@ class _BookingScreensState extends State<BookingScreens> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
-        child: Column(
-          children: [
-
-            const Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-
-                Text('Sun'),
-                Text('Mon'),
-                Text('Tues'),
-                Text('Wed'),
-                Text('Thus'),
-                Text('Fri'),
-                Text('Sat'),
-              ],
-            ),
-
-            // calender UI
-
-            Padding(
-              padding: 
-              const EdgeInsets.only(top: 15, bottom: 35),
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height / 1.8,
-                child: PageView.builder(
-                  itemCount: 12,
-                  itemBuilder: (context, index)
-                  {
-                    return CalenderUi(
-                      monthIndex: index,
-                      bookedDates: _bookedDates,
-                      selectDates: _selectDates,
-                      getSelectedDates: _getSelectedDates,
-                    );
-                  }),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
+          child: Column(
+            children: [
+      
+              const Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+      
+                  Text('Sun'),
+                  Text('Mon'),
+                  Text('Tues'),
+                  Text('Wed'),
+                  Text('Thus'),
+                  Text('Fri'),
+                  Text('Sat'),
+                ],
               ),
-              ),
-
-             Padding(
-              padding: 
-             const EdgeInsets.fromLTRB(25, 25, 0, 25),
-             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-
-                const Text(
-                  'Filter by Listing',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
-                  ),
+      
+              // calender UI
+      
+              Padding(
+                padding: 
+                const EdgeInsets.only(top: 15, bottom: 35),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height / 1.8,
+                  child: PageView.builder(
+                    itemCount: 12,
+                    itemBuilder: (context, index)
+                    {
+                      return CalenderUi(
+                        monthIndex: index,
+                        bookedDates: _bookedDates,
+                        selectDates: _selectDates,
+                        getSelectedDates: _getSelectedDates,
+                      );
+                    }),
                 ),
-
-                MaterialButton(
-                  onPressed:()
-                  {
-                    _clearSelectedPosting();
-                  },
-                  child: const Text(
-                    'Reset',
+                ),
+      
+               Padding(
+                padding: 
+               const EdgeInsets.fromLTRB(25, 25, 0, 25),
+               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+      
+                  const Text(
+                    'Filter by Listing',
                     style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25.0, bottom: 25.0),
-                    child: Container(),
-                    ),
-              ],
-             ),
-             ),
-        
-           // display  host listings
-           ListView.builder(
-            itemCount: AppConstants.currentUser.myPostings!.length,
-            itemBuilder: 
-            (context, index)
-            {
-              return Padding(
-                padding: const EdgeInsets.only(bottom: 26.0),
-                child: InkResponse(
-                  onTap: () {
-                    _selectPostings(AppConstants.currentUser.myPostings![index]);
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: _selectedPosting == AppConstants.currentUser.myPostings![index] ? Colors.blue : Colors.grey,
-                        width: 1.5,
+      
+                  MaterialButton(
+                    onPressed:()
+                    {
+                      _clearSelectedPosting();
+                    },
+                    child: const Text(
+                      'Reset',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
                       ),
-                      borderRadius: BorderRadius.circular(6.0),
                     ),
-                    child: PostingListingingTileUI(
-                      posting: AppConstants.currentUser.myPostings![index],
                     ),
-                    // 9:38 - 20
+      
+                    Padding(
+                      padding: const EdgeInsets.only(top: 25.0, bottom: 25.0),
+                      child: Container(),
+                      ),
+                ],
+               ),
+               ),
+          
+             // display  host listings
+             ListView.builder(
+              itemCount: AppConstants.currentUser.myPostings!.length,
+              itemBuilder: 
+              (context, index)
+              {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 26.0),
+                  child: InkResponse(
+                    onTap: () {
+                      _selectPostings(AppConstants.currentUser.myPostings![index]);
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: _selectedPosting == AppConstants.currentUser.myPostings![index] ? Colors.blue : Colors.grey,
+                          width: 1.5,
+                        ),
+                        borderRadius: BorderRadius.circular(6.0),
+                      ),
+                      child: PostingListingingTileUI(
+                        posting: AppConstants.currentUser.myPostings![index],
+                      ),
+                      // 9:38 - 20
+                    ),
                   ),
-                ),
-              );
-            })
-        
-          ],
-        ),
-        )
+                );
+              })
+          
+            ],
+          ),
+          )
+      ),
     );
   }
 }
