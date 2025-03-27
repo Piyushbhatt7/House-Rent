@@ -48,12 +48,12 @@ class ConversationModel {
     };
 
     await FirebaseFirestore.instance.collection('conversation/${id}/messages').add(messgeData);
-    Map<String, dynamic> convoData = {
+    Map<String, dynamic> conversationData = {
       'lastMessageDateTime': DateTime.now(),
       'lastMessageText': messageText
     };
 
-    await FirebaseFirestore.instance.doc('conversations/${id}').update(convoData);
+    await FirebaseFirestore.instance.doc('conversations/${id}').update(conversationData);
   }
 
 }
