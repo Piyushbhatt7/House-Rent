@@ -20,6 +20,11 @@ class ConversationModel {
       AppConstants.currentUser.getFullNameofUser(),
       otherContact.getFullNameofUser()
     ];
+
+    List<String> userIDs = [
+      AppConstants.currentUser.id!,
+      otherContact.id!,
+    ]
   }
 
 }
