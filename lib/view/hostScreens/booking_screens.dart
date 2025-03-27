@@ -33,7 +33,7 @@ class _BookingScreensState extends State<BookingScreens> {
   {
     posting.getAllBookingsFromFirestore().whenComplete(()
     {
-       _bookedDates = _selectedPosting!.getAllBookedDates();
+       _bookedDates = posting.getAllBookedDates();
     });
     _selectedPosting = posting;
    
