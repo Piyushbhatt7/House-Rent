@@ -5,12 +5,12 @@ class ConversationModel {
 
   String? id;
   ContactModel? contact;
-  List<MessageModel>? message;
+  List<MessageModel>? messages;
   MessageModel? lastMessage;
 
-  Conversation() 
+  ConversationModel() 
   {
-    message = [];
+    messages = [];
   }
 
 }

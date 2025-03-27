@@ -4,6 +4,7 @@ import 'package:get/route_manager.dart';
 import 'package:house/global.dart';
 import 'package:house/model/booking_model.dart';
 import 'package:house/model/contact_model.dart';
+import 'package:house/model/conversationModel.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/model/review_model.dart';
 
@@ -191,7 +192,7 @@ class UserModel extends ContactModel
 
     addBookingConversation(BookingModel booking) async
     {
-
+      ConversationModel conversation = ConversationModel();
     }
 
    
