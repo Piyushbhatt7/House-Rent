@@ -27,8 +27,12 @@ class ConversationModel {
     ];
 
     Map<String, dynamic> conversationDataMap = {
-      
-    }
+
+      'lastMessageDateTime': DateTime.now(),
+      'lastMessageText': "",
+      'userNames': userName,
+      'userIDs': userIDs,
+    };
   }
 
 }
