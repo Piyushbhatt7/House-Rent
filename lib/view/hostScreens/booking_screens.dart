@@ -29,7 +29,7 @@ class _BookingScreensState extends State<BookingScreens> {
      
   }
 
-  _selectPostings(PostingModel posting)
+  _selectAPosting(PostingModel posting)
   {
     _selectedPosting = posting;
 
@@ -154,7 +154,7 @@ class _BookingScreensState extends State<BookingScreens> {
                   padding: const EdgeInsets.only(bottom: 26.0),
                   child: InkResponse(
                     onTap: () {
-                      _selectPostings(AppConstants.currentUser.myPostings![index]);
+                      _selectAPosting(AppConstants.currentUser.myPostings![index]);
                     },
                     child: Container(
                       decoration: BoxDecoration(
