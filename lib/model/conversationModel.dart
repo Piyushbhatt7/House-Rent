@@ -35,7 +35,7 @@ class ConversationModel {
       'userIDs': userIDs,
     };
 
-    DocumentReference reference = await FirebaseFirestore.instance.collection('conversation')
+    DocumentReference reference = await FirebaseFirestore.instance.collection('conversation').add(conversationDataMap);
   }
 
 }
