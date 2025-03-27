@@ -8,4 +8,9 @@ class ConversationModel {
   List<MessageModel>? message;
   MessageModel? lastMessage;
 
+  Conversation() 
+  {
+    message = [];
+  }
+
 }
