@@ -95,7 +95,7 @@ class UserModel extends ContactModel
       {
         PostingModel posting = PostingModel(id: postingIDs);
         await posting.getAllImagesFromStorage();
-        
+        await posting.getAllBookingsFromFirestore();
         await posting.getAllImagesFromStorage();
 
         myPostings!.add(posting);
