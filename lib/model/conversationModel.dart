@@ -24,7 +24,11 @@ class ConversationModel {
     List<String> userIDs = [
       AppConstants.currentUser.id!,
       otherContact.id!,
-    ]
+    ];
+
+    Map<String, dynamic> conversationDataMap = {
+      
+    }
   }
 
 }
