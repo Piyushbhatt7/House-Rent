@@ -4,5 +4,7 @@ class Conversation {
 
   String? id;
   ContactModel? contact;
+  List<Message>? message;
+  Message? lastMessage;
 
 }
