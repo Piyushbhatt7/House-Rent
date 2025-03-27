@@ -199,6 +199,7 @@ class UserModel extends ContactModel
       String textMessage = "Hi my name is ${AppConstants.currentUser!.firstName} and I have "
       "just booked ${booking.posting!.name} from ${booking.dates!.first} to "
       "${booking.dates!.last} if you have any questions contact me. Enjoy your "
+      "stay!";
     }
 
    
