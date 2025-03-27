@@ -183,12 +183,16 @@ class UserModel extends ContactModel
         "earnings": totalPriceForAllNights + int.parse(earningsOld), // 7:03 19
       }
      );
-
-     bookings!.add(booking);
-
-    await addBookingConversation(booking);
-
+        bookings!.add(booking);
    }
+
+
+    addBookingConversation(BookingModel booking) async
+    {
+
+    }
+
+   
 
    List<DateTime> getAllBookedDates()
    {
