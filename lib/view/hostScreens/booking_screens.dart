@@ -150,6 +150,9 @@ class _BookingScreensState extends State<BookingScreens> {
                     _selectPostings(AppConstants.currentUser.myPostings![index]);
                   },
                   child: Container(
+                    decoration: BoxDecoation(
+                      
+                    ),
                     // 9:38 - 20
                   ),
                 ),
