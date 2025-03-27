@@ -201,7 +201,7 @@ class UserModel extends ContactModel
       "${booking.dates!.last} if you have any questions contact me. Enjoy your "
       "stay!";
 
-      await conversation.addMessageToFirestore(text);
+      await conversation.addMessageToFirestore(textMessage);
     }
 
    
