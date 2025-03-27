@@ -193,6 +193,7 @@ class UserModel extends ContactModel
     addBookingConversation(BookingModel booking) async
     {
       ConversationModel conversation = ConversationModel();
+      conversation.addConversationToFirestore(booking.posting!.host!);
     }
 
    
