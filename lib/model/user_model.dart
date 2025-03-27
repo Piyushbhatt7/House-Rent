@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:house/global.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/booking_model.dart';
 import 'package:house/model/contact_model.dart';
 import 'package:house/model/conversationModel.dart';
@@ -194,6 +195,8 @@ class UserModel extends ContactModel
     {
       ConversationModel conversation = ConversationModel();
       conversation.addConversationToFirestore(booking.posting!.host!);
+
+      String textMessage = "Hi my name is ${AppConstants.currentUser.firstName} and I"
     }
 
    
