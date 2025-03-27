@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/view/widgets/calender_ui.dart';
+import 'package:house/view/widgets/posting_listinging_tile_ui.dart';
 
 class BookingScreens extends StatefulWidget {
   const BookingScreens({super.key});
@@ -157,6 +158,7 @@ class _BookingScreensState extends State<BookingScreens> {
                       ),
                       borderRadius: BorderRadius.circular(6.0),
                     ),
+                    child: PostingListingingTileUI(),
                     // 9:38 - 20
                   ),
                 ),
