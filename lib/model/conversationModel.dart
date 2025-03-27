@@ -13,4 +13,9 @@ class ConversationModel {
     messages = [];
   }
 
+  addConversationToFirestore(ContactModel otherContact) async
+  {
+    
+  }
+
 }
