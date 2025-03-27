@@ -158,7 +158,9 @@ class _BookingScreensState extends State<BookingScreens> {
                       ),
                       borderRadius: BorderRadius.circular(6.0),
                     ),
-                    child: PostingListingingTileUI(),
+                    child: PostingListingingTileUI(
+                      posting: ,
+                    ),
                     // 9:38 - 20
                   ),
                 ),
