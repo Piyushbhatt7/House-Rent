@@ -43,7 +43,7 @@ class ConversationModel {
   {
     Map<String, dynamic> messgeData = {
       'dateTime': DateTime.now(),
-      'senderID': AppConstants.currentUser!.id,
+      'senderID': AppConstants.currentUser.id,
       'text': messageText,
     };
 
