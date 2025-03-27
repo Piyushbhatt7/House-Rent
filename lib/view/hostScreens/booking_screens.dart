@@ -141,6 +141,7 @@ class _BookingScreensState extends State<BookingScreens> {
           
              // display  host listings
              ListView.builder(
+              shrinkWrap: true,
               itemCount: AppConstants.currentUser.myPostings!.length,
               itemBuilder: 
               (context, index)
