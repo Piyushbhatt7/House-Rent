@@ -196,7 +196,8 @@ class UserModel extends ContactModel
       ConversationModel conversation = ConversationModel();
       conversation.addConversationToFirestore(booking.posting!.host!);
 
-      String textMessage = "Hi my name is ${AppConstants.currentUser.firstName} and I"
+      String textMessage = "Hi my name is ${AppConstants.currentUser.firstName} and I have "
+      "just booked ${booking.posting!.name} from ${booking.dates!.first} to"
     }
 
    
