@@ -39,4 +39,13 @@ class ConversationModel {
     id = reference.id;
   }
 
+  addMessageToFirestore(String messageText) async
+  {
+    Map<String, dynamic> messgeData = {
+      'dateTime': DateTime.now(),
+      'senderID': AppConstants.currentUser!.id,
+      'text': messageText,
+    };
+  }
+
 }
