@@ -1,3 +1,4 @@
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/contact_model.dart';
 import 'package:house/model/message_model.dart';
 
@@ -15,7 +16,10 @@ class ConversationModel {
 
   addConversationToFirestore(ContactModel otherContact) async
   {
-    
+    List<String> userName = [
+      AppConstants.currentUser.getFullNameofUser(),
+      otherContact.getFullNameofUser()
+    ];
   }
 
 }
