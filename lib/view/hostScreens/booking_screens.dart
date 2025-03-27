@@ -152,8 +152,10 @@ class _BookingScreensState extends State<BookingScreens> {
                   child: Container(
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: _selectedPosting == AppConstants.currentUser.myPostings![index] ? Colors.blue : Colors.grey
-                      )
+                        color: _selectedPosting == AppConstants.currentUser.myPostings![index] ? Colors.blue : Colors.grey,
+                        width: 1.5,
+                      ),
+                      borderRadius: BorderRadius.circular(6.0),
                     ),
                     // 9:38 - 20
                   ),
