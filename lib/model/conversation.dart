@@ -1,6 +1,6 @@
 import 'package:house/model/contact_model.dart';
 
-class Conversation {
+class ConversationModel {
 
   String? id;
   ContactModel? contact;
