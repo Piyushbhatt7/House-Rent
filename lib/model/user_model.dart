@@ -202,7 +202,7 @@ class UserModel extends ContactModel
       "stay!";
 
       await conversation.addMessageToFirestore(textMessage);
-    }
+    } // 
 
    
 
