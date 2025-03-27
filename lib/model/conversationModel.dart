@@ -46,6 +46,14 @@ class ConversationModel {
       'senderID': AppConstants.currentUser!.id,
       'text': messageText,
     };
+
+    await FirebaseFirestore.instance.collection('conversation/${id}/messages').add(messgeData);
+    Map<String, dynamic> convoData = {
+      'lastMessageDateTime': DateTime.now(),
+      'lastMessageText': messageText
+    };
+
+    await FirebaseFirestore.instance.doc('conversations/${id}').update(convoData);
   }
 
 }
