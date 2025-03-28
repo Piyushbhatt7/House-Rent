@@ -5,4 +5,6 @@ class  MessageModel
   ContactModel? sender;
   String? text;
   DateTime? dateTime;
+
+  MessageModel();
 }
