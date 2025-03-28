@@ -68,7 +68,7 @@ class ConversationModel {
     lastMessage!.dateTime = lastMessageDateTime;
     lastMessage!.text = lastMessageText;
 
-    List<String> userIDs = List<String>.from(snapshot['userIDs']) ?? 
+    List<String> userIDs = List<String>.from(snapshot['userIDs']) ?? [];
   }
 
 }
