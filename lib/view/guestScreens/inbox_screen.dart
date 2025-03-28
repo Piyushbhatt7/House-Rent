@@ -31,7 +31,7 @@ class _InboxScreenState extends State<InboxScreen> {
               DocumentSnapshot snapshot = dataSnapshot.data!.docs[index];
 
               ConversationModel currentConversation = ConversationModel();
-              currentConversation.getConversationInfoFomFirestore(snapshot);
+              currentConversation.getConversationInfoFomFirestore(snapshot); // 4:07 - 24
             }
             );
         }
