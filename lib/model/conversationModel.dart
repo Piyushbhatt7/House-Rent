@@ -77,6 +77,7 @@ class ConversationModel {
       if(userID != AppConstants.currentUser!.id)
       {
         this.otherContact!.id = userID;
+        break;
       }
     }
   }
