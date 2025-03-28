@@ -4,4 +4,5 @@ class  MessageModel
 {
   ContactModel? sender;
   String? text;
+  DateTime?
 }
