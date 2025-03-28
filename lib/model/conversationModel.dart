@@ -63,7 +63,7 @@ class ConversationModel {
     DateTime lastMessageDateTime = lastMessageDateTimestamp.toDate();
     lastMessage = MessageModel();
     lastMessage!.dateTime = lastMessageDateTime;
-    la
+    lastMessage!.text = lastMessageText;
   }
 
 }
