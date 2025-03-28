@@ -15,7 +15,7 @@ class _InboxScreenState extends State<InboxScreen> {
       stream: inboxViewModel.getConversations(), 
       builder: (context, dataSnapshot)
       {
-        if(dataSnapshot.connectionState == )
+        if(dataSnapshot.connectionState == ConnectionState.waiting)
       }
       );
   }
