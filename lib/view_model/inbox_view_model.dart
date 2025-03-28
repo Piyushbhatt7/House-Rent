@@ -9,6 +9,6 @@ class InboxViewModel {
     return FirebaseFirestore.instance
     .collection('conversations')
     .where('userIDs', arrayContains: AppConstants.currentUser.id)
-    .snapshots()
+    .snapshots();
   }
 }
