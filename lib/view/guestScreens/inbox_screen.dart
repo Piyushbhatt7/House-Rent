@@ -13,7 +13,10 @@ class _InboxScreenState extends State<InboxScreen> {
   Widget build(BuildContext context) {
     return StreamBuilder(
       stream: inboxViewModel.getConversations(), 
-      builder: (context, )
+      builder: (context, dataSnapshot)
+      {
+        
+      }
       );
   }
 }
