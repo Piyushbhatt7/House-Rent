@@ -57,6 +57,14 @@ class _ConversationListTileUiState extends State<ConversationListTileUi> {
         widget.conversation!.lastMessage!.text!,
         overflow: TextOverflow.ellipsis,
       ),
+
+      trailing: Text(
+        widget.conversation!.lastMessage!.getMessageDateTime(),
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 12,
+        ),
+      ),
    
     );
   }
