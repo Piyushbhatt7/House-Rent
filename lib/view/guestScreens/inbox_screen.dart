@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:house/global.dart';
 
@@ -11,7 +12,7 @@ class InboxScreen extends StatefulWidget {
 class _InboxScreenState extends State<InboxScreen> {
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
+    return StreamBuilder<QuerySnapshot>(
       stream: inboxViewModel.getConversations(), 
       builder: (context, dataSnapshot)
       {
@@ -23,8 +24,9 @@ class _InboxScreenState extends State<InboxScreen> {
         }
         else{
           return ListView.builder(
-            itemCount: dataSnapshot.data!.doc.length,
-            itemBuilder: itemBuilder)
+            itemCount: dataSnapshot.data!.docs.length,
+            itemBuilder: itemBuilder
+            );
         }
       }
       );
