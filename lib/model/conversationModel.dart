@@ -67,7 +67,8 @@ class ConversationModel {
     lastMessage = MessageModel();
     lastMessage!.dateTime = lastMessageDateTime;
     lastMessage!.text = lastMessageText;
-    
+
+    List<String> userIDs = 
   }
 
 }
