@@ -53,6 +53,11 @@ class _ConversationListTileUiState extends State<ConversationListTileUi> {
           fontSize: 18.5
         ),
       ),
+      subtitle: Text(
+        widget.conversation!.lastMessage!.text!,
+        overflow: TextOverflow.ellipsis,
+      ),
+   
     );
   }
 }
