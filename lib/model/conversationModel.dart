@@ -91,9 +91,6 @@ class ConversationModel {
     }
   }
 
-  String getMessageDateTime()
-  {
-    
-  }
+  
 
 }
