@@ -16,6 +16,9 @@ class _InboxScreenState extends State<InboxScreen> {
       builder: (context, dataSnapshot)
       {
         if(dataSnapshot.connectionState == ConnectionState.waiting)
+        {
+          
+        }
       }
       );
   }
