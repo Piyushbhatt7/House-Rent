@@ -86,7 +86,7 @@ class ConversationModel {
       if(name != AppConstants.currentUser.getFullNameofUser())
       {
         otherContact!.firstName = name.split(" ")[0];
-        
+        otherContact!.lasName = name.split(" ")[1];
       }
     }
   }
