@@ -59,6 +59,8 @@ class ConversationModel {
   getConversationInfoFomFirestore(DocumentSnapshot snapshot)
   {
     id = snapshot.id;
+
+    String lastMessageText = 
     Timestamp lastMessageDateTimestamp = snapshot['lastMessageDateTime'] ?? Timestamp.now();
     DateTime lastMessageDateTime = lastMessageDateTimestamp.toDate();
     lastMessage = MessageModel();
