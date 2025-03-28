@@ -46,6 +46,13 @@ class _ConversationListTileUiState extends State<ConversationListTileUi> {
           radius: MediaQuery.of(context).size.width / 14.0,
         ),
       ),
+      title: Text(
+        conversation!.otherContact!.getFullNameofUser(),
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 18.5
+        ),
+      ),
     );
   }
 }
