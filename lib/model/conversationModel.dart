@@ -70,7 +70,15 @@ class ConversationModel {
 
     List<String> userIDs = List<String>.from(snapshot['userIDs']) ?? [];
     List<String> userNames = List<String>.from(snapshot['userNames']) ?? [];
-    otherContact = ContactModel()
+    otherContact = ContactModel();
+
+    for(String userID in userIDs)
+    {
+      if(userID != AppConstants.currentUser!.id)
+      {
+        this.otherContact!.id = userID;
+      }
+    }
   }
 
 }
