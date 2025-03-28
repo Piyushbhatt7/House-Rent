@@ -37,7 +37,8 @@ class _InboxScreenState extends State<InboxScreen> {
                 onTap: () {
                   
                 },
-              )
+                child: ,
+              );
             }
             );
         }
