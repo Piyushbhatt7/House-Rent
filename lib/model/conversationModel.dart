@@ -59,7 +59,7 @@ class ConversationModel {
   getConversationInfoFomFirestore(DocumentSnapshot snapshot)
   {
     id = snapshot.id;
-    
+    Timestamp lastMessageDateTimestamp = snapshot['lastMessageDateTime'] ?? Timestamp.now();
   }
 
 }
