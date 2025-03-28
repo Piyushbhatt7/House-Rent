@@ -76,8 +76,17 @@ class ConversationModel {
     {
       if(userID != AppConstants.currentUser.id)
       {
-        this.otherContact!.id = userID;
+        otherContact!.id = userID;
         break;
+      }
+    }
+
+    for(String name in userNames)
+    {
+      if(name != AppConstants.currentUser.getFullNameofUser())
+      {
+        otherContact!.firstName = name.split(" ")[0];
+        
       }
     }
   }
