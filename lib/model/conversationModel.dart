@@ -56,4 +56,9 @@ class ConversationModel {
     await FirebaseFirestore.instance.doc('conversations/${id}').update(conversationData);
   }
 
+  getConversationInfoFomFirestore(DocumentSnapshot snapshot)
+  {
+    
+  }
+
 }
