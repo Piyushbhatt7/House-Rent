@@ -43,6 +43,7 @@ dependencies:
   image_picker:
   custom_rating_bar: 
   pay:
+  timeago:
 dev_dependencies:
   flutter_test:
     sdk: flutter
