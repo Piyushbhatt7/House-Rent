@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/global.dart';
 
 class InboxScreen extends StatefulWidget {
   const InboxScreen({super.key});
@@ -11,8 +12,8 @@ class _InboxScreenState extends State<InboxScreen> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: stream, 
-      builder: builder
+      stream: inboxViewModel.getConversations(), 
+      builder: (context, )
       );
   }
 }
