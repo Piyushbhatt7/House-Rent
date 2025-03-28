@@ -17,7 +17,9 @@ class _InboxScreenState extends State<InboxScreen> {
       {
         if(dataSnapshot.connectionState == ConnectionState.waiting)
         {
-          
+          return const Center(
+            child: CircularProgressIndicator(),
+          )
         }
       }
       );
