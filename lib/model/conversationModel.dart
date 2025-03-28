@@ -7,6 +7,7 @@ class ConversationModel {
 
   String? id;
   ContactModel? contact;
+  ContactModel? otherContact;
   List<MessageModel>? messages;
   MessageModel? lastMessage;
 
@@ -86,7 +87,7 @@ class ConversationModel {
       if(name != AppConstants.currentUser.getFullNameofUser())
       {
         otherContact!.firstName = name.split(" ")[0];
-        otherContact!.lasName = name.split(" ")[1];
+        otherContact!.lastName = name.split(" ")[1];
       }
     }
   }
