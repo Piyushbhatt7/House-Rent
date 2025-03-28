@@ -74,7 +74,7 @@ class ConversationModel {
 
     for(String userID in userIDs)
     {
-      if(userID != AppConstants.currentUser!.id)
+      if(userID != AppConstants.currentUser.id)
       {
         this.otherContact!.id = userID;
         break;
