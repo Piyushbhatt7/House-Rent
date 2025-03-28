@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:house/global.dart';
+import 'package:house/model/conversationModel.dart';
 
 class InboxScreen extends StatefulWidget {
   const InboxScreen({super.key});
@@ -28,6 +29,8 @@ class _InboxScreenState extends State<InboxScreen> {
             itemBuilder: (context, index)
             {
               DataSnapshot snapshot = dataSnapshot.data!.docs[index];
+
+              ConversationModel currentConversation = ConversationModel();
             }
             );
         }
