@@ -70,6 +70,7 @@ class ConversationModel {
 
     List<String> userIDs = List<String>.from(snapshot['userIDs']) ?? [];
     List<String> userNames = List<String>.from(snapshot['userNames']) ?? [];
+    otherContact = ContactModel()
   }
 
 }
