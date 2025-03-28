@@ -19,7 +19,12 @@ class _InboxScreenState extends State<InboxScreen> {
         {
           return const Center(
             child: CircularProgressIndicator(),
-          )
+          );
+        }
+        else{
+          return ListView.builder(
+            itemCount: dataSnapshot.data!.doc.length,
+            itemBuilder: itemBuilder)
         }
       }
       );
