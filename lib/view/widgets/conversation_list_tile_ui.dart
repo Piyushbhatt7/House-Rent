@@ -16,7 +16,12 @@ class _ConversationListTileUiState extends State<ConversationListTileUi> {
 
   getImageOfOtherContact()
   {
-    
+    conversation!.otherContact!.getImageFromStorage().whenComplete(()
+    {
+      setState(() {
+        
+      });
+    });
   }
 
   @override
@@ -26,11 +31,21 @@ class _ConversationListTileUiState extends State<ConversationListTileUi> {
 
     conversation = widget.conversation;
 
-    conversation!.otherContact!.getImageFromStorage();
+   getImageOfOtherContact();
 
   }
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListTile(
+      leading: GestureDetector(
+        onTap: () {
+          
+        },
+        child: CircleAvatar(
+          backgroundImage: conversation!.otherContact!.displayImage,
+          radius: MediaQuery.of(context).size.width / 14.0,
+        ),
+      ),
+    );
   }
 }
