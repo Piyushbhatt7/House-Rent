@@ -58,6 +58,7 @@ class ConversationModel {
 
   getConversationInfoFomFirestore(DocumentSnapshot snapshot)
   {
+    id = snapshot.id;
     
   }
 
