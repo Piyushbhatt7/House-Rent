@@ -60,7 +60,7 @@ class ConversationModel {
   {
     id = snapshot.id;
 
-    String lastMessageText = 
+    String lastMessageText = snapshot['lastMessageText'] ?? "";
     Timestamp lastMessageDateTimestamp = snapshot['lastMessageDateTime'] ?? Timestamp.now();
     DateTime lastMessageDateTime = lastMessageDateTimestamp.toDate();
     lastMessage = MessageModel();
