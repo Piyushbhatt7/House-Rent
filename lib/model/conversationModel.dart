@@ -60,6 +60,7 @@ class ConversationModel {
   {
     id = snapshot.id;
     Timestamp lastMessageDateTimestamp = snapshot['lastMessageDateTime'] ?? Timestamp.now();
+    DateTime lastMessageDateTime = lastMessageDateTimestamp.toDate();
   }
 
 }
