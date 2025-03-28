@@ -70,13 +70,13 @@ class ConversationModel {
 
     List<String> userIDs = List<String>.from(snapshot['userIDs']) ?? [];
     List<String> userNames = List<String>.from(snapshot['userNames']) ?? [];
-    contact = ContactModel();
+    otherContact = ContactModel();
 
     for(String userID in userIDs)
     {
       if(userID != AppConstants.currentUser.id)
       {
-        contact!.id = userID;
+        otherContact!.id = userID;
         break;
       }
     }
@@ -85,8 +85,8 @@ class ConversationModel {
     {
       if(name != AppConstants.currentUser.getFullNameofUser())
       {
-        contact!.firstName = name.split(" ")[0];
-        contact!.lastName = name.split(" ")[1];
+        otherContact!.firstName = name.split(" ")[0];
+        otherContact!.lasName = name.split(" ")[1];
       }
     }
   }
