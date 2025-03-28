@@ -10,8 +10,6 @@ class InboxScreen extends StatefulWidget {
 class _InboxScreenState extends State<InboxScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-     
-    );
+    return StreamBuil
   }
 }
