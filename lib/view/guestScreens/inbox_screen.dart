@@ -25,7 +25,10 @@ class _InboxScreenState extends State<InboxScreen> {
         else{
           return ListView.builder(
             itemCount: dataSnapshot.data!.docs.length,
-            itemBuilder: itemBuilder
+            itemBuilder: (context, index)
+            {
+              DataSnapshot snapshot = dataSnapshot.data!.docs[index];
+            }
             );
         }
       }
