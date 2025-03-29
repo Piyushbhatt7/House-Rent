@@ -71,6 +71,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                     decoration: const InputDecoration(
                       hintText: 'Write a message',
                       contentPadding: EdgeInsets.all(20.0),
+                      border: InputBorder.none
                     ),
                   ),
                 )
