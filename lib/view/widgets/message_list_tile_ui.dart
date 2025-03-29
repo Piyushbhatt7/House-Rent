@@ -9,7 +9,15 @@ class MessageListTileUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if(message!.sender!.firstName == AppConstants.currentUser!.firstName)
+    if(message!.sender!.firstName == AppConstants.currentUser.firstName) 
+    {
     return Container();
+  }
+  else {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 16, 36, 16),
+      
+      )
+  }
   }
 }
