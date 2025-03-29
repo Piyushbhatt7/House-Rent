@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:house/global.dart';
-import 'package:house/model/conversationModel.dart';
+import 'package:house/model/conversation_model.dart';
 import 'package:house/view/widgets/conversation_list_tile_ui.dart';
 
 class InboxScreen extends StatefulWidget {
@@ -35,7 +35,7 @@ class _InboxScreenState extends State<InboxScreen> {
               currentConversation.getConversationInfoFomFirestore(snapshot); // 4:07 - 24
 
               return InkResponse(
-                onTap: () {
+                onTap: ()
                   
                 },
                 child: ConversationListTileUi(
