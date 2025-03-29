@@ -49,8 +49,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
       body: Column(
         children: [
 
-          Expanded(child: 
-          )
+          Expanded(
+            child: 
+          ),
         ],
       ),
     
