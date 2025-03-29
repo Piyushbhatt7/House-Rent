@@ -13,6 +13,8 @@ class InboxViewModel {
 
   getMessages()
   {
-    return FirebaseFirestore.instance.collection('conversations/${conversation!.id}/messages').orderBy('dateTime').snapshots(),
+    return FirebaseFirestore.instance
+    .collection('conversations/${conversation!.id}/messages')
+    .orderBy('dateTime').snapshots();
   }
 }
