@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_connect/sockets/src/sockets_io.dart';
 import 'package:house/global.dart';
 import 'package:house/model/conversation_model.dart';
+import 'package:house/model/message_model.dart';
 
 class ConversationScreen extends StatefulWidget {
 
@@ -64,7 +65,15 @@ class _ConversationScreenState extends State<ConversationScreen> {
                   return const Center(child: CircularProgressIndicator(),);
                 }
                 else {
-
+                  return ListView.builder(
+                    itemCount: snapshots.data!.docs.length,
+                    itemBuilder: (context, index)
+                    {
+                      DocumentSnapshot snapshot = snapshots.data!.docs[index];
+                      MessageModel currentMessage = MessageModel();
+                      currentMessage.getMessageInfoFromFirestore(snapshot);
+                    }
+                    );
                 }
               },
 
