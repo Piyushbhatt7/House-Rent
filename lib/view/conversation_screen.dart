@@ -76,6 +76,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
                     minLines: 1,
                     maxLines: 5,
+                    style: TextStyle(
+                      fontSize: 20.0
+                    ),
                   ),
                 )
               ],
