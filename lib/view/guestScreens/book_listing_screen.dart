@@ -196,7 +196,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
                   type: ApplePayButtonType.buy,
                   margin: const EdgeInsets.only(top: 15.0),
                   onPaymentResult: (result) {
-                    print("Payment Resulr = $result");
+                    print("Payment Result = $result");
                     setState(() {
                       paymentResult = result.toString();
                       //bookingPrice;
@@ -222,7 +222,7 @@ class _BookListingScreenState extends State<BookListingScreen> {
                   margin: const EdgeInsets.only(top: 15.0),
 
                   onPaymentResult: (result) {
-                    print("Payment Resulr = $result");
+                    print("Payment Result = $result");
                     setState(() {
                       paymentResult = result.toString();
                       //bookingPrice;
