@@ -45,6 +45,15 @@ class _ConversationScreenState extends State<ConversationScreen> {
         backgroundColor: Colors.black,
         title: Text(conversation!.otherContact!.getFullNameofUser()),
       ),
+      
+      body: Column(
+        children: [
+
+          Expanded(child: 
+          )
+        ],
+      ),
+    
     );
   }
 }
