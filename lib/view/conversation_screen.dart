@@ -52,7 +52,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
         children: [
 
           Expanded(
-            child: Container()
+            child: StreamBuilder(
+              stream: ,
+            )
           ),
 
           Container(
