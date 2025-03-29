@@ -73,6 +73,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
                       contentPadding: EdgeInsets.all(20.0),
                       border: InputBorder.none
                     ),
+
+                    minLines: 1,
+                    maxLines: 5,
                   ),
                 )
               ],
