@@ -76,7 +76,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
                       if(currentMessage.sender!.id == AppConstants.currentUser.id)
                       {
-                        currentMessage.sender = AppConstants.currentUser.createUserFromContact();
+                        currentMessage.sender = AppConstants.currentUser.createContactFromUser();
                       }
                     }
                     );
