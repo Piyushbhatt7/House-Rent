@@ -50,8 +50,12 @@ class _ConversationScreenState extends State<ConversationScreen> {
         children: [
 
           Expanded(
-            child: 
+            child: Container()
           ),
+
+          Container(
+            
+          )
         ],
       ),
     
