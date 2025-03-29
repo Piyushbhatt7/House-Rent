@@ -14,6 +14,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
   ConversationModel? conversation;
 
+  TextEditingController controller = TextEditingController();
+
   @override
   void initState() {
     // TODO: implement initState
