@@ -10,4 +10,9 @@ class InboxViewModel {
     .where('userIDs', arrayContains: AppConstants.currentUser.id)
     .snapshots();
   }
+
+  getMessages()
+  {
+    return 
+  }
 }
