@@ -69,15 +69,22 @@ class _BookListingScreenState extends State<BookListingScreen> {
     }
   }
 
-  _makeBooking() {
-    if (selectedDates.isEmpty) {
-      return;
-    }
-
-    posting!.makeNewBooking(selectedDates, context, widget.hostID).whenComplete(() {
-      Get.back();
-    });
+_makeBooking() {
+  if (selectedDates.isEmpty) {
+    print("No dates selected!");
+    return;
   }
+
+  if (bookingPrice == 0.0) {
+    print("Error: Booking price is zero. Cannot proceed.");
+    return;
+  }
+
+  posting!.makeNewBooking(selectedDates, context, widget.hostID).whenComplete(() {
+    Get.back();
+  });
+}
+
 
   calculateAmountForOverStay() {
     if (selectedDates.isEmpty) {
