@@ -31,6 +31,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
             gradient: LinearGradient(
               colors: [
                 Colors.pinkAccent,
+                Colors.amber,
               ]
             )
           ),
