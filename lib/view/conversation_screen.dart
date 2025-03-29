@@ -59,6 +59,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
                 color: Colors.black
               )
             ),
+            child: Row(
+              
+            ),
           )
         ],
       ),
