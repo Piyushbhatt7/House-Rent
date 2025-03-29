@@ -12,7 +12,7 @@ class InboxViewModel {
     .snapshots();
   }
 
-  getMessages(ConversationModel conversation)
+  getMessages(ConversationModel? conversation)
   {
     return FirebaseFirestore.instance
     .collection('conversations/${conversation!.id}/messages')
