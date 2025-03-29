@@ -13,4 +13,9 @@ class  MessageModel
   {
     return timeago.format(dateTime!);
   }
+
+  getMessageInfoFromFirestore(DocumentSnapshot snapshot)
+  {
+    Timestamp
+  }
 }
