@@ -54,7 +54,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
           Expanded(
             child: StreamBuilder(
-              stream: FirebaseFirestore.instance.collection('conversations/${conversation!.id}/messages').orderBy('dateTime'),
+              stream: FirebaseFirestore.instance.collection('conversations/${conversation!.id}/messages').orderBy('dateTime').snapshots(),
             )
           ),
 
