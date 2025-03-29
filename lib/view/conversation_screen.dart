@@ -74,7 +74,10 @@ class _ConversationScreenState extends State<ConversationScreen> {
                       MessageModel currentMessage = MessageModel();
                       currentMessage.getMessageInfoFromFirestore(snapshot); // 6:58 - 25
 
-                      if(currentMessage.sender!.id == AppConstants.currentUser.id);
+                      if(currentMessage.sender!.id == AppConstants.currentUser.id)
+                      {
+                        currentMessage.sender = AppConstants.currentUser.createUserFromContact();
+                      }
                     }
                     );
                 }
