@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/conversation_model.dart';
 
 class ConversationScreen extends StatefulWidget {
+
+  ConversationModel? 
   const ConversationScreen({super.key});
 
   @override
