@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_connect/sockets/src/sockets_io.dart';
 import 'package:house/global.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/conversation_model.dart';
 import 'package:house/model/message_model.dart';
 
@@ -72,6 +73,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
                       DocumentSnapshot snapshot = snapshots.data!.docs[index];
                       MessageModel currentMessage = MessageModel();
                       currentMessage.getMessageInfoFromFirestore(snapshot); // 6:58 - 25
+
+                      if(currentMessage.sender!.id == AppConstants.currentUser.id);
                     }
                     );
                 }
