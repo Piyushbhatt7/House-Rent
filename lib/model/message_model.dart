@@ -24,5 +24,7 @@ class  MessageModel
     String senderID = snapshot['senderID'] ?? "";
 
     sender = ContactModel(id: senderID);
+
+    text = snapshot['text'] ?? "";
   }
 }
