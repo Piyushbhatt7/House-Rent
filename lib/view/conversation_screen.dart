@@ -70,7 +70,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                   child: TextField(
                     decoration: const InputDecoration(
                       hintText: 'Write a message',
-                      
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                   ),
                 )
