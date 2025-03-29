@@ -47,7 +47,7 @@ class MessageListTileUi extends StatelessWidget {
                     stops: [0.0, 1.0],
                     tileMode: TileMode.clamp
                     ),
-                    borderRadius: BorderRadius.circular(10)
+                    borderRadius: BorderRadius.circular(10) // 11:17 - 25
                 ),
               ),
                )
