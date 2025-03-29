@@ -71,7 +71,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                     {
                       DocumentSnapshot snapshot = snapshots.data!.docs[index];
                       MessageModel currentMessage = MessageModel();
-                      currentMessage.getMessageInfoFromFirestore(snapshot);
+                      currentMessage.getMessageInfoFromFirestore(snapshot); // 6:58 - 25
                     }
                     );
                 }
