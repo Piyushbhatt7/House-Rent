@@ -5,7 +5,7 @@ import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/booking_model.dart';
 import 'package:house/model/contact_model.dart';
-import 'package:house/model/conversationModel.dart';
+import 'package:house/model/conversation_model.dart';
 import 'package:house/model/posting_model.dart';
 import 'package:house/model/review_model.dart';
 
