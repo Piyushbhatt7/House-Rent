@@ -3,7 +3,7 @@ import 'package:house/model/conversation_model.dart';
 
 class ConversationScreen extends StatefulWidget {
 
-  ConversationModel? 
+  ConversationModel? conversation;
   const ConversationScreen({super.key});
 
   @override
