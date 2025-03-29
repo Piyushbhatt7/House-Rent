@@ -51,6 +51,11 @@ class UserModel extends ContactModel
       myPostings = [];
     }
 
+    createContactFromUser()
+    {
+      
+    }
+
     Future<void> saveUserToFirestore (bio, city, country, email, firstName, lastName, id) async
     {
       Map<String, dynamic> dataMap = 
