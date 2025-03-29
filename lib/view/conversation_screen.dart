@@ -35,7 +35,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
               ],
 
               begin: FractionalOffset(0.0, 0.0),
-              end: 
+              end: FractionalOffset(1.0, 0.0)
             )
           ),
         ),
