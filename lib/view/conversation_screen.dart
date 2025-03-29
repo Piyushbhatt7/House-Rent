@@ -68,7 +68,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 5 / 6,
                   child: TextField(
-                    
+                    decoration: const InputDecoration(
+                      
+                    ),
                   ),
                 )
               ],
