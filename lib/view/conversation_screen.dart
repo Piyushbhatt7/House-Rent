@@ -26,7 +26,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
+        flexibleSpace: Container(
+          decoration: ,
+        ),
       ),
     );
   }
