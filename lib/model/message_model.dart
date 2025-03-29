@@ -16,6 +16,6 @@ class  MessageModel
 
   getMessageInfoFromFirestore(DocumentSnapshot snapshot)
   {
-    Timestamp
+    Timestamp lastMessageTimeStamp
   }
 }
