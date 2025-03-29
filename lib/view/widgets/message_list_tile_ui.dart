@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house/model/app_constants.dart';
 import 'package:house/model/message_model.dart';
 
 class MessageListTileUi extends StatelessWidget {
@@ -8,6 +9,7 @@ class MessageListTileUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if(message!.sender!.firstName == AppConstants.currentUser!.firstName)
     return Container();
   }
 }
