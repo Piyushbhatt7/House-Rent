@@ -32,7 +32,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
               colors: [
                 Colors.pinkAccent,
                 Colors.amber,
-              ]
+              ],
+
+              begin: FractionalOffset(0.0, 0.0)
             )
           ),
         ),
