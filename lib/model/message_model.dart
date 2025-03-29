@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:house/model/contact_model.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
@@ -16,6 +17,6 @@ class  MessageModel
 
   getMessageInfoFromFirestore(DocumentSnapshot snapshot)
   {
-    Timestamp lastMessageTimeStamp
+    Timestamp lastMessageTimeStamp = snapshot['dateTime'] ?? Timestamp.now();
   }
 }
