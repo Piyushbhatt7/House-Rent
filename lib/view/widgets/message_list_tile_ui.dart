@@ -16,8 +16,11 @@ class MessageListTileUi extends StatelessWidget {
   else {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 16, 36, 16),
-      
-      )
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
+      ),
+      );
   }
   }
 }
