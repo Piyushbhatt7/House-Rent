@@ -55,7 +55,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
           Expanded(
             child: StreamBuilder(
-              stream: inboxViewModel.getConversations()
+              stream: inboxViewModel.getConversations(conversation)
 
             )
           ),
