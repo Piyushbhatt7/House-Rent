@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:house/model/conversationModel.dart';
+import 'package:house/model/conversation_model.dart';
 
 class ConversationListTileUi extends StatefulWidget {
 
