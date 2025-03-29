@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:house/model/app_constants.dart';
+import 'package:house/model/conversation_model.dart';
 
 class InboxViewModel {
 
@@ -11,7 +12,7 @@ class InboxViewModel {
     .snapshots();
   }
 
-  getMessages()
+  getMessages(ConversationModel conversation)
   {
     return FirebaseFirestore.instance
     .collection('conversations/${conversation!.id}/messages')
