@@ -53,7 +53,12 @@ class UserModel extends ContactModel
 
     createContactFromUser()
     {
-      
+      return ContactModel(
+        id: id,
+        firstName: firstName,
+        lastName: lastName,
+        displayImage: displayImage,
+      );
     }
 
     Future<void> saveUserToFirestore (bio, city, country, email, firstName, lastName, id) async
