@@ -35,7 +35,7 @@ class _InboxScreenState extends State<InboxScreen> {
               currentConversation.getConversationInfoFomFirestore(snapshot); // 4:07 - 24
 
               return InkResponse(
-                onTap: ()
+                onTap: (){
                   
                 },
                 child: ConversationListTileUi(
