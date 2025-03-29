@@ -54,7 +54,11 @@ class _ConversationScreenState extends State<ConversationScreen> {
           ),
 
           Container(
-            
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black
+              )
+            ),
           )
         ],
       ),
