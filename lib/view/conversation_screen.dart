@@ -29,7 +29,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: 
+              colors: [
+                Colors.pinkAccent,
+              ]
             )
           ),
         ),
