@@ -78,6 +78,10 @@ class _ConversationScreenState extends State<ConversationScreen> {
                       {
                         currentMessage.sender = AppConstants.currentUser.createContactFromUser();
                       }
+                      else {
+
+                        currentMessage.sender = conversation!.otherContact;
+                      }
                     }
                     );
                 }
