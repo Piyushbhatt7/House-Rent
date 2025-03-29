@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:house/model/conversation_model.dart';
 
@@ -53,7 +54,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
           Expanded(
             child: StreamBuilder(
-              stream: ,
+              stream: FirebaseFirestore.instance.collection('conversations/${conversation!.id}/messages'),
             )
           ),
 
