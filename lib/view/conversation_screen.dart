@@ -56,7 +56,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
-              stream: inboxViewModel.getConversations(conversation),
+              stream: inboxViewModel.getMessages(conversation),
               builder: (context, snapshots)
               {
                 if(snapshots.connectionState == ConnectionState.waiting)
