@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:house/global.dart';
 import 'package:house/model/conversation_model.dart';
 
 class ConversationScreen extends StatefulWidget {
@@ -54,7 +55,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
           Expanded(
             child: StreamBuilder(
-              stream:
+              stream: inboxViewModel.getConversations()
 
             )
           ),
