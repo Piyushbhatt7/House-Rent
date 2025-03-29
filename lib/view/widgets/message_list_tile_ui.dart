@@ -29,6 +29,18 @@ class MessageListTileUi extends StatelessWidget {
               backgroundImage: message!.sender!.displayImage,
               radius: MediaQuery.of(context).size.width / 20,
             ),
+          ),
+
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 11),
+              child: Container(
+                padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  
+                ),
+              ),
+               )
           )
         ],
       ),
