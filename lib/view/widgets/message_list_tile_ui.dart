@@ -19,6 +19,14 @@ class MessageListTileUi extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+
+          GestureDetector(
+            onTap: () {
+              
+            },
+          )
+        ],
       ),
       );
   }
