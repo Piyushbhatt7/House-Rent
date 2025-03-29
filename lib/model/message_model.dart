@@ -18,5 +18,6 @@ class  MessageModel
   getMessageInfoFromFirestore(DocumentSnapshot snapshot)
   {
     Timestamp lastMessageTimeStamp = snapshot['dateTime'] ?? Timestamp.now();
+    dateTime = lastMessageTimeStamp.toDate();
   }
 }
