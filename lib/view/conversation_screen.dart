@@ -55,7 +55,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
         children: [
 
           Expanded(
-            child: StreamBuilder(
+            child: StreamBuilder<QuerySnapshot>(
               stream: inboxViewModel.getConversations(conversation),
               builder: (context, snapshots)
               {
@@ -64,7 +64,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                   return const Center(child: CircularProgressIndicator(),);
                 }
                 else {
-                  
+
                 }
               },
 
