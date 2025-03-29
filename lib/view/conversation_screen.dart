@@ -27,7 +27,11 @@ class _ConversationScreenState extends State<ConversationScreen> {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
-          decoration: ,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: 
+            )
+          ),
         ),
       ),
     );
