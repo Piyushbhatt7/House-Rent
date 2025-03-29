@@ -4,7 +4,7 @@ import 'package:house/model/conversation_model.dart';
 class ConversationScreen extends StatefulWidget {
 
   ConversationModel? conversation;
-  const ConversationScreen({super.key});
+   ConversationScreen({super.key});
 
   @override
   State<ConversationScreen> createState() => _ConversationScreenState();
