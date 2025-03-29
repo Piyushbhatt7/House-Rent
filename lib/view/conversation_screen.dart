@@ -60,7 +60,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
               )
             ),
             child: Row(
-              
+              mainAxisSize: MainAxisSize.max,
             ),
           )
         ],
