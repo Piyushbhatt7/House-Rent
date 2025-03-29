@@ -25,6 +25,10 @@ class MessageListTileUi extends StatelessWidget {
             onTap: () {
               
             },
+            child: CircleAvatar(
+              backgroundImage: message!.sender!.displayImage,
+              radius: MediaQuery.of(context).size.width / 20,
+            ),
           )
         ],
       ),
