@@ -19,6 +19,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
     // TODO: implement initState
     super.initState();
 
+    conversation = this.widget.conversation;
+
   }
   @override
   Widget build(BuildContext context) {
