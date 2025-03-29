@@ -22,5 +22,7 @@ class  MessageModel
     dateTime = lastMessageTimeStamp.toDate();
 
     String senderID = snapshot['senderID'] ?? "";
+
+    sender = ContactModel(id: senderID);
   }
 }
