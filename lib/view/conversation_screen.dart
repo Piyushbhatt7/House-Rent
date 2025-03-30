@@ -5,6 +5,7 @@ import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/model/conversation_model.dart';
 import 'package:house/model/message_model.dart';
+import 'package:house/view/widgets/message_list_tile_ui.dart';
 
 class ConversationScreen extends StatefulWidget {
 
@@ -82,7 +83,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
                         currentMessage.sender = conversation!.otherContact;
                       }
-                    }
+                      return MessageListTileUi(message: currentMessage,);
+                    },
                     );
                 }
               },
