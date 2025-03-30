@@ -24,7 +24,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
   sendMessage()
   {
-    
+    String text = 
   }
 
   @override
