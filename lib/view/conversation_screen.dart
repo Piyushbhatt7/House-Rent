@@ -70,7 +70,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
         ),
 
         backgroundColor: Colors.black,
-        title: Text(conversation!.otherContact!.getFullNameofUser()),
+        title: Text(conversation!.otherContact!.getFullNameofUser(), style: TextStyle(color: Colors.white),),
       ),
       
       body: Column(
