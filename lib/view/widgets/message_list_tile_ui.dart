@@ -68,6 +68,9 @@ class MessageListTileUi extends StatelessWidget {
 
                     Align(
                       alignment: Alignment.bottomRight,
+                      child: Text(
+                        message!.getMessageDateTime(),
+                      ),
                     )
                   ],
                 ),
