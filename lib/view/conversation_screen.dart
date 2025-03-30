@@ -123,9 +123,10 @@ class _ConversationScreenState extends State<ConversationScreen> {
                 Expanded(
                   child: IconButton(onPressed: ()
                   {
-
+                    sendMessage();
                   }, 
-                  icon: const Icon(Icons.send))
+                  icon: const Icon(Icons.send),
+                  )
                    )
               ],
             ),
