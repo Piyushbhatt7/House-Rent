@@ -18,8 +18,6 @@ class MessageListTileUi extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
 
-        
-
           Flexible(
             child: Padding(
               padding: const EdgeInsets.only(left: 11),
