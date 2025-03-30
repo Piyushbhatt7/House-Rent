@@ -35,7 +35,7 @@ class MessageListTileUi extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(left: 11),
               child: Container(
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [
