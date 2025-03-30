@@ -86,6 +86,7 @@ class MessageListTileUi extends StatelessWidget {
       );
  
   }
+  // receiver
   else {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 16, 36, 16),
