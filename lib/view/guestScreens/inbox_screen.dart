@@ -39,7 +39,7 @@ class _InboxScreenState extends State<InboxScreen> {
 
               return InkResponse(
                 onTap: (){
-                  Get.to(ConversationScreen());
+                  Get.to(ConversationScreen(conversation: currentConversation,));
                 },
                 child: ConversationListTileUi(
                   conversation: currentConversation,
