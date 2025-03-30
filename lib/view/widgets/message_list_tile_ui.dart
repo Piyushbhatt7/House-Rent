@@ -74,7 +74,7 @@ class MessageListTileUi extends StatelessWidget {
                           fontSize: 15.0,
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
