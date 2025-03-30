@@ -71,13 +71,16 @@ class MessageListTileUi extends StatelessWidget {
           ),
           
 
-          GestureDetector(
-            onTap: () {
-              
-            },
-            child: CircleAvatar(
-              backgroundImage: AppConstants.currentUser.displayImage,
-              radius: MediaQuery.of(context).size.width / 20,
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: GestureDetector(
+              onTap: () {
+                
+              },
+              child: CircleAvatar(
+                backgroundImage: AppConstants.currentUser.displayImage,
+                radius: MediaQuery.of(context).size.width / 20,
+              ),
             ),
           )
        
