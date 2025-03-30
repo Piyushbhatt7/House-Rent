@@ -30,6 +30,11 @@ class _ConversationScreenState extends State<ConversationScreen> {
     {
       return;
     }
+
+    conversation!.addMessageToFirestore(text).whenComplete()
+    {
+      
+    }
   }
 
   @override
