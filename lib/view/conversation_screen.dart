@@ -22,6 +22,11 @@ class _ConversationScreenState extends State<ConversationScreen> {
 
   TextEditingController controller = TextEditingController();
 
+  sendMessage()
+  {
+    
+  }
+
   @override
   void initState() {
     // TODO: implement initState
@@ -30,6 +35,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
     conversation = this.widget.conversation;
 
   }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
