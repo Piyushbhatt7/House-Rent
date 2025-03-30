@@ -74,6 +74,7 @@ class MessageListTileUi extends StatelessWidget {
               
             },
             child: CircleAvatar(
+              backgroundImage: AppConstants.currentUser.displayImage,
               
             ),
           )
