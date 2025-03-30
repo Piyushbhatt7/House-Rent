@@ -118,7 +118,11 @@ class _ConversationScreenState extends State<ConversationScreen> {
                     ),
                     controller: controller,
                   ),
-                )
+                ),
+
+                Expanded(
+                  child:
+                   )
               ],
             ),
           )
