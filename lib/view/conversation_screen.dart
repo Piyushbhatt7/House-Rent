@@ -25,6 +25,11 @@ class _ConversationScreenState extends State<ConversationScreen> {
   sendMessage()
   {
     String text = controller.text;
+
+    if(text.isEmpty)
+    {
+      return;
+    }
   }
 
   @override
