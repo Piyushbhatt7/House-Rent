@@ -52,6 +52,20 @@ class MessageListTileUi extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: Text(
+                        message!.text!,
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+                        textWidthBasis: TextWidthBasis.parent,
+                      ),
+                    
+                    )
+                  ],
                 ),
               ),
                )
