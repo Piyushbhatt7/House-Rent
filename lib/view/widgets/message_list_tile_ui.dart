@@ -49,6 +49,10 @@ class MessageListTileUi extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.circular(10) // 11:17 - 25
                 ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                ),
               ),
                )
           )
