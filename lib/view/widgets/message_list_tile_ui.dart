@@ -64,7 +64,9 @@ class MessageListTileUi extends StatelessWidget {
                         textWidthBasis: TextWidthBasis.parent,
                       ),
                     
-                    )
+                    ),
+
+                    
                   ],
                 ),
               ),
