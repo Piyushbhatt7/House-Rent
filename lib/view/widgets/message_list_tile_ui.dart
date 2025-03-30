@@ -9,6 +9,8 @@ class MessageListTileUi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // sender
     if(message!.sender!.firstName == AppConstants.currentUser.firstName) 
     {
     return Padding(
