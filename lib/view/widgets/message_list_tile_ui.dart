@@ -26,8 +26,8 @@ class MessageListTileUi extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [
-                      Colors.lightGreenAccent,
-                      Colors.purpleAccent,
+                      Colors.pinkAccent,
+                      Colors.amber,
                     ],
                     begin: FractionalOffset(0.0, 0.0),
                     end: FractionalOffset(1.0, 0.0),
