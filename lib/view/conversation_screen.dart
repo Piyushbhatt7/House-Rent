@@ -34,9 +34,9 @@ class _ConversationScreenState extends State<ConversationScreen> {
     conversation!.addMessageToFirestore(text).whenComplete(()
     {
       setState(() {
-        
+        controller.text = "";
       });
-    })
+    });
   }
 
   @override
