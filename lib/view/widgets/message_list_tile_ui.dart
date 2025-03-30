@@ -66,7 +66,7 @@ class MessageListTileUi extends StatelessWidget {
                 ),
               ),
                )
-          )
+          ),
           
 
           GestureDetector(
