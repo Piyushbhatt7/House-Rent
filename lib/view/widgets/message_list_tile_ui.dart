@@ -66,7 +66,9 @@ class MessageListTileUi extends StatelessWidget {
                     
                     ),
 
-                    
+                    Align(
+                      alignment: Alignment.bottomRight,
+                    )
                   ],
                 ),
               ),
