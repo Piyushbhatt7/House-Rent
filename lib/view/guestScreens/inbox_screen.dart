@@ -1,7 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
+import 'package:get/route_manager.dart';
 import 'package:house/global.dart';
 import 'package:house/model/conversation_model.dart';
+import 'package:house/view/conversation_screen.dart';
 import 'package:house/view/widgets/conversation_list_tile_ui.dart';
 
 class InboxScreen extends StatefulWidget {
@@ -36,7 +39,7 @@ class _InboxScreenState extends State<InboxScreen> {
 
               return InkResponse(
                 onTap: (){
-                  
+                  Get.to(ConversationScreen());
                 },
                 child: ConversationListTileUi(
                   conversation: currentConversation,
