@@ -81,7 +81,7 @@ Future<void> saveUserToFirestore(bio, city, country, email, firstName, lastName,
 Future<void> addImageToFirebaseStorage(File imageFileofUser, String currentUserID) async {
   try {
     Reference referenceStorage = FirebaseStorage.instance.ref()
-        .child("userImages") // Ensure folder name is correct
+        .child("useImages") // Ensure folder name is correct
         .child(currentUserID)
         .child("$currentUserID.png");
 
@@ -140,13 +140,13 @@ getUserInfoFromFirestore (userID) async
   AppConstants.currentUser.city = snapshot['city'] ?? "";
   AppConstants.currentUser.country = snapshot['country'] ?? "";
   AppConstants.currentUser.isHost = snapshot['isHost'] ?? false;
-  //AppConstants.currentUser.displayImage = snapshot['displayImage'] ?? "";
+  AppConstants.currentUser.displayImage = snapshot['displayImage'] ?? "";
 }
 
 getImageStorage(String userID) async {
   try {
     final ref = FirebaseStorage.instance.ref()
-        .child("userImages")
+        .child("useImages")
         .child(userID)
         .child("$userID.png");
 
