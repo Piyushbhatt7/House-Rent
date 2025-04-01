@@ -54,8 +54,8 @@ class PostingModel
 
     for(int i = 0; i < displayImages!.length; i++)
     {
-      imageNames!.add("image${i}.png");
-    }
+      imageNames!.add("images${i}.png"); // changed to s
+    } 
    }
 
   getMyPostingsFromFirstore () async
