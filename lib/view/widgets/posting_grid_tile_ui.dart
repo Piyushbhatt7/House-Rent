@@ -29,7 +29,14 @@ class _PostingGridTileUiState extends State<PostingGridTileUi>
     posting =  widget.posting;
 
     updateUI();
+    fetchImage();
+    
 
+  }
+
+  Future<void> fetchImage() async {
+    await posting!.getFirstImageFromStorage();
+    setState(() {}); // ✅ Update UI when the image loads
   }
   @override
   Widget build(BuildContext context) 
