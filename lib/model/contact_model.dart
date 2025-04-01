@@ -52,7 +52,7 @@ class ContactModel {
     }
 
     final imageData = await FirebaseStorage.instance.ref()
-    .child("userImages")
+    .child("useImages")
     .child(id!)
     .child("$id.png")
     .getData(1024 * 1024);
