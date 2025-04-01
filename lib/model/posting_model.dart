@@ -80,7 +80,7 @@ class PostingModel
     String hostID = data['hostID'] ?? "";
     host = ContactModel(id: hostID);
 
-    imageNames = data.containsKey('imagesNames') ? List<String>.from(data['imagesNames']) : [];
+    imageNames = data.containsKey('imageNames') ? List<String>.from(data['imageNames']) : []; // removed the
     name = data['names'] ?? "";
     price = data.containsKey('price') ? data['price'].toDouble() : 0.0;
     rating = data.containsKey('rating') ? data['rating'].toDouble() : 2.5;
