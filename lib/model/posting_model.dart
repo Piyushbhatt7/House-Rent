@@ -54,16 +54,19 @@ class PostingModel
 
     for(int i = 0; i < displayImages!.length; i++)
     {
-      imageNames!.add("images${i}.png"); // changed to s
+      imageNames!.add("image${i}.png"); // changed to s
     } 
    }
 
-  getMyPostingsFromFirstore () async
-  {
+  getMyPostingsFromFirestore() async {
+  try {
     DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('postings').doc(id).get();
-
     getPostingInfoFromSnapshot(snapshot);
+  } catch (e) {
+    print("Error fetching document: $e");
   }
+}
+
 
   getPostingInfoFromSnapshot(DocumentSnapshot snapshot) {
   Map<String, dynamic>? data = snapshot.data() as Map<String, dynamic>?;
@@ -81,7 +84,7 @@ class PostingModel
     host = ContactModel(id: hostID);
 
     imageNames = data.containsKey('imageNames') ? List<String>.from(data['imageNames']) : []; // removed the
-    name = data['names'] ?? "";
+    name = data['name'] ?? "";
     price = data.containsKey('price') ? data['price'].toDouble() : 0.0;
     rating = data.containsKey('rating') ? data['rating'].toDouble() : 2.5;
     type = data['type'] ?? "";
@@ -89,35 +92,32 @@ class PostingModel
 }
 
 
-  getAllImagesFromStorage() async {
-  displayImages = [];
+ Future<List<MemoryImage>> getAllImagesFromStorage() async {
+  displayImages ??= [];
+  displayImages!.clear();
 
-  for (int i = 0; i < imageNames!.length; i++) {
+  for (String imageName in imageNames ?? []) {
     try {
-      final imageData = await FirebaseStorage.instance.ref()
-          .child("postingImages")
-          .child(id!)
-          .child(imageNames![i])
-          .getData(1024 * 1024);
+      final imageData = await FirebaseStorage.instance
+          .ref()
+          .child("postingImages/$id/$imageName")
+          .getData(2 * 1024 * 1024); // Increased size to 2MB
 
       if (imageData != null) {
         displayImages!.add(MemoryImage(imageData));
-        print("Image loaded successfully: ${imageNames![i]}");
-      } else {
-        print("Image data is null for: ${imageNames![i]}");
+        print("Image loaded: $imageName");
       }
     } catch (e) {
-      print("Error loading image ${imageNames![i]}: $e");
+      print("Error loading image $imageName: $e");
     }
   }
-
-  return displayImages;
+  return displayImages!;
 }
 
 
-  getFirstImageFromStorage() async {
-  if (displayImages!.isNotEmpty) {
-    return displayImages!.first;
+ Future<MemoryImage?> getFirstImageFromStorage() async {
+  if (displayImages != null && displayImages!.isNotEmpty) {
+    return displayImages!.first;  // ✅ If already loaded, return the first image
   }
 
   if (imageNames == null || imageNames!.isEmpty) {
@@ -129,19 +129,26 @@ class PostingModel
     String imagePath = "postingImages/$id/${imageNames!.first}";
     print("Fetching from path: $imagePath"); // Debugging
 
-    final imageData = await FirebaseStorage.instance.ref(imagePath).getData(1024 * 1024);
+    final imageData = await FirebaseStorage.instance
+        .ref()
+        .child("postingImages")
+        .child(id!)
+        .child(imageNames!.first)
+        .getData(1024 * 1024);
 
     if (imageData != null) {
       MemoryImage image = MemoryImage(imageData);
+      displayImages ??= [];  // ✅ Ensure the list is initialized
       displayImages!.add(image);
-      return image;
+      return image;  // ✅ Return the fetched image
     }
   } catch (e) {
     print("Error fetching image: $e");
   }
 
-  return null;
+  return null;  // ✅ Return null if image fetching fails
 }
+
 
 
 
