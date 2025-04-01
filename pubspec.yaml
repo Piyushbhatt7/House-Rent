@@ -39,7 +39,7 @@ dependencies:
   firebase_auth:
   firebase_core:
   cloud_firestore:
-  firebase_storage: ^12.4.4
+  firebase_storage: 
   image_picker:
   custom_rating_bar: 
   pay:
