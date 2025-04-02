@@ -67,7 +67,7 @@ const String defaultGooglePay = '''{
     },
     "transactionInfo": {
       "countryCode": "US",
-      "currencyCode": "USD",
+      "currencyCode": "INR",
       "totalPriceStatus": "FINAL",
       "totalPrice": "10.00"
     }
@@ -114,7 +114,7 @@ const String basicGooglePayLoadPaymentData = '''{
   "transactionInfo": {
     "totalPriceStatus": "FINAL",
     "totalPrice": "12.34",
-    "currencyCode": "USD"
+    "currencyCode": "INR"
   }
 }''';
 
@@ -154,6 +154,6 @@ const String invalidGooglePayLoadPaymentData = '''{
   "transactionInfo": {
     "totalPriceStatus": "FINAL",
     "totalPrice": "12.34",
-    "currencyCode": "USD"
+    "currencyCode": "INR"
   }
 }''';
