@@ -47,7 +47,7 @@ const String defaultGooglePay = '''{
           "type": "PAYMENT_GATEWAY",
           "parameters": {
             "gateway": "example",
-            "gatewayMerchantId": "gatewayMerchantId"
+            "gatewayMerchantId": "exampleMerchantId"
           }
         },
         "parameters": {
@@ -67,7 +67,7 @@ const String defaultGooglePay = '''{
     },
     "transactionInfo": {
       "countryCode": "US",
-      "currencyCode": "INR",
+      "currencyCode": "USD",
       "totalPriceStatus": "FINAL",
       "totalPrice": "10.00"
     }
