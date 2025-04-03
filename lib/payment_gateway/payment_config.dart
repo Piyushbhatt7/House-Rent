@@ -10,7 +10,7 @@ const String defaultApplePay = '''{
     "requiredBillingContactFields": ["emailAddress", "name", "phoneNumber", "postalAddress"],
     "requiredShippingContactFields": [],
     "shippingMethods": [
-      {                   
+      {                    
         "amount": "0.00",
         "detail": "Available within an hour" ,
         "identifier": "in_store_pickup",  
