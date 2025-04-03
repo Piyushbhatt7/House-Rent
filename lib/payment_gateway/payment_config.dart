@@ -15,7 +15,7 @@ const String defaultApplePay = '''{
         "detail": "Available within an hour" ,   
         "identifier": "in_store_pickup",    
         "label": "In-Store Pickup"
-      },                
+      },                 
       {
         "amount": "4.99",
         "detail": "5-8 Business Days",
