@@ -13,7 +13,7 @@ const String defaultApplePay = '''{
       {                           
         "amount": "0.00",        
         "detail": "Available within an hour" ,   
-        "identifier": "in_store_pickup",  
+        "identifier": "in_store_pickup",   
         "label": "In-Store Pickup"
       },  
       {
