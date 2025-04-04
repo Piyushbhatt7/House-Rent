@@ -296,7 +296,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       hint: const Text(
                         "Select property type",
                         style: TextStyle(                 
-                          fontSize: 20.0           
+                          fontSize: 20.0            
                         ),
                       ),
                       ),
