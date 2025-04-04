@@ -298,10 +298,10 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                         style: TextStyle(                 
                           fontSize: 20.0                
                         ), 
-                      ),    
+                      ),     
                       ),
                     ), 
-                           
+                            
                     // Price  
                   
                   Padding(padding: 
