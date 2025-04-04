@@ -297,7 +297,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                         "Select property type",
                         style: TextStyle(                 
                           fontSize: 20.0                
-                        ),
+                        ), 
                       ),
                       ),
                     ), 
