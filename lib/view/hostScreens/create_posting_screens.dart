@@ -302,7 +302,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       ),
                     ), 
                     
-                    // Price 
+                    // Price  
                   
                   Padding(padding: 
                   const EdgeInsets.only(top: 21.0),
