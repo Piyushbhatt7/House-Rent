@@ -226,7 +226,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
 
           Get.to(HostHomeScreen()); 
 
-          }, 
+          },  
           icon: const Icon(Icons.upload)
           ),
         ],
