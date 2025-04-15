@@ -268,7 +268,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                     ),
                     ),
                  
-                    // Slect property type        
+                    // Slect property type         
 
                     Padding(padding: 
                     const EdgeInsets.only(top: 28.0),
