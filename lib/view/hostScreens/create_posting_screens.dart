@@ -262,7 +262,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                         if(textInput!.isEmpty)
                         {
                           return "please enter a valid name";
-                        }
+                        } 
                         return null;
                       },
                     ),
