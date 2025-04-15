@@ -267,7 +267,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                       },
                     ),
                     ),
-                  
+                   
                     // Slect property type          
 
                     Padding(padding: 
