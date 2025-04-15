@@ -215,7 +215,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
                   break;
                 }
               }
-  
+   
               await postingViewModel.updatePostingInfoToFirestore();
 
                Get.snackbar("Update Listing", "your is updated successufully.");
