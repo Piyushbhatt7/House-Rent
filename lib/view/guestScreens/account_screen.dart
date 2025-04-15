@@ -5,6 +5,7 @@ import 'package:house/global.dart';
 import 'package:house/model/app_constants.dart';
 import 'package:house/view/guest_home_screen.dart';
 import 'package:house/view/host_home_screen.dart';
+import 'package:house/view/login_screen.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -244,19 +245,25 @@ class _AccountScreenState extends State<AccountScreen> {
                {
 
                },
-               child: ListTile(
-                contentPadding: const EdgeInsets.all(0.0),
-                leading: Text(
-                  "Log Out",
-                  style: TextStyle(
-                    fontSize: 18.5,
-                    fontWeight: FontWeight.normal,
+               child: MaterialButton(
+                 onPressed: ()
+                 {
+                   Get.to(LoginScreen()); // changed over here
+                 },
+                 child: ListTile(
+                  contentPadding: const EdgeInsets.all(0.0),
+                  leading: Text(
+                    "Log Out",
+                    style: TextStyle(
+                      fontSize: 18.5,
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
-                ),
-                trailing: Icon(
-                  size: 34,
-                  Icons.login_outlined,
-                ),
+                  trailing: Icon(
+                    size: 34,
+                    Icons.login_outlined,
+                  ),
+                 ),
                ),
                ),
                 ),
