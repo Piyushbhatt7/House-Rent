@@ -229,7 +229,7 @@ class _CreatePostingScreensState extends State<CreatePostingScreens> {
           },  
           icon: const Icon(Icons.upload)
           ),
-        ],                
+        ],                 
       ),
       
       body: Center(
